@@ -1,6 +1,6 @@
-<center><font size=5 color=#008b8b>Content</font></center> 
+<center><font size=5 color=#008b8b>Content</font></center>
 
-[toc]
+[TOC]
 
 ## 1.Introduction
 
@@ -38,33 +38,33 @@ The university library provides a large number of book resources for students an
 
 1. Forum functions and readership. In the future, the system will improve the forum function, and establish their own readership circle for different reader groups. In the forum, users can have academic exchanges but also can put forward corresponding suggestions and opinions for the improvement of the library management system. In the reader circle, readers with the same reading hobby can make friends and exchange their reading insights.
 
-1. The application of big data. Big data technology is used to collect users' daily bibliographic journal query, action location track, reading period, and other information, so as to understand the knowledge needs and reading habits of each user. In order, according to these analysis results, the system can timely complete and update the books and periodicals that are the most concerned by user groups and that has been the most frequently retrieved and borrowed, and push the latest knowledge information in each professional field required by users according to the personalized needs of users. 
+2. The application of big data. Big data technology is used to collect users' daily bibliographic journal query, action location track, reading period, and other information, so as to understand the knowledge needs and reading habits of each user. In order, according to these analysis results, the system can timely complete and update the books and periodicals that are the most concerned by user groups and that has been the most frequently retrieved and borrowed, and push the latest knowledge information in each professional field required by users according to the personalized needs of users. 
 
 ## 2. Glossary of Terms
 
-| terms | definition |
-| ---- | ---- |
-| **User** | All the people who could use the Smart University Library Management System. |
-| **Teacher** | The person teaching classes at the university. |
-| **Student** | The person enrolled in classes at the university. |
-| **Public user** | The system users are other than the students and teachers. Could be someone from the community near the University and so on. The system is open to society. |
-| **Account** | A representation of a user's identity in a system in which a user can access certain contents of the system only after logging in to his or her account. |
-| **Administrator** | A person who has permission to create and delete accounts or change the book information in the system. Administrators execute the decrease or increase of books in this system. |
-| **Suggestion** | A piece of advice that is carried out by the users, will bring a more convenient experience to users if the advice is adopted. |
-| **Book Diagram** | A diagram that stores all the information of all the books in the library, including the name, index, category, entry time, and the borrowing authority of different users of each book. |
-| **Forum** | An online discussion platform where users can post messages and reply to other users’ messages. |
-| **Post** | A message that a user submits to the forum. A post can include text, images, videos, or other types of content. |
-| **Bookmark** | Mark a post so that it can be easily accessed later. |
-| **Open Space** | Space in the library building could be accessed by anyone with a SULMS(Smart University Library Management System) account. The open spaces have facilities including public PCs, tables and desks, bookshelves, study rooms, etc. |
-| **Study Room** | A room that could be used exclusively by one or a few users for studying purposes. Only teachers and students can use a study room. One must book a spare room before using it. If the user fails to arrive on time, he or she will be punished. |
-| **Retrieve password** | When a user forgets his or her account password, he or she can retrieve his or her password by entering his or her username and verifying the bound email address. |
-| **Borrow books:** | Users with authority to borrow books stocked in the library. |
-| **Return books:** | Users return the books they have borrowed from the library. |
-| **Search books:** | The user enters the information of the book he wants to query, and the system displays the corresponding book. |
-| **Renew books:** | The user continues to borrow the books they are borrowing or pay fines for exceeding the borrowing period. |
+| terms                           | definition                                                                                                                                                                                                                                                                                                            |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **User**                        | All the people who could use the Smart University Library Management System.                                                                                                                                                                                                                                          |
+| **Teacher**                     | The person teaching classes at the university.                                                                                                                                                                                                                                                                        |
+| **Student**                     | The person enrolled in classes at the university.                                                                                                                                                                                                                                                                     |
+| **Public user**                 | The system users are other than the students and teachers. Could be someone from the community near the University and so on. The system is open to society.                                                                                                                                                          |
+| **Account**                     | A representation of a user's identity in a system in which a user can access certain contents of the system only after logging in to his or her account.                                                                                                                                                              |
+| **Administrator**               | A person who has permission to create and delete accounts or change the book information in the system. Administrators execute the decrease or increase of books in this system.                                                                                                                                      |
+| **Suggestion**                  | A piece of advice that is carried out by the users, will bring a more convenient experience to users if the advice is adopted.                                                                                                                                                                                        |
+| **Book Diagram**                | A diagram that stores all the information of all the books in the library, including the name, index, category, entry time, and the borrowing authority of different users of each book.                                                                                                                              |
+| **Forum**                       | An online discussion platform where users can post messages and reply to other users’ messages.                                                                                                                                                                                                                       |
+| **Post**                        | A message that a user submits to the forum. A post can include text, images, videos, or other types of content.                                                                                                                                                                                                       |
+| **Bookmark**                    | Mark a post so that it can be easily accessed later.                                                                                                                                                                                                                                                                  |
+| **Open Space**                  | Space in the library building could be accessed by anyone with a SULMS(Smart University Library Management System) account. The open spaces have facilities including public PCs, tables and desks, bookshelves, study rooms, etc.                                                                                    |
+| **Study Room**                  | A room that could be used exclusively by one or a few users for studying purposes. Only teachers and students can use a study room. One must book a spare room before using it. If the user fails to arrive on time, he or she will be punished.                                                                      |
+| **Retrieve password**           | When a user forgets his or her account password, he or she can retrieve his or her password by entering his or her username and verifying the bound email address.                                                                                                                                                    |
+| **Borrow books:**               | Users with authority to borrow books stocked in the library.                                                                                                                                                                                                                                                          |
+| **Return books:**               | Users return the books they have borrowed from the library.                                                                                                                                                                                                                                                           |
+| **Search books:**               | The user enters the information of the book he wants to query, and the system displays the corresponding book.                                                                                                                                                                                                        |
+| **Renew books:**                | The user continues to borrow the books they are borrowing or pay fines for exceeding the borrowing period.                                                                                                                                                                                                            |
 | **Check the borrowing record:** | The user or the librarian queries the user's borrowing records. The borrowing record includes the books that users have already borrowed and the books that they are borrowing, as well as the borrowing time of each book. Based on this, the librarian can determine whether the user exceeds the borrowing period. |
-| **Manage the borrowing right:** | The librarian can manage the user's borrowing rights. Students, teachers, and public users have different permissions. In addition, the librarian can cancel the permission of the users who fail to return the books many times according to the regulations. |
-| |  |
+| **Manage the borrowing right:** | The librarian can manage the user's borrowing rights. Students, teachers, and public users have different permissions. In addition, the librarian can cancel the permission of the users who fail to return the books many times according to the regulations.                                                        |
+|                                 |                                                                                                                                                                                                                                                                                                                       |
 
 ## 3. Use case modeling
 
@@ -72,9 +72,9 @@ The university library provides a large number of book resources for students an
 
 ### 3.2 填上各位的内容
 
-### 3.3 
+### 3.3 Book Borrowing Management System
 
-### 3.4 
+### 3.4
 
 ### 3.5
 
