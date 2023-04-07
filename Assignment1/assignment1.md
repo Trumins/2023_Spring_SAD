@@ -70,11 +70,69 @@ The university library provides a large number of book resources for students an
 
 ### 3.1 Book Managment System
 
-### 3.2 填上各位的内容
+### 3.2 Account Management System
+
+**Use Case Diagram**
+
+![](C:\Users\18763\Desktop\作业\系统分析与设计\第1次\AMS(format undetermined)\User account management system.png)
+
+**Concise Text Descriptions** 
+
+Login account: This use case allows the user to log in to the account by entering the correct username, password, and verification code.
+
+Exit account: This use case allows the user to log out of the account from the system, after which the user needs to log in again in order to access the system.
+
+Change password: This use case allows the user to change the login password of his/her account. After the change, the user must use the changed login password to log in to the account again.
+
+Modifying user information: This use case allows the user to modify some of the personal information saved in the system, such as the mobile phone number and bound email address.
+
+Retrieve password: This use case allows users to retrieve their login password if they forget their login password by entering the account name and then using email authentication.
+
+Email authentication: This use case is used to verify the user's email when retrieving the password. The system sends a verification email to the email box bound to the user. The user can complete the verification by clicking the verification link in the email, and the password can be retrieved after the verification is completed.
+
+Register account: This use case allows public users to register new accounts on their own, after registration of public users can login the account access to the system.
+
+Bind email address: This use case is used for mailbox authentication when a user binds an email. The system sends a verification email to the email box that the user wants to bind. The user can complete the verification by clicking the verification link in the email. After the verification is completed, the binding can be completed.
+
+Cancel account: This use case allows public users to cancel their account, which will be permanently deleted and then unable to log in to the account.
+
+Create account: This use case allows the account administrator to create an account for the newly enrolled teachers and students. The account user name is the user's student ID or job ID, the password is the default value, and the personal information is the personal information saved in the student information management system or the faculty information management system.
+
+Delete account: This use case allows the account administrator to delete the account for students and faculty who have left the university. After deleting the account, the account will not be used to log in to the system.
+
+**Detailed Specification for Use Case**
+
+Use Case:Login account
+
+| **USE CASE**          | **Login account**                                            |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UCxx                                                         |
+| **Specification**     | This use case allows the user to log  in to the account by entering the correct username, password, and  verification code. |
+| **Actors**            | **Users**                                                    |
+| **Pre-Condition**     | The user already has his own account  in the system.         |
+| **Basic Flow**        | When the user enters the  login page, the use case begins;  1. The user enters the  username, password, and verification code in the input box, and then clicks  "Login";  2. The system confirms that  the verification code entered by the user is correct;  3. The system determines  that the username and password entered by the user match;  4. The user logs in to the  account successfully, and the use case ends. |
+| **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case  ends;  3a. If the system confirms that the  verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login  fails and the use case ends;  4a. If the system confirms that the  password entered by the user is incorrect, the system displays a message  indicating "Incorrect username or Password". The login fails and  the use case ends. |
+| **Post-Condition**    | After successful login,  users can log out of the account, change the login password, or modify their  information. |
+
+![Login_account](C:\Users\18763\Desktop\作业\系统分析与设计\第1次\AMS(format undetermined)\Login_account.png)
+
+Use Case:Register account
+
+| **USE CASE**          | **Register account**                                         |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UCxx                                                         |
+| **Specification**     | This use case allows public users to  register new accounts on their own. |
+| **Actors**            | **Public  users**                                            |
+| **Pre-Condition**     | Public users access the system for the  first time and do not have their own accounts. |
+| **Basic Flow**        | The use case begins when  the public user goes to the login page and clicks "Register";  1. The public user enters  the username wants to register in the input box and clicks "Next";  2. The system confirms that  the entered user name has not been used;  3. The public user enters  the password and the confirm password in the input box, and clicks “Next”;  4. The system confirms that  the password entered by the user is the same as the confirmed password;  5. The public user enters  the email address wants to bind and clicks "Verify";  6. The system sends a  verification email to the email address entered by the user, and the public  user clicks the verification link in the verification email to pass the  verification within 48 hours;  7. The account is  successfully registered, and the use case ends. |
+| **Alternative Flows** | a. If the public user exits the page  at any of the first 5 steps, registration fails and the use case ends;  2a. If the system confirms that the  username entered by the public user has been used, the system displays a  prompt "The username has been used" and returns to step 1;  4a. If the system finds that the  password entered by the public user is different from the confirmed password,  the system displays the message "Confirm password is different from the  password" and returns to step 3;  6a. If the public user does not  receive the verification email, they can modify the email address and click  " Reverify " or directly click " Reverify". Then the  system will resend the verification email, and the previous verification  email will become invalid;  6b. If the public user does not  complete the authentication within 48 hours of the validity period of the  verification email, the account registration fails and the use case ends. |
+| **Post-Condition**    | After successfully  registering an account, the public user can log in to the system through the  account. |
+
+![Register_account](C:\Users\18763\Desktop\作业\系统分析与设计\第1次\AMS(format undetermined)\Register_account.png)
 
 ### 3.3 Book Borrowing Management System
 
-### 3.4
+### 3.4填上各位的内容
 
 ### 3.5
 
