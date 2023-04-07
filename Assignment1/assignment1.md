@@ -72,7 +72,7 @@ The university library provides a large number of book resources for students an
 
 **Use Case Diagram**
 
-![](../image/gyy_UC_graph.png)
+![](picture/gyy_UC_graph.png)
 
 **Concise Text Descriptions** 
 
@@ -96,11 +96,9 @@ Book cataloguing: Give each book a category so that users can find it easily.
 
 Make index: An index is a string of numbers that will make librarians place books to the right place more efficiently.
 
-
-
 **Detailed Specification for Use Case**
 
-![](E:\QQFile\Assignment\image\gyy_activity.png)
+![](picture/gyy_activity.png)
 
 Use Case : Administrator’s Operation
 
