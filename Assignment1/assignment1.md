@@ -42,33 +42,96 @@ The university library provides a large number of book resources for students an
 
 ## 2. Glossary of Terms
 
-| terms                           | definition                                                                                                                                                                                                                                                                                                            |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **User**                        | All the people who could use the Smart University Library Management System.                                                                                                                                                                                                                                          |
-| **Teacher**                     | The person teaching classes at the university.                                                                                                                                                                                                                                                                        |
-| **Student**                     | The person enrolled in classes at the university.                                                                                                                                                                                                                                                                     |
-| **Public user**                 | The system users are other than the students and teachers. Could be someone from the community near the University and so on. The system is open to society.                                                                                                                                                          |
-| **Account**                     | A representation of a user's identity in a system in which a user can access certain contents of the system only after logging in to his or her account.                                                                                                                                                              |
-| **Administrator**               | A person who has permission to create and delete accounts or change the book information in the system. Administrators execute the decrease or increase of books in this system.                                                                                                                                      |
-| **Suggestion**                  | A piece of advice that is carried out by the users, will bring a more convenient experience to users if the advice is adopted.                                                                                                                                                                                        |
-| **Book Diagram**                | A diagram that stores all the information of all the books in the library, including the name, index, category, entry time, and the borrowing authority of different users of each book.                                                                                                                              |
-| **Forum**                       | An online discussion platform where users can post messages and reply to other users’ messages.                                                                                                                                                                                                                       |
-| **Post**                        | A message that a user submits to the forum. A post can include text, images, videos, or other types of content.                                                                                                                                                                                                       |
-| **Bookmark**                    | Mark a post so that it can be easily accessed later.                                                                                                                                                                                                                                                                  |
-| **Open Space**                  | Space in the library building could be accessed by anyone with a SULMS(Smart University Library Management System) account. The open spaces have facilities including public PCs, tables and desks, bookshelves, study rooms, etc.                                                                                    |
-| **Study Room**                  | A room that could be used exclusively by one or a few users for studying purposes. Only teachers and students can use a study room. One must book a spare room before using it. If the user fails to arrive on time, he or she will be punished.                                                                      |
-| **Retrieve password**           | When a user forgets his or her account password, he or she can retrieve his or her password by entering his or her username and verifying the bound email address.                                                                                                                                                    |
-| **Borrow books:**               | Users with authority to borrow books stocked in the library.                                                                                                                                                                                                                                                          |
-| **Return books:**               | Users return the books they have borrowed from the library.                                                                                                                                                                                                                                                           |
-| **Search books:**               | The user enters the information of the book he wants to query, and the system displays the corresponding book.                                                                                                                                                                                                        |
-| **Renew books:**                | The user continues to borrow the books they are borrowing or pay fines for exceeding the borrowing period.                                                                                                                                                                                                            |
+| terms                           | definition                                                   |
+| ------------------------------- | ------------------------------------------------------------ |
+| **User**                        | All the people who could use the Smart University Library Management System. |
+| **Teacher**                     | The person teaching classes at the university.               |
+| **Student**                     | The person enrolled in classes at the university.            |
+| **Public user**                 | The system users are other than the students and teachers. Could be someone from the community near the University and so on. The system is open to society. |
+| **Account**                     | A representation of a user's identity in a system in which a user can access certain contents of the system only after logging in to his or her account. |
+| **Administrator**               | A person who has permission to create and delete accounts or change the book information in the system. Administrators execute the decrease or increase of books in this system. |
+| **Suggestion**                  | A piece of advice that is carried out by the users, will bring a more convenient experience to users if the advice is adopted. |
+| **Book Diagram**                | A diagram that stores all the information of all the books in the library, including the name, index, category, entry time, and the borrowing authority of different users of each book. |
+| **Forum**                       | An online discussion platform where users can post messages and reply to other users’ messages. |
+| **Post**                        | A message that a user submits to the forum. A post can include text, images, videos, or other types of content. |
+| **Bookmark**                    | Mark a post so that it can be easily accessed later.         |
+| **Open Space**                  | Space in the library building could be accessed by anyone with a SULMS(Smart University Library Management System) account. The open spaces have facilities including public PCs, tables and desks, bookshelves, study rooms, etc. |
+| **Study Room**                  | A room that could be used exclusively by one or a few users for studying purposes. Only teachers and students can use a study room. One must book a spare room before using it. If the user fails to arrive on time, he or she will be punished. |
+| **Retrieve password**           | When a user forgets his or her account password, he or she can retrieve his or her password by entering his or her username and verifying the bound email address. |
+| **Borrow books:**               | Users with authority to borrow books stocked in the library. |
+| **Return books:**               | Users return the books they have borrowed from the library.  |
+| **Search books:**               | The user enters the information of the book he wants to query, and the system displays the corresponding book. |
+| **Renew books:**                | The user continues to borrow the books they are borrowing or pay fines for exceeding the borrowing period. |
 | **Check the borrowing record:** | The user or the librarian queries the user's borrowing records. The borrowing record includes the books that users have already borrowed and the books that they are borrowing, as well as the borrowing time of each book. Based on this, the librarian can determine whether the user exceeds the borrowing period. |
-| **Manage the borrowing right:** | The librarian can manage the user's borrowing rights. Students, teachers, and public users have different permissions. In addition, the librarian can cancel the permission of the users who fail to return the books many times according to the regulations.                                                        |
-|                                 |                                                                                                                                                                                                                                                                                                                       |
+| **Manage the borrowing right:** | The librarian can manage the user's borrowing rights. Students, teachers, and public users have different permissions. In addition, the librarian can cancel the permission of the users who fail to return the books many times according to the regulations. |
+|                                 |                                                              |
 
 ## 3. Use case modeling
 
-### 3.1 Book Managment System
+### 3.1 Book Management System
+
+**Use Case Diagram**
+
+![](../image/gyy_UC_graph.png)
+
+**Concise Text Descriptions** 
+
+Give suggestions: After using the Smart Library System, the users may have some suggestions that will bring a more convenient experience to users if the advice is adopted.
+
+Change book inventory: Include buy new books, increase book numbers and decrease book numbers.
+
+Buy new books: By adopting users' suggestions, the administrators may find that the library misses some good books, thus buying them and updating the information.
+
+Increase book numbers: Add more books to the library and update the information.
+
+Decrease book numbers: Remove some books out and update the informaation.
+
+Enter book info: After change the book inventory, the manager should update the book information. 
+
+Make knowledge graph: By using big data technology, the Smart Library System automatically generate a knowledge graph which indicates the information of the inventory of the library.
+
+Classify books: Include book cataloguing, developing labels and making index.
+
+Book cataloguing: Give each book a category so that users can find it easily.
+
+Make index: An index is a string of numbers that will make librarians place books to the right place more efficiently.
+
+
+
+**Detailed Specification for Use Case**
+
+![](E:\QQFile\Assignment\image\gyy_activity.png)
+
+Use Case : Administrator’s Operation
+
+| **USE CASE**          | **Administrator’s Operation**                                |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC1                                                          |
+| **Specification**     | This use case allows the administrator to check user’s suggestions or look for the statistic laws to determine whether to buy new books or increase some books or decrease some special book’s inventory. |
+| **Actors**            | Administrators                                               |
+| **Pre-Condition**     | The administrator already login.                             |
+| **Basic Flow**        | When the administrator  login successfully, the use case begins; |
+|                       | 1. The administrator first  check the message to find whether to change some books’ inventory or not. |
+|                       | 2. Then, after receiving  information from users and statistic laws, the administrator know whether to  decrease or increase or buy new books. |
+|                       | 3. After that, the  administrator change the book inventory information and change the storage. |
+|                       | 4. Then, give the  increased books or new books labels, index and catalogue them and place them  in right place. |
+|                       | 4. The administrator ends  his works, the use case ends.     |
+| **Alternative Flows** | After checking messages, the administrator may find that there’s nothing to do, then the use case should end immediately. |
+| **Post-Condition**    | After successfully operate, the library’s book inventory has changed, the users may find more books and have more convenient experience and the administrator should wait the next change. |
+
+Use Case : **User give suggestions**
+
+| USE CASE              | User give suggestions                                        |
+| --------------------- | ------------------------------------------------------------ |
+| ID                    | UC2                                                          |
+| **Specification**     | This use case allows users to give some suggestions depend on their experience. |
+| **Actors**            | Public users                                                 |
+| **Pre-Condition**     | Public users should use the library and book management system beforehand and have some experience to put forth. |
+| **Basic Flow**        | The use case begins when the public user login successfully. |
+|                       | After the users submit their suggestions, this use case ends. |
+| **Alternative Flows** | The users may find that there is no need to give such a suggestion for the reason that the suggestion is hard to implement or the suggestion is only depend on his own experience and there is no commonality in others. |
+| **Post-conditions**   | After giving suggestions, the administrator should login to handle the suggestions |
+|                       |                                                              |
 
 ### 3.2 Account Management System
 
@@ -102,7 +165,7 @@ Delete account: This use case allows the account administrator to delete the acc
 
 **Detailed Specification for Use Case**
 
-Use Case:Login account
+Use Case : Login account
 
 | **USE CASE**          | **Login account**                                            |
 | --------------------- | ------------------------------------------------------------ |
@@ -140,17 +203,51 @@ Use Case:Register account
 
 ### 4.1 Objectives
 
+The purpose of this document is to define requirements of the Smart Library System. This Supplementary Specification lists the requirements that are not readily captured in the use cases of the use-case model. The Supplementary Specifications and the use-case model together capture a complete set of requirements on the system.
+
+### 4.2 Scope
+
+
+This Supplementary Specification applies to the Smart Library System This specification defines the non-functional requirements of the system; such as reliability, usability, performance, and supportability, as well as functional requirements that are common across a number of use cases. (The functional requirements are defined in the Use Case Specifications.)
+
 ### 4.2 Performance
+
+- Due to the total number of users and administrators may exceed 5,000, the system shall support up to 2000 simultaneous users against the central database at any given time, and up to 500 simultaneous users against the local servers at any time.
+- The system must respond to each request within one second.
+- The system must be able to process at least 300 requests concurrently, and it must be able to complete 90% of all requests within 2 minutes.
 
 ### 4.3 Reliability
 
+Not considering network failing, the system shall be available 24 hours a day 7 days a week, with no more than 1% down time. Specially, the system must be 100% operational in 99.9% of the calendar year during some special time in a year(like winter and summer vocation or postgraduate examinations period).
+
 ### 4.4 Security
 
-### 4.5 Maintainability
+- The security of the system includes authentication, access control, data integrity and data privacy. 
+- The system has a centralized database and will not allow inventory data or other important data to be stored outside of its servers. Also, this system assumes that only the user or whoever he/she allows will have access to his/her user interface.
+- Users must be authenticated with a user name and password. 
+- A user who wants to change his/her user password must verify himself/herself by inputting a right verification code.
+- A user who forget his/her name and want to recover it must apply to the administrator. 
+- Sensitive information should be stored in the database with strong encryption algorithm, and transmission information should be encrypted to protect privacy.
+- Only the administrator has the permission to change the information of the inventory, the public users only have access to view the information.
+
+### 4.5 Supportability
+
+- In case of system error, operation and maintenance personnel can diagnose and solve the problem within 2 hours.
+- The system should be easy to expand, and the code should be conducive to the realization of new functions.
+- This system should update as well as back up data regularly.
+- The most likely places to go wrong are high concurrency time such as vocation or when a academic forum is held, one of the solution is to hence it's data processing capabilities by using more appropriate data base.
 
 ### 4.6 Comprehensibility
 
+The text and buttons in the GUI should be friendly for teachers and students.
+
+The system shall provide Web pages that can run on multiple platforms.
+
 ### 4.7 Design constraints
+
+- We should use java to implement it's logical section.
+- Use html to display the pages
+- Use MySql to store data and implement data-related operations 
 
 ## 5. References
 
