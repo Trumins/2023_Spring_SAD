@@ -183,9 +183,9 @@ Use Case:Register account
 
 ### 3.3 Book Borrowing Management System
 
-***use case diagram***
+**use case diagram**
 
-![wxl-BBW-use case diagram](C:\Users\wangxinglin\Desktop\wxl-BBW-use%20case%20diagram.png)
+![wxl-BBW-use case diagram](picture/wxl-BBW-use case diagram.png)
 
 **Concise Text Descriptions**
 
@@ -223,7 +223,7 @@ View the user's personal information. Includingthe user's permission, borrowing 
 
 **Activity Diagram**
 
-![wxl-BBW-activity diagram](C:\Users\wangxinglin\Desktop\wxl-BBW-activity%20diagram.png)
+![wxl-BBW-activity diagram](picture/wxl-BBW-activity diagram.png)
 
 **Detailed Specification for Use Case**
 
