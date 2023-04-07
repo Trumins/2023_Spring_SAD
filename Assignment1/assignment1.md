@@ -1,3 +1,7 @@
+---
+typora-root-url: picture
+---
+
 <center><font size=5 color=#008b8b>Content</font></center>
 
 [TOC]
@@ -74,7 +78,7 @@ The university library provides a large number of book resources for students an
 
 **Use Case Diagram**
 
-![](C:\Users\18763\Desktop\作业\系统分析与设计\第1次\AMS(format undetermined)\User account management system.png)
+![](/User account management system.png)
 
 **Concise Text Descriptions** 
 
@@ -106,7 +110,7 @@ Use Case:Login account
 
 | **USE CASE**          | **Login account**                                            |
 | --------------------- | ------------------------------------------------------------ |
-| **ID**                | UCxx                                                         |
+| **ID**                | UC01                                                         |
 | **Specification**     | This use case allows the user to log  in to the account by entering the correct username, password, and  verification code. |
 | **Actors**            | **Users**                                                    |
 | **Pre-Condition**     | The user already has his own account  in the system.         |
@@ -114,13 +118,13 @@ Use Case:Login account
 | **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case  ends;  3a. If the system confirms that the  verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login  fails and the use case ends;  4a. If the system confirms that the  password entered by the user is incorrect, the system displays a message  indicating "Incorrect username or Password". The login fails and  the use case ends. |
 | **Post-Condition**    | After successful login,  users can log out of the account, change the login password, or modify their  information. |
 
-![Login_account](C:\Users\18763\Desktop\作业\系统分析与设计\第1次\AMS(format undetermined)\Login_account.png)
+![](/Login_account.png)
 
 Use Case:Register account
 
 | **USE CASE**          | **Register account**                                         |
 | --------------------- | ------------------------------------------------------------ |
-| **ID**                | UCxx                                                         |
+| **ID**                | UC07                                                         |
 | **Specification**     | This use case allows public users to  register new accounts on their own. |
 | **Actors**            | **Public  users**                                            |
 | **Pre-Condition**     | Public users access the system for the  first time and do not have their own accounts. |
@@ -128,7 +132,7 @@ Use Case:Register account
 | **Alternative Flows** | a. If the public user exits the page  at any of the first 5 steps, registration fails and the use case ends;  2a. If the system confirms that the  username entered by the public user has been used, the system displays a  prompt "The username has been used" and returns to step 1;  4a. If the system finds that the  password entered by the public user is different from the confirmed password,  the system displays the message "Confirm password is different from the  password" and returns to step 3;  6a. If the public user does not  receive the verification email, they can modify the email address and click  " Reverify " or directly click " Reverify". Then the  system will resend the verification email, and the previous verification  email will become invalid;  6b. If the public user does not  complete the authentication within 48 hours of the validity period of the  verification email, the account registration fails and the use case ends. |
 | **Post-Condition**    | After successfully  registering an account, the public user can log in to the system through the  account. |
 
-![Register_account](C:\Users\18763\Desktop\作业\系统分析与设计\第1次\AMS(format undetermined)\Register_account.png)
+![](/Register_account.png)
 
 ### 3.3 Book Borrowing Management System
 
