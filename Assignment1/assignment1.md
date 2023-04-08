@@ -2,13 +2,13 @@
 
 [toc]
 
-<font size=7 >**1.Introduction**</font>
+## 1.Introduction
 
-<font size=6 >**1.1 Development background**</font>
+### 1.1 Development background
 
 The university library provides a large number of book resources for students and teachers, which is an important space for learning and exchanging ideas. Therefore, it is very necessary to establish an efficient and reliable library information management system. At the same time, human society is experiencing a new round of technological and industrial revolutions led by artificial intelligence, big data, and other technologies. At present, these emerging technologies are not fully applied in the field of library management. Based on the concept of Smart +, we believe that the library management system should provide more convenient and efficient information and knowledge services for schools and society by transforming it into intelligent systems. Through software engineering and big data technologies, we plan to develop an intelligent university library management system.
 
-<font size=6 >**1.2 Functions of the System**</font>
+### 1.2 Functions of the System
 
 - The system can realize the management of book resources and support the classification, cataloguing, labeling, indexing, input, modification, deletion, and other functions of the collection of books.
 - The system can manage the borrowing information and support readers' borrowing, returning, renewing, and other businesses.
@@ -17,7 +17,7 @@ The university library provides a large number of book resources for students an
 - The system supports the management of venue resources and users' reservations of venues.
 - The system supports the reader communication function, which can analyze readers' reading preferences according to their borrowing records, and help readers find other readers with the same interests to communicate according to their reading preferences.
 
-<font size=6 >**1.3 Target users**</font>
+### 1.3 Target users
 
 - Students: Students of the university can inquire, borrow and renew books on the system, and deal with violations. They can make reservations for seats. They can log on to the forum to express views and communicate with people who have similar reading interests.
 - Teachers: similar to the authority of students in the university. But the authority to query and borrow books and periodicals is higher.
@@ -25,12 +25,12 @@ The university library provides a large number of book resources for students an
 - Librarian: Manage all the library books borrowing and returning through this system. Check out the information and borrowing status of the books. Manage the borrowing rights of various users.
 - Administrator: Review forum posts in the system and deal with illegal users.
 
-<font size=6 >**1.4 Originalities of the System**</font>
+### 1.4 Originalities of the System
 
 1. Forum functions and readership. In the future, the system will improve the forum function, and establish their own readership circle for different reader groups. In the forum, users can have academic exchanges but also can put forward corresponding suggestions and opinions for the improvement of the library management system. In the reader circle, readers with the same reading hobby can make friends and exchange their reading insights.
 2. The application of big data. Big data technology is used to collect users' daily bibliographic journal query, action location track, reading period, and other information, so as to understand the knowledge needs and reading habits of each user. In order, according to these analysis results, the system can timely complete and update the books and periodicals that are the most concerned by user groups and that has been the most frequently retrieved and borrowed, and push the latest knowledge information in each professional field required by users according to the personalized needs of users.
 
-<font size=7 >**2. Glossary of Terms**</font>
+## 2. Glossary of Terms
 
 | Terms                                 | Definition                                                                                                                                                                                                                                                                                                            |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,9 +106,9 @@ Use Case : Administrator’s Operation
 | **Alternative Flows** | After checking messages, the administrator may find that there’s nothing to do, then the use case should end immediately.                                                                                  |
 | **Post-Condition**    | After successfully operate, the library’s book inventory has changed, the users may find more books and have more convenient experience and the administrator should wait the next change.                 |
 
-Use Case : User give suggestions
+Use Case : User Give Suggestions
 
-| USE CASE                    | User give suggestions                                                                                                                                                                                                    |
+| USE CASE                    | User Give Suggestions                                                                                                                                                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ID                          | UC02                                                                                                                                                                                                                      |
 | **Specification**     | This use case allows users to give some suggestions depend on their experience.                                                                                                                                          |
@@ -151,9 +151,9 @@ Use Case : User give suggestions
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-Use Case: Login account
+Use Case: Login Account
 
-| **USE CASE**          | **Login account**                                            |
+| **USE CASE**          | **Login Account**                                            |
 | --------------------- | ------------------------------------------------------------ |
 | **ID**                | UC03                                                         |
 | **Specification**     | This use case allows the user to log  in to the account by entering the correct username, password, and  verification code. |
@@ -165,9 +165,9 @@ Use Case: Login account
 
 ![](picture/Login_account.png)
 
-Use Case: Register account
+Use Case: Register Account
 
-| **USE CASE**          | **Register account**                                         |
+| **USE CASE**          | **Register Account**                                         |
 | --------------------- | ------------------------------------------------------------ |
 | **ID**                | UC04                                                         |
 | **Specification**     | This use case allows public users to  register new accounts on their own. |
@@ -183,7 +183,7 @@ Use Case: Register account
 
 <font size=4 >**Use Case Diagram**</font>
 
-![wxl-BBW-use case diagram](picture/wxl-BBW-use case diagram.png)
+![wxl-BBW-use-case-diagram](picture/wxl-BBW-use-case-diagram.png)
 
 <font size=4 >**Concise Text Descriptions**</font>
 
@@ -203,13 +203,13 @@ Use Case: Register account
 
 **Query borrower information:** View the user's personal information. Includingthe user's permission, borrowing records, and so on
 
-**Activity Diagram**
-
-![wxl-BBW-activity diagram](picture/wxl-BBW-activity diagram.png)
-
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-| **USE CASE**          | **Borrow books**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+![wxl-BBW-activity-diagram](picture/wxl-BBW-activity-diagram.png)
+
+Use Case: Borrow Books
+
+| **USE CASE**          | **Borrow Books**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ID**                | UC05                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Specification**     | The user queries the books they want to borrow and applies for borrowing.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -219,7 +219,9 @@ Use Case: Register account
 | **Alternative Flows** | a. If the information entered is incorrect format, the system will prompt the user to re-enter the information of the book.                                           b. If the query book does not exist or the book is not included in the library, the system will indicate that the book does not exist or the library does not include the book, and prompt to requery.                                                       c. If the inventory of the book is insufficient, the system will indicate that the inventory of books is insufficient, and recommend similar books.                         d. If the user does not have borrowing authority, the system will prompt the user not has the right to borrow and refuses to borrow the book. |
 | **Post-Condition**    | Users borrow books successfully.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-| **USE CASE**          | Return books                                                                                                                                                                                                                                                                                                                   |
+Use Case: Return Books
+
+| **USE CASE**          | **Return Books**                                                                                                                                                                                                                                                                                                                   |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **ID**                | UC06                                                                                                                                                                                                                                                                                                                           |
 | **Specification**     | The user enters the information about the book he wants to return, and the system shows the borrowing situation of the book.                                                                                                                                                                                                   |
@@ -231,11 +233,11 @@ Use Case: Register account
 
 ### 3.4 Venue Management System
 
-**Use Case Diagram**
+<font size=4 >**Use Case Diagram**</font>
 
 ![UCDofVMS](picture/USDofVMS.png)
 
-**Detailed Specification for Use Case**
+<font size=4 >**Detailed Specification for Use Case**</font>
 
 Use Case:Enter Open Spaces
 
