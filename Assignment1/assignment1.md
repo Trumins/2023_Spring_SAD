@@ -283,27 +283,27 @@ Use Case: Check in to a Study Room
 
 <font size=4 >**Concise Text Descriptions**</font>
 
-**Search for Readers:** The user searches other readers in the forum.
+**Search for Readers:** The user utilizes the search function within the forum to find and connect with other readers.
 
-**View Recommended Readers:** The user views readers who have similar preferences. This is based on big data analysis.
+**View Recommended Readers:** The user views a list of recommended readers who have similar reading preferences. These recommendations are generated through big data analysis of the user’s reading habits and interests.
 
-**View Posts:** The user views posts in the forum. The posts are displayed based on user preference analysed with big data techniques.
+**View Posts:** The user views posts within the forum. The posts are displayed in an order that is determined by the user’s preferences, which are analyzed using big data techniques.
 
-**Bookmark Favorite Posts:** The user marks a post he/she likes so that the user can easily view it later.
+**Bookmark Favorite Posts:** The user bookmarks posts that he/she finds interesting or useful. This allows the user to easily access and view these posts at a later time.
 
-**Share Thoughts:** The user expresses his/her opinion to communicate with other readers in the forum.
+**Share Thoughts:** The user expresses his/her opinions and thoughts to communicate with other readers in the forum.
 
-**Reply to Posts:** The user replys to a post to express his/her opinions about the post in the forum.
+**Reply to Posts:** The user replies to posts in the forum to express his/her opinions about the content of the post.
 
-**Create Posts:** The user creates a post to share his/her thoughts about reading in the forum.
+**Create Posts:** The user creates posts in the forum to share his/her thoughts about reading.
 
-**Update Own Posts:** The user makes changes to the posts he/she has posted before.
+**Update Own Posts:** The user makes changes to posts that they have previously created. This includes updating the content of the post or deleting the post entirely.
 
-**Report Inappropriate Posts:** The user tell the administrator when seeing a post with inappropriate content including violence, insults, pornography, etc.
+**Report Inappropriate Posts:** The user reports a post with inappropriate content to the administrator. Inappropriate content may include offensive language, hate speech, graphic violence, or other types of content that violate the platform’s community guidelines.
 
-**Delete Inappropriate Posts:** The administrator delete the inappropriate post reported from a user.
+**Delete Inappropriate Posts:** The administrator deletes an inappropriate post that has been reported by a user.
 
-**Ban the Account:** The administrator choose to ban the account for too many times of posting inappropriate content or other reasons.
+**Ban the Account:** The administrator chooses to ban a user’s account due to repeated violations of the platform’s terms of service, such as posting inappropriate content. The administrator may also ban the account for other reasons, as determined by the platform’s community guidelines.
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
@@ -338,7 +338,7 @@ Use Case: Reply to Posts
 | **USE CASE**          | Reply to Posts |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ID**                | UC12                                                                                                                                                                                                                                                                         |
-| **Specification**     | This use case describes how a User replys to a post to express his/her opinions about the post in the forum. |
+| **Specification**     | This use case describes how a User replies to a post to express his/her opinions about the post in the forum. |
 | **Actors**            | **Users**                                                                                                                                                                                                                                                            |
 | **Pre-Condition**     | The user must be logged onto the system before this use case begins.                                           |
 | **Basic Flow**        | This use case starts when the User wishes to reply to a post in the forum.<br/>1. include (View Posts).<br/>2. The User clicks the reply box.<br/>3. The User types the reply.<br/>4. The User clicks “Reply”.<br/>5. The system attaches the reply to the post and displays the reply on the page.|
