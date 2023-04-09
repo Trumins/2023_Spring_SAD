@@ -2,7 +2,7 @@
 
 [toc]
 
-## 1.Introduction
+## 1. Introduction
 
 ### 1.1 Development background
 
@@ -151,7 +151,7 @@ Use Case: Login Account
 | **Actors**            | **Users**                                                    |
 | **Pre-Condition**     | The user already has his own account in the system.          |
 | **Basic Flow**        | When the user enters the login page, the use case begins.<br/>1. The user enters the username, password, and verification code in the input box, and then clicks  "Login". <br/>2. The system confirms that the verification code entered by the user is correct.<br/>3. The system determines that the username and password entered by the user match.<br/>4. The user logs in to the account successfully, and the use case ends. |
-| **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case ends.<br/>3a. If the system confirms that the verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login fails and the use case ends.<br/>4a. If the system confirms that the  password entered by the user is incorrect, the system displays a message indicating "Incorrect username or Password". The login fails and the use case ends. |
+| **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case ends.<br/>b. If the system confirms that the verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login fails and the use case ends.<br/>c. If the system confirms that the password entered by the user is incorrect, the system displays a message indicating "Incorrect username or Password". The login fails and the use case ends. |
 | **Post-Condition**    | After successful login,  users can log out of the account, change the login password, or modify their information. |
 
 ![](picture/Login_account.png)
@@ -165,8 +165,8 @@ Use Case: Register Account
 | **Actors**            | **Public  users**                                            |
 | **Pre-Condition**     | Public users access the system for the  first time and do not have their own accounts. |
 | **Basic Flow**        | The use case begins when  the public user goes to the login page and clicks "Register".<br/>1. The public user enters  the username wants to register in the input box and clicks "Next". <br/>2. The system confirms that  the entered user name has not been used. <br/>3. The public user enters  the password and the confirm password in the input box, and clicks “Next”.  <br/>4. The system confirms that  the password entered by the user is the same as the confirmed password;<br/>5. The public user enters  the email address wants to bind and clicks "Verify".<br/>6. The system sends a  verification email to the email address entered by the user, and the public user clicks the verification link in the verification email to pass the verification within 48 hours.<br/>7. The account is successfully registered, and the use case ends. |
-| **Alternative Flows** | a. If the public user exits the page  at any of the first 5 steps, registration fails and the use case ends.<br/>2a. If the system confirms that the  username entered by the public user has been used, the system displays a  prompt "The username has been used" and returns to step 1. <br/>4a. If the system finds that the  password entered by the public user is different from the confirmed password,  the system displays the message "Confirm password is different from the  password" and returns to step 3. <br/>6a. If the public user does not receive the verification email, they can modify the email address and click  " Reverify " or directly click " Reverify". Then the  system will resend the verification email, and the previous verification  email will become invalid.<br/>6b. If the public user does not complete the authentication within 48 hours of the validity period of the verification email, the account registration fails and the use case ends. |
-| **Post-Condition**    | After successfully  registering an account, the public user can log in to the system through the  account. |
+| **Alternative Flows** | a. If the public user exits the page at any of the first 5 steps, registration fails and the use case ends.<br/>b. If the system confirms that the  username entered by the public user has been used, the system displays a  prompt "The username has been used" and returns to step 1. <br/>c. If the system finds that the  password entered by the public user is different from the confirmed password,  the system displays the message "Confirm password is different from the  password" and returns to step 3. <br/>d. If the public user does not receive the verification email, they can modify the email address and click  " Reverify " or directly click " Reverify". Then the system will resend the verification email, and the previous verification email will become invalid.<br/>e. If the public user does not complete the authentication within 48 hours of the validity period of the verification email, the account registration fails and the use case ends. |
+| **Post-Condition**    | After successfully registering an account, the public user can log in to the system through the account. |
 
 ![](picture/Register_account.png)
 
