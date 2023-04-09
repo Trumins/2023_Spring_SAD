@@ -10,7 +10,7 @@ The university library provides a large number of book resources for students an
 
 ### 1.2 Functions of the System
 
-- The system can realize the management of book resources and support the classification, cataloguing, labeling, indexing, input, modification, deletion, and other functions of the collection of books.
+- The system can realize the management of book resources and support the classification, cataloguing, labelling, indexing, input, modification, deletion, and other functions of the collection of books.
 - The system can manage the borrowing information and support readers' borrowing, returning, renewing, and other businesses.
 - The system supports the management of reader information and the operation of user account registration, login, and password modification. In addition, readers can be divided into teachers, students, and the public for separate management, providing different permissions for different types of readers.
 - The system supports a variety of terminals, enabling users to handle services online through various terminals.
@@ -39,7 +39,7 @@ The university library provides a large number of book resources for students an
 | **Student**                     | The person enrolled in classes at the university.                                                                                                                                                                                                                                                                     |
 | **Public user**                 | The system users are other than the students and teachers. Could be someone from the community near the University and so on. The system is open to society.                                                                                                                                                          |
 | **Account**                     | A representation of a user's identity in a system in which a user can access certain contents of the system only after logging in to his or her account.                                                                                                                                                              |
-| **Administrator**               | A person who has permission to create and delete accounts or change the book information in the system. Administrators execute the decrease or increase of books in this system.                                                                                                                                      |
+| **Administrator**               | A person who has permission to create and delete accounts or change the book information in the system. Administrators execute the decrease or increase of books in this system.                                                                                                                                     |
 | **Suggestion**                  | A piece of advice that is carried out by the users, will bring a more convenient experience to users if the advice is adopted.                                                                                                                                                                                        |
 | **Book Diagram**                | A diagram that stores all the information of all the books in the library, including the name, index, category, entry time, and the borrowing authority of different users of each book.                                                                                                                              |
 | **Forum**                       | An online discussion platform where users can post messages and reply to other users’ messages.                                                                                                                                                                                                                      |
@@ -47,13 +47,10 @@ The university library provides a large number of book resources for students an
 | **Bookmark**                    | A mark of a post so that the post can be easily accessed later.                                                                                                                                                                                                                                                                  |
 | **Open Space**                  | Space in the library building could be accessed by anyone with a SULMS(Smart University Library Management System) account. The open spaces have facilities including public PCs, tables and desks, bookshelves, study rooms, etc.                                                                                    |
 | **Study Room**                  | A room that could be used exclusively by one or a few users for studying purposes. Only teachers and students can use a study room. One must book a spare room before using it. If the user fails to arrive on time, he or she will be punished.                                                                      |
-| **Retrieve password**           | When a user forgets his or her account password, he or she can retrieve his or her password by entering his or her username and verifying the bound email address.                                                                                                                                                    |
-| **Borrow books:**               | Users with authority to borrow books stocked in the library.                                                                                                                                                                                                                                                          |
-| **Return books:**               | Users return the books they have borrowed from the library.                                                                                                                                                                                                                                                           |
-| **Search books:**               | The user enters the information of the book he wants to query, and the system displays the corresponding book.                                                                                                                                                                                                        |
-| **Renew books:**                | The user continues to borrow the books they are borrowing or pay fines for exceeding the borrowing period.                                                                                                                                                                                                            |
-| **Check the borrowing record:** | The user or the librarian queries the user's borrowing records. The borrowing record includes the books that users have already borrowed and the books that they are borrowing, as well as the borrowing time of each book. Based on this, the librarian can determine whether the user exceeds the borrowing period. |
-| **Manage the borrowing right:** | The librarian can manage the user's borrowing rights. Students, teachers, and public users have different permissions. In addition, the librarian can cancel the permission of the users who fail to return the books many times according to the regulations.                                                        |
+| **Password** | A series of letters or numbers that you must type into the library management system in order to be able to use it.                                 |
+| **Borrowing Record** | A borrowing record takes down information about book borrowing activities. For users, borrowing record has information like how many books he has borrowed, the title of the book, and the time and duration. For a book, the borrowing record has information about when the book is borrowed and returned. |
+| **Borrowing Right** | A user is allowed to borrow this book if he has the borrowing right over this specific book.                                                                                                                                                               |
+| **Authorization** | The official permission that was controlled by the Administrator for the users to use a study room etc.                                                                                                 |
 
 ## 3. Use case modeling
 
@@ -91,33 +88,27 @@ The university library provides a large number of book resources for students an
 
 Use Case : Administrator’s Operation
 
-| **USE CASE**          | **Administrator’s Operation**                                                                                                                                                                        |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **ID**                | UC01                                                                                                                                                                                                         |
-| **Specification**     | This use case allows the administrator to check user’s suggestions or look for the statistic laws to determine whether to buy new books or increase some books or decrease some special book’s inventory. |
-| **Actors**            | Administrators                                                                                                                                                                                              |
-| **Pre-Condition**     | The administrator already login.                                                                                                                                                                            |
-| **Basic Flow**        | When the administrator  login successfully, the use case begins;                                                                                                                                            |
-|                             | 1. The administrator first  check the message to find whether to change some books’ inventory or not.                                                                                                      |
-|                             | 2. Then, after receiving  information from users and statistic laws, the administrator know whether to  decrease or increase or buy new books.                                                              |
-|                             | 3. After that, the  administrator change the book inventory information and change the storage.                                                                                                             |
-|                             | 4. Then, give the  increased books or new books labels, index and catalogue them and place them  in right place.                                                                                            |
-|                             | 4. The administrator ends  his works, the use case ends.                                                                                                                                                    |
-| **Alternative Flows** | After checking messages, the administrator may find that there’s nothing to do, then the use case should end immediately.                                                                                  |
-| **Post-Condition**    | After successfully operate, the library’s book inventory has changed, the users may find more books and have more convenient experience and the administrator should wait the next change.                 |
+| **USE CASE**          | **Administrator’s Operation**                                |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC01                                                         |
+| **Specification**     | This use case allows the administrator to check users’ suggestions or look for the statistic laws to determine whether to buy new books or increase some books or decrease some special book inventory. |
+| **Actors**            | Administrators                                               |
+| **Pre-Condition**     | The administrator already login.                             |
+| **Basic Flow**        | When the administrator login successfully, the use case begins.<br/>1. The administrator first checks the message to find out whether to change some books’ inventory or not.<br/>2. Then, after receiving information from users and statistic laws, the administrator knows whether to decrease or increase or buy new books.<br/>3. After that, the administrator changes the book inventory information and changes the storage.<br/>4. Then, give the increased books or new books labels, index and catalogue them and place them in right place.<br/>5. The administrator ends his work, and the use case ends. |
+| **Alternative Flows** | a. After checking messages, the administrator may find that there’s nothing to do, and then the use case should end immediately. |
+| **Post-Condition**    | After successfully operating, the library’s book inventory has changed, the users may find more books and have a more convenient experience and the administrator should wait for the next change. |
 
 Use Case : User Give Suggestions
 
-| USE CASE                    | User Give Suggestions                                                                                                                                                                                                    |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ID                          | UC02                                                                                                                                                                                                                      |
-| **Specification**     | This use case allows users to give some suggestions depend on their experience.                                                                                                                                          |
-| **Actors**            | Public users                                                                                                                                                                                                             |
-| **Pre-Condition**     | Public users should use the library and book management system beforehand and have some experience to put forth.                                                                                                         |
-| **Basic Flow**        | The use case begins when the public user login successfully.                                                                                                                                                             |
-|                             | After the users submit their suggestions, this use case ends.                                                                                                                                                            |
-| **Alternative Flows** | The users may find that there is no need to give such a suggestion for the reason that the suggestion is hard to implement or the suggestion is only depend on his own experience and there is no commonality in others. |
-| **Post-conditions**   | After giving suggestions, the administrator should login to handle the suggestions. |
+| **USE CASE**          | **Give Suggestions**                                         |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC02                                                         |
+| **Specification**     | This use case allows users to give some suggestions depending on their experience. |
+| **Actors**            | Public users                                                 |
+| **Pre-Condition**     | Public users should use the library and book management system beforehand and have some experience to put forth. |
+| **Basic Flow**        | The use case begins when the public user login successfully.<br/>1. After the users submit their suggestions, this use case ends. |
+| **Alternative Flows** | a. The users may find that there is no need to give such a suggestion for the reason that the suggestion is hard to implement or the suggestion only depend on his own experience and there is no commonality in others. |
+| **Post-Condition**    | After giving suggestions, the administrator should log in to handle the suggestions |
 
 ### 3.2 Account Management System
 
@@ -156,12 +147,12 @@ Use Case: Login Account
 | **USE CASE**          | **Login Account**                                            |
 | --------------------- | ------------------------------------------------------------ |
 | **ID**                | UC03                                                         |
-| **Specification**     | This use case allows the user to log  in to the account by entering the correct username, password, and  verification code. |
+| **Specification**     | This use case allows the user to log in to the account by entering the correct username, password, and verification code. |
 | **Actors**            | **Users**                                                    |
-| **Pre-Condition**     | The user already has his own account  in the system.         |
-| **Basic Flow**        | When the user enters the  login page, the use case begins;<br/>1. The user enters the  username, password, and verification code in the input box, and then clicks  "Login"; <br/>2. The system confirms that  the verification code entered by the user is correct;<br/>3. The system determines  that the username and password entered by the user match;<br/>4. The user logs in to the  account successfully, and the use case ends. |
-| **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case  ends;<br/>3a. If the system confirms that the  verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login  fails and the use case ends;<br/>4a. If the system confirms that the  password entered by the user is incorrect, the system displays a message  indicating "Incorrect username or Password". The login fails and  the use case ends. |
-| **Post-Condition**    | After successful login,  users can log out of the account, change the login password, or modify their  information. |
+| **Pre-Condition**     | The user already has his own account in the system.          |
+| **Basic Flow**        | When the user enters the  login page, the use case begins.<br/>1. The user enters the  username, password, and verification code in the input box, and then clicks  "Login". <br/>2. The system confirms that  the verification code entered by the user is correct.<br/>3. The system determines  that the username and password entered by the user match.<br/>4. The user logs in to the  account successfully, and the use case ends. |
+| **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case ends.<br/>3a. If the system confirms that the verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login  fails and the use case ends.<br/>4a. If the system confirms that the  password entered by the user is incorrect, the system displays a message indicating "Incorrect username or Password". The login fails and the use case ends. |
+| **Post-Condition**    | After successful login,  users can log out of the account, change the login password, or modify their information. |
 
 ![](picture/Login_account.png)
 
@@ -175,7 +166,7 @@ Use Case: Register Account
 | **Pre-Condition**     | Public users access the system for the  first time and do not have their own accounts. |
 | **Basic Flow**        | The use case begins when  the public user goes to the login page and clicks "Register";<br/>1. The public user enters  the username wants to register in the input box and clicks "Next"; <br/>2. The system confirms that  the entered user name has not been used; <br/>3. The public user enters  the password and the confirm password in the input box, and clicks “Next”;  <br/>4. The system confirms that  the password entered by the user is the same as the confirmed password;<br/>5. The public user enters  the email address wants to bind and clicks "Verify";<br/>6. The system sends a  verification email to the email address entered by the user, and the public  user clicks the verification link in the verification email to pass the  verification within 48 hours;<br/>7. The account is  successfully registered, and the use case ends. |
 | **Alternative Flows** | a. If the public user exits the page  at any of the first 5 steps, registration fails and the use case ends;<br/>2a. If the system confirms that the  username entered by the public user has been used, the system displays a  prompt "The username has been used" and returns to step 1; <br/>4a. If the system finds that the  password entered by the public user is different from the confirmed password,  the system displays the message "Confirm password is different from the  password" and returns to step 3; <br/>6a. If the public user does not  receive the verification email, they can modify the email address and click  " Reverify " or directly click " Reverify". Then the  system will resend the verification email, and the previous verification  email will become invalid;<br/>6b. If the public user does not  complete the authentication within 48 hours of the validity period of the  verification email, the account registration fails and the use case ends. |
-| **Post-Condition**    | After successfully  registering an account, the public user can log in to the system through the  account. |
+| **Post-Condition**    | After successfully registering an account, the public user can log in to the system through the account. |
 
 ![](picture/Register_account.png)
 
@@ -187,21 +178,21 @@ Use Case: Register Account
 
 <font size=4 >**Concise Text Descriptions**</font>
 
-**Borrow books:** Userswith authority to borrow books stocked in the library.
+**Borrow books:** Users with authority to borrow books stocked in the library.
 
-**Return books:** Usersreturn the books they have borrowed from the library.
+**Return books:** Users return the books they have borrowed from the library.
 
-**Search books:** Theuser enters the information of the book he wants to query, and the systemdisplays the corresponding book.
+**Search books:** The user enters the information of the book he wants to query, and the system displays the corresponding book.
 
-**Renew books:** Theuser continues to borrow the books they are borrowing.
+**Renew books:** The user continues to borrow the books they are borrowing.
 
-**Pay the fine:** Userspay fines for exceeding the borrowing period.
+**Pay the fine:** Users pay fines for exceeding the borrowing period.
 
-**Check the borrowing record:** Theuser or the librarian queries the user's borrowing records. The borrowingrecord includes the books that users have already borrowed and the books thatthey are borrowing, as well as the borrowing time of each book. Based on this,the librarian can determine whether the user exceeds the borrowing period.
+**Check the borrowing record:** The user or the librarian queries the user's borrowing records. The borrowing record includes the books that users have already borrowed and the books that they are borrowing, as well as the borrowing time of each book. Based on this, the librarian can determine whether the user exceeds the borrowing period.
 
-**Manage the borrowing right:** Thelibrarian can manage the user's borrowing rights. Students, teachers, andpublic users have different permissions. In addition, the librarian can cancelthe permission of the users who fail to return the books many times accordingto the regulations
+**Manage the borrowing right:** The librarian can manage the user's borrowing rights. Students, teachers, and public users have different permissions. In addition, the librarian can cancel the permission of the users who fail to return the books many times according to the regulations
 
-**Query borrower information:** View the user's personal information. Includingthe user's permission, borrowing records, and so on
+**Query borrower information:** View the user's personal information. Including the user's permission, borrowing records, and so on
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
@@ -215,8 +206,8 @@ Use Case: Borrow Books
 | **Specification**     | The user queries the books they want to borrow and applies for borrowing.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **Actors**            | **User**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Pre-Condition**     | The user enters key information about the book to borrow in the system.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Basic Flow**        | 1. User enters the key information about the book.                             2. User clicks the 'query' button to query books.                               3. System retrieves the existence of books corresponding to the information entered by the user. If successful, display the details of the book.                          4. User applies for a library.                                               5. System views the book inventory. If sufficient, turn to 6.                      6. Check the user's borrowing authority. If available, then borrow successfully.                                                                                                                                    |
-| **Alternative Flows** | a. If the information entered is incorrect format, the system will prompt the user to re-enter the information of the book.                                           b. If the query book does not exist or the book is not included in the library, the system will indicate that the book does not exist or the library does not include the book, and prompt to requery.                                                       c. If the inventory of the book is insufficient, the system will indicate that the inventory of books is insufficient, and recommend similar books.                         d. If the user does not have borrowing authority, the system will prompt the user not has the right to borrow and refuses to borrow the book. |
+| **Basic Flow**        | 1. The user enters the key information about the book.<br/>2. User clicks the 'query' button to query books.<br/>3. System retrieves the existence of books corresponding to the information entered by the user. If successful, display the details of the book. <br/>4. User applies for a library. <br/>5. System views the book inventory. If sufficient, turn to 6.<br/>6. Check the user's borrowing authority. If available, then borrow successfully.                                                                                                   |
+| **Alternative Flows** | a. If the information entered is incorrect format, the system will prompt the user to re-enter the information of the book. <br/>b. If the query book does not exist or the book is not included in the library, the system will indicate that the book does not exist or the library does not include the book, and prompt to requery. <br/>c. If the inventory of the book is insufficient, the system will indicate that the inventory of books is insufficient, and recommend similar books.<br/>d. If the user does not have borrowing authority, the system will prompt the user not to have the right to borrow and refuses to borrow the book. |
 | **Post-Condition**    | Users borrow books successfully.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 Use Case: Return Books
@@ -227,8 +218,8 @@ Use Case: Return Books
 | **Specification**     | The user enters the information about the book he wants to return, and the system shows the borrowing situation of the book.                                                                                                                                                                                                   |
 | **Actors**            | **User**                                                                                                                                                                                                                                                                                                                 |
 | **Pre-Condition**     | The user has borrowed the book before.                                                                                                                                                                                                                                                                                         |
-| **Basic Flow**        | 1. User enters the information about the book you want to return.      2. User clicks the ‘return’ button to return the book.                             3. Query and show whether the book has exceeded the deadline. If the time limit is not exceeded, the book is returned successfully. |
-| **Alternative Flows** | 3.1 If the user exceeded the time limit, the system will prompt the user to pay the fee before returning the book.If the fine has been paid, returning success.                                                                                                                                                                |
+| **Basic Flow**        | 1. The user enters the information about the book you want to return.<br/>2. User clicks the ‘return’ button to return the book.<br/>3. Query and show whether the book has exceeded the deadline. If the time limit is not exceeded, the book is returned successfully. |
+| **Alternative Flows** | 3.1 If the user exceeded the time limit, the system will prompt the user to pay the fee before returning the book. If the fine has been paid, returning success.                                                                                                                                                               |
 | **Post-Condition**    | Users return books successfully.                                                                                                                                                                                                                                                                                               |
 
 ### 3.4 Venue Management System
@@ -237,9 +228,25 @@ Use Case: Return Books
 
 ![UCDofVMS](picture/USDofVMS.png)
 
+<font size=4 >**Concise Text Descriptions**</font>
+
+**Enter Open Spaces:** This use case happens when a user wanted to enter the library building in order to borrow and return books, and use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold.
+
+**Book for a Study Room:** In this use case, teachers and students will see information about the study rooms on the system interface. Users could book a study room by choosing a spare room, a time spot to enter the room and the duration. Users could only use the study room after booking one.
+
+**Check Authorization:** The study room is originally designed to meet the university's students and teachers' needs, so only they have the authority to use the study room. Public users could only enter open spaces and borrow books. Thus, this process must be done first when a user books a study room.
+
+**Choose a Time:** After logging in and checking authorization, the user will choose a vacant room and time in order to finish the booking behavior.
+
+**Check in to a Study Room:** Users must check in to a study room at the registered time. The user could either wipe the library card or enter the temporary password he or she get after booking. The room door will be unlocked after the check-in process.
+
+**Issue Punishment:** When a user doesn't arrive and check in on time, a punishment will be issued. This use case is developed to urge all the users to make full use of the study recourses.
+
+**Alter Authorization:** The administrator could change a user's authority of using the study room.
+
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-Use Case:Enter Open Spaces
+Use Case: Enter Open Spaces
 
 | **USE CASE**          | Enter Open Spaces                                                                                                                                                                                                                                  |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -247,8 +254,8 @@ Use Case:Enter Open Spaces
 | **Specification**     | This use case happens when a user wanted to enter the library building in order to borrow and return books, use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold. |
 | **Actors**            | Users                                                                                                                                                                                                                                              |
 | **Pre-Condition**     | User's account must be valid and active                                                                                                                                                                                                            |
-| **Basic Flow**        |                                                                                                                                                                                                                                                    |
-| **Alternative Flows** |                                                                                                                                                                                                                                                    |
+| **Basic Flow**        | 1. The user reaches the turnstile at the front gate of the library building.<br/>2. User verifies his or her identity at the smart device attached to the turnstile.<br/> 2.1 If the user has a library card, he or she could swipe the card.<br/> 2.2 The user could also enter his or her account number on the panel to get verification.<br/>3. The user walks through the turnstile and enters the open spaces. |
+| **Alternative Flows** | 1. The user reaches the turnstile at the front gate of the library building.<br/>2. User verifies his or her identity at the smart device attached to the turnstile.<br/> 2.1 If the user has a library card, he or she could swipe the card.<br/> 2.2 The user could also enter his or her account number on the panel to get verification.<br/>3. The user walks through the turnstile and enters the open spaces. |
 | **Post-Condition**    | After successfully entered the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room.                                                    |
 
 Use Case: Book a Study Room
@@ -259,8 +266,8 @@ Use Case: Book a Study Room
 | **Specification**     | In this use case, teachers and students will see information about the study rooms on the system interface. Users could book a study room by choosing a spare room, a time spot to enter the room and the duration. Users could only use the study room after booking one. |
 | **Actors**            | **Users**                                                                                                                                                                                                                                                            |
 | **Pre-Condition**     | The user must have a valid account and log in to the system and jump to the booking webpage.                                                                                                                                                                               |
-| **Basic Flow**        | .                                                                                                                                                                                                                                                                          |
-| **Alternative Flows** | .                                                                                                                                                                                                                                                                          |
+| **Basic Flow**        | 1. Users click the booking button.<br/>2. Check whether the user is authorized to use a study room(public users are not allowed to use study rooms).<br/>3. Users browse the information of all the available time periods of study rooms.<br/>4. Users choose a spare study room.<br/>5. Users choose an available time period.<br/>6. Users confirm the booking information.<br/>7. Users get a temporary password to enter the chosen study room. |
+| **Alternative Flows** | a. There are no vacant rooms: users could not choose rooms and will be directed to leave this page.<br/>b. The room chosen has no vacancy: users could not choose a time(step 5)<br/>c. The user is not authorized to use the study room: The user will be informed when clicking the booking button and could not enter step 3. |
 | **Post-Condition**    | Users could check in to the study room at due time.                                                                                                                                                                                                                        |
 
 Use Case: Check in to a Study Room
@@ -271,8 +278,8 @@ Use Case: Check in to a Study Room
 | **Specification**     | Users must check in to a study room at the registered time. The user could either wipe the library card or enter the temporary password he or she get after booking. The room door will be unlocked after the check-in process. |
 | **Actors**            | Teachers and students                                                                                                                                                                                                           |
 | **Pre-Condition**     | The user must have successfully booked a spare study room already. The user must have already entered the open spaces.                                                                                                          |
-| **Basic Flow**        |                                                                                                                                                                                                                                 |
-| **Alternative Flows** |                                                                                                                                                                                                                                 |
+| **Basic Flow**        | 1. Users reach the door of the room he or she booked.<br/>2. Users check-in:<br/> 2.1. If the user has a library card, he could swipe the card to check in.<br/> 2.2. If the user doesn’t have a card, he could enter the temporary password through the panel.<br/>3. The system unlocks the door so that the user could get into the study room. |
+| **Alternative Flows** | a. The user enters the wrong temporary password: he will be given 5 more times to enter the correct password, otherwise, he could not check-in and use the room.<br/>b. The user check-in 20 minutes later than the booked time spot: The user will be punished, he could not use the study room for the next 5 days. |
 | **Post-Condition**    | none                                                                                                                                                                                                                            |
 
 ### 3.5 Reader Communication System
