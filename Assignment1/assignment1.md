@@ -84,7 +84,7 @@ The university library provides a large number of book resources for students an
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-![](picture/gyy_activity.png)
+![](./picture/gyy_Activity_graph.png)
 
 Use Case : Administrator’s Operation
 
@@ -174,7 +174,7 @@ Use Case: Register Account
 
 <font size=4 >**Use Case Diagram**</font>
 
-![wxl-BBW-use-case-diagram](picture/wxl-BBW-use-case-diagram.png)
+![](./picture/wxl_BBW_UC_diagram.png)
 
 <font size=4 >**Concise Text Descriptions**</font>
 
@@ -196,7 +196,7 @@ Use Case: Register Account
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-![wxl-BBW-activity-diagram](picture/wxl-BBW-activity-diagram.png)
+![](./picture/wxl_BBW_Activity_diagram.png)
 
 Use Case: Borrow Books
 
@@ -226,7 +226,7 @@ Use Case: Return Books
 
 <font size=4 >**Use Case Diagram**</font>
 
-![UCDofVMS](picture/USDofVMS.png)
+![](./picture/VMS_UC_diagram.png)
 
 <font size=4 >**Concise Text Descriptions**</font>
 
