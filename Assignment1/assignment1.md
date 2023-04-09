@@ -352,6 +352,10 @@ Use Case: Reply to Posts
 | **Alternative Flows** | a. At any point, the User may leave the page.<br/>b. If, in step 4 where the post was already deleted, the system displays an error message and the use case terminates. |
 | **Post-Condition**    | If the use case was successful, a new reply is posted below the post.  |
 
+### 3.6 Complete Use Case Diagram
+
+![](picture/Overview.png)
+
 ## 4. Supplementary Specification
 
 ### 4.1 Objectives
