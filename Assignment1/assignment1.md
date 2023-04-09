@@ -50,7 +50,7 @@ The university library provides a large number of book resources for students an
 | **Password** | A series of letters or numbers that you must type into the library management system in order to be able to use it.                                 |
 | **Borrowing  Record** | A borrowing record takes down information about book borrowing activities. For users, borrowing record has information like how many books he has borrowed, the title of the book, and the time and duration. For a book, the borrowing record has information about when the book is borrowed and returned. |
 | **Borrowing Right** | A user is allowed to borrow this book if he has the borrowing right over this specific book.                                                                                                                                                               |
-| **Authorization** | The official permission that was controlled by the Administrator for the users to use a study room etc.                                                                                                 |
+| **Authorization** | The official permission that was controlled by the Administrator for the users to use a study room, etc.                                                                                                 |
 
 ## 3. Use case modeling
 
@@ -84,8 +84,6 @@ The university library provides a large number of book resources for students an
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-![](./picture/gyy_Activity_graph.png)
-
 Use Case : Administrator’s Operation
 
 | **USE CASE**          | **Administrator’s Operation**                                |
@@ -109,6 +107,10 @@ Use Case : User Give Suggestions
 | **Basic Flow**        | The use case begins when the public user login successfully.<br/>1. After the users submit their suggestions, this use case ends. |
 | **Alternative Flows** | a. The users may find that there is no need to give such a suggestion for the reason that the suggestion is hard to implement or the suggestion is only depend on his own experience and there is no commonality in others. |
 | **Post-Condition**    | After giving suggestions, the administrator should login to handle the suggestions |
+
+<font size=4 >**Activity Diagram for All Use Cases**</font>
+
+![](./picture/gyy_Activity_graph.png)
 
 ### 3.2 Account Management System
 
@@ -142,8 +144,6 @@ Use Case : User Give Suggestions
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-![](picture/Login_account.png)
-
 Use Case: Login Account
 
 | **USE CASE**          | **Login Account**                                            |
@@ -156,7 +156,7 @@ Use Case: Login Account
 | **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case ends.<br/>b. If the system confirms that the verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login fails and the use case ends.<br/>c. If the system confirms that the password entered by the user is incorrect, the system displays a message indicating "Incorrect username or Password". The login fails and the use case ends. |
 | **Alternative Flows** | a. At any point in the login process,  the user may exit the page. In this case, the login fails and the use case ends.<br/>b. (supplement for 3) If the system confirms that the verification code entered by the user is incorrect, a message "Verification Code error" is displayed. The login fails and the use case ends.<br/>c. (supplement for 4) If the system confirms that the  password entered by the user is incorrect, the system displays a message indicating "Incorrect username or Password". The login fails and the use case ends. |
 
-![](picture/Register_account.png)
+![](picture/Login_account.png)
 
 Use Case: Register Account
 
@@ -169,6 +169,8 @@ Use Case: Register Account
 | **Basic Flow**        | The use case begins when  the public user goes to the login page and clicks "Register".<br/>1. The public user enters  the username wants to register in the input box and clicks "Next". <br/>2. The system confirms that  the entered user name has not been used. <br/>3. The public user enters  the password and the confirm password in the input box, and clicks “Next”.  <br/>4. The system confirms that  the password entered by the user is the same as the confirmed password;<br/>5. The public user enters  the email address wants to bind and clicks "Verify".<br/>6. The system sends a  verification email to the email address entered by the user, and the public user clicks the verification link in the verification email to pass the verification within 48 hours.<br/>7. The account is successfully registered, and the use case ends. |
 | **Alternative Flows** | a. If the public user exits the page at any of the first 5 steps, registration fails and the use case ends.<br/>b. If the system confirms that the  username entered by the public user has been used, the system displays a  prompt "The username has been used" and returns to step 1. <br/>c. If the system finds that the  password entered by the public user is different from the confirmed password,  the system displays the message "Confirm password is different from the  password" and returns to step 3. <br/>d. If the public user does not receive the verification email, they can modify the email address and click  " Reverify " or directly click " Reverify". Then the system will resend the verification email, and the previous verification email will become invalid.<br/>e. If the public user does not complete the authentication within 48 hours of the validity period of the verification email, the account registration fails and the use case ends. |
 | **Post-Condition**    | After successfully registering an account, the public user can log in to the system through the account. |
+
+![](picture/Register_account.png)
 
 ### 3.3 Book Borrowing Management System
 
@@ -196,8 +198,6 @@ Use Case: Register Account
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-![](./picture/wxl_BBW_Activity_diagram.png)
-
 Use Case: Borrow Books
 
 | **USE CASE**          | **Borrow Books**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -221,6 +221,10 @@ Use Case: Return Books
 | **Basic Flow**        | 1. The user enters the information about the book you want to return. <br/>2. User clicks the ‘return’ button to return the book.<br/>3. Query and show whether the book has exceeded the deadline. If the time limit is not exceeded, the book is returned successfully. |
 | **Alternative Flows** | (supplement for 3) If the user exceeded the time limit, the system will prompt the user to pay the fee before returning the book. If the fine has been paid, returning success.                                                                                                                                            |
 | **Post-Condition**    | Users return books successfully.                                                                                                                                                                                                                                                                                               |
+
+<font size=4 >**Activity Diagram for All Use Cases**</font>
+
+![](./picture/wxl_BBW_Activity_diagram.png)
 
 ### 3.4 Venue Management System
 
@@ -314,8 +318,6 @@ Use Case: Check in to a Study Room
 
 <font size=4 >**Detailed Specification for Use Case**</font>
 
-![lhc_ViewPosts_AD](picture/lhc_ViewPosts_AD.png)
-
 Use Case: View Posts
 
 | **USE CASE**          | View Posts |
@@ -327,6 +329,8 @@ Use Case: View Posts
 | **Basic Flow**        | This use case starts when the User wishes to view posts in the forum.<br/>1. The User enters the forum page.<br/>2. The system displays posts and topics on the page.<br/>3. The User clicks a post.<br/>4. The system creates a new page and displays the post content.<br/>5. The User views the post content.|
 | **Alternative Flows** | a. At any point, the User may leave the page.<br/>b. If, after step 2, the User may click a topic. If this occurs, the system displays posts from the selected topic to replace the originally displayed posts.<br/>c. If, in step 5, the User may click “Bookmark” to bookmark the post. If this occurs, the system adds the post to the User’s bookmark collection and shows a bookmarked flag. |
 | **Post-Condition**    | If the User bookmarked a post, the post is added to his/her bookmark collection.  |
+
+![lhc_ViewPosts_AD](picture/lhc_ViewPosts_AD.png)
 
 Use Case: Create Posts
 
