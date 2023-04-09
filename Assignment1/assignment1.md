@@ -286,6 +286,8 @@ Use Case: Check in to a Study Room
 | **Alternative Flows** | a. The user enters the wrong temporary password: he will be given 5 more times to enter the correct password, otherwise, he could not check in and use the room.<br/>b. The user check-in 20 minutes later than the booked time spot: The user will be punished, he could not use the study room for the next 5 days. |
 | **Post-Condition**    | none                                                                                                                                                                                                                            |
 
+![ActivityDiagramofBookRooms.png](picture/ActivityDiagramofBookRooms.png)
+
 ### 3.5 Reader Communication System
 
 <font size=4 >**Use Case Diagram**</font>
