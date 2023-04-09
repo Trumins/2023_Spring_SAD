@@ -433,7 +433,7 @@ This article analyzes the current situation and limitations of the digital libra
 
 ### 7.1 Persona
 
-The purpose of 
+The purpose of this system is to provide users with a convenient access to more resources and more possibile usage of the resources. Based on our scope, in the early step of exploring system functions, we should find the expected users' true needs. Persona is a good way to summarizes users personality and values.
 
 - **Ted**
 
