@@ -1,3 +1,5 @@
+![](./picture/cover.png)
+
 <center><font size=5 color=#008b8b>Content</font></center>
 
 [toc]
@@ -428,6 +430,22 @@ This article analyzes the present situation and the deficiency of library manage
 This article analyzes the current situation and limitations of the digital library management system, and designs a digital library management system combining the relevant technologies of big data and cloud storage, which has functions such as intelligent query, literature association, data statistics, big data user analysis, literature synchronous upload and cloud progress.
 
 ## 6. Contributions
+
+We divided this Smart Library System into five pieces, and the division of labor within the group was average and clear, as follows:
+
+1. Book_Borrowing_System : Wang Xinglin
+2. Boon_Management_System : Ge Yuyang
+3. Venue_Managemnet_System : Ding Yimin
+4. Reader_communication_System : Li Haocheng
+5. Account_Management_System : Wang Jingyue
+6. Introduction : Wang Xinglin
+7. References : Wang Jing yue
+8. Supplementary : Ge Yuyang
+9. Agile analysis : Ding Yimin
+10. Summarize the use case diagram : Wang Jingyue
+11. Summarize the final document : All members have participated in this part
+12. Beautify the final document : Li Haocheng
+13. Optimize details in final document : Ding Yimin and Ge Yuyang
 
 ## 7. Agile Requirements Gathering and Analysis
 
