@@ -1,0 +1,4 @@
+User删除了Profession属性
+新建了Borrowers类，继承自User，属性和函数与原来的CampusUser类一致
+PublicUser和CampusUser继承Borrowers
+
