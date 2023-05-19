@@ -2414,7 +2414,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -108,
-											"top": -82,
+											"top": -66,
 											"height": 13
 										},
 										{
@@ -2425,7 +2425,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 1109,
-											"top": 742,
+											"top": 710,
 											"width": 215.89013671875,
 											"height": 13,
 											"text": "BookBorrowManagementSystem"
@@ -2439,7 +2439,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -108,
-											"top": -82,
+											"top": -66,
 											"width": 90.00341796875,
 											"height": 13,
 											"text": "(from Model)"
@@ -2453,14 +2453,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -108,
-											"top": -82,
+											"top": -66,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1104,
-									"top": 735,
+									"top": 703,
 									"width": 225.89013671875,
 									"height": 25,
 									"stereotypeLabel": {
@@ -2483,14 +2483,17 @@
 								},
 								{
 									"$ref": "AAAAAAGIMdhiHQwWbiE="
+								},
+								{
+									"$ref": "AAAAAAGINCyuZyJhJ58="
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 1104,
-							"top": 720,
+							"top": 688,
 							"width": 225.89013671875,
-							"height": 201,
+							"height": 233,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIMdK2IAq6sg8="
 							}
@@ -2756,7 +2759,7 @@
 											"font": "Arial;13;1",
 											"left": 593,
 											"top": 759,
-											"width": 195,
+											"width": 204.775390625,
 											"height": 13,
 											"text": "Update&Use Knowledge Graph"
 										},
@@ -2791,7 +2794,7 @@
 									"font": "Arial;13;0",
 									"left": 588,
 									"top": 752,
-									"width": 205,
+									"width": 214.775390625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGIMc51kgoDkbk="
@@ -2878,7 +2881,7 @@
 							"containerChangeable": true,
 							"left": 568,
 							"top": 752,
-							"width": 225,
+							"width": 234.775390625,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIMc51kgoCmug="
@@ -3109,8 +3112,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -128,
-											"top": -192,
+											"left": -112,
+											"top": -288,
 											"height": 13
 										},
 										{
@@ -3120,11 +3123,11 @@
 												"$ref": "AAAAAAGIMdg5ugvA32I="
 											},
 											"font": "Arial;13;1",
-											"left": 1137,
-											"top": 791,
-											"width": 85.07763671875,
+											"left": 1145,
+											"top": 743,
+											"width": 88.841796875,
 											"height": 13,
-											"text": "Component1"
+											"text": "Borrow Books"
 										},
 										{
 											"_type": "LabelView",
@@ -3134,8 +3137,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -128,
-											"top": -192,
+											"left": -112,
+											"top": -288,
 											"width": 246.2763671875,
 											"height": 13,
 											"text": "(from BookBorrowManagementSystem)"
@@ -3148,16 +3151,16 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -128,
-											"top": -192,
+											"left": -112,
+											"top": -288,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 1132,
-									"top": 784,
-									"width": 95.07763671875,
+									"left": 1140,
+									"top": 736,
+									"width": 98.841796875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGIMdg5ugvBYoo="
@@ -3184,7 +3187,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -72,
-									"top": -168,
+									"top": -216,
 									"width": 10,
 									"height": 10
 								},
@@ -3200,7 +3203,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -72,
-									"top": -168,
+									"top": -216,
 									"width": 10,
 									"height": 10
 								},
@@ -3216,7 +3219,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -72,
-									"top": -168,
+									"top": -216,
 									"width": 10,
 									"height": 10
 								},
@@ -3232,7 +3235,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -72,
-									"top": -168,
+									"top": -216,
 									"width": 10,
 									"height": 10
 								}
@@ -3242,9 +3245,9 @@
 							},
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 1112,
-							"top": 784,
-							"width": 115.07763671875,
+							"left": 1120,
+							"top": 736,
+							"width": 118.841796875,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIMdg5ugvA32I="
@@ -3292,8 +3295,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -488,
-											"top": -472,
+											"left": -472,
+											"top": -552,
 											"height": 13
 										},
 										{
@@ -3303,11 +3306,11 @@
 												"$ref": "AAAAAAGIMdhiHQwXnEc="
 											},
 											"font": "Arial;13;1",
-											"left": 1137,
-											"top": 847,
-											"width": 85.07763671875,
+											"left": 1145,
+											"top": 807,
+											"width": 85.22998046875,
 											"height": 13,
-											"text": "Component1"
+											"text": "Return Books"
 										},
 										{
 											"_type": "LabelView",
@@ -3317,8 +3320,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -488,
-											"top": -472,
+											"left": -472,
+											"top": -552,
 											"width": 246.2763671875,
 											"height": 13,
 											"text": "(from BookBorrowManagementSystem)"
@@ -3331,16 +3334,16 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -488,
-											"top": -472,
+											"left": -472,
+											"top": -552,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 1132,
-									"top": 840,
-									"width": 95.07763671875,
+									"left": 1140,
+									"top": 800,
+									"width": 95.22998046875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGIMdhiHQwYqLQ="
@@ -3366,8 +3369,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -296,
-									"top": -272,
+									"left": -288,
+									"top": -312,
 									"width": 10,
 									"height": 10
 								},
@@ -3382,8 +3385,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -296,
-									"top": -272,
+									"left": -288,
+									"top": -312,
 									"width": 10,
 									"height": 10
 								},
@@ -3398,8 +3401,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -296,
-									"top": -272,
+									"left": -288,
+									"top": -312,
 									"width": 10,
 									"height": 10
 								},
@@ -3414,8 +3417,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -296,
-									"top": -272,
+									"left": -288,
+									"top": -312,
 									"width": 10,
 									"height": 10
 								}
@@ -3425,9 +3428,9 @@
 							},
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 1112,
-							"top": 840,
-							"width": 115.07763671875,
+							"left": 1120,
+							"top": 800,
+							"width": 115.22998046875,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIMdhiHQwXnEc="
@@ -6514,6 +6517,189 @@
 							"templateParameterCompartment": {
 								"$ref": "AAAAAAGIMfNwBxCvUY4="
 							}
+						},
+						{
+							"_type": "UMLComponentView",
+							"_id": "AAAAAAGINCyuZyJhJ58=",
+							"_parent": {
+								"$ref": "AAAAAAGIMYbg3X32tjg="
+							},
+							"model": {
+								"$ref": "AAAAAAGINCyuZiJff0o="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAGINCyuZyJi1Js=",
+									"_parent": {
+										"$ref": "AAAAAAGINCyuZyJhJ58="
+									},
+									"model": {
+										"$ref": "AAAAAAGINCyuZiJff0o="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGINCyuZyJjjZA=",
+											"_parent": {
+												"$ref": "AAAAAAGINCyuZyJi1Js="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -104,
+											"top": -120,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGINCyuZyJkyQ8=",
+											"_parent": {
+												"$ref": "AAAAAAGINCyuZyJi1Js="
+											},
+											"font": "Arial;13;1",
+											"left": 1145,
+											"top": 871,
+											"width": 109.78271484375,
+											"height": 13,
+											"text": "Manage Authority"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGINCyuZyJl8L0=",
+											"_parent": {
+												"$ref": "AAAAAAGINCyuZyJi1Js="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -104,
+											"top": -120,
+											"width": 228.2998046875,
+											"height": 13,
+											"text": "(from BookBorrowManagementSystem)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGINCyuZyJmtRw=",
+											"_parent": {
+												"$ref": "AAAAAAGINCyuZyJi1Js="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -104,
+											"top": -120,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 1140,
+									"top": 864,
+									"width": 119.78271484375,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAGINCyuZyJjjZA="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAGINCyuZyJkyQ8="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAGINCyuZyJl8L0="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAGINCyuZyJmtRw="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAGINCyuZyJnHRI=",
+									"_parent": {
+										"$ref": "AAAAAAGINCyuZyJhJ58="
+									},
+									"model": {
+										"$ref": "AAAAAAGINCyuZiJff0o="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -64,
+									"top": -80,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAGINCyuZyJotlk=",
+									"_parent": {
+										"$ref": "AAAAAAGINCyuZyJhJ58="
+									},
+									"model": {
+										"$ref": "AAAAAAGINCyuZiJff0o="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -64,
+									"top": -80,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAGINCyuZyJpSVE=",
+									"_parent": {
+										"$ref": "AAAAAAGINCyuZyJhJ58="
+									},
+									"model": {
+										"$ref": "AAAAAAGINCyuZiJff0o="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -64,
+									"top": -80,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAGINCyuZyJq6sM=",
+									"_parent": {
+										"$ref": "AAAAAAGINCyuZyJhJ58="
+									},
+									"model": {
+										"$ref": "AAAAAAGINCyuZiJff0o="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -64,
+									"top": -80,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGIMdK2IAq5esM="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1120,
+							"top": 864,
+							"width": 139.78271484375,
+							"height": 45,
+							"nameCompartment": {
+								"$ref": "AAAAAAGINCyuZyJi1Js="
+							},
+							"suppressAttributes": true,
+							"suppressOperations": true,
+							"attributeCompartment": {
+								"$ref": "AAAAAAGINCyuZyJnHRI="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAGINCyuZyJotlk="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAGINCyuZyJpSVE="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAGINCyuZyJq6sM="
+							}
 						}
 					]
 				},
@@ -6747,7 +6933,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGIMdKt/Qq1pzQ="
 							},
-							"name": "Component1"
+							"name": "Borrow Books"
 						},
 						{
 							"_type": "UMLComponent",
@@ -6755,7 +6941,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGIMdKt/Qq1pzQ="
 							},
-							"name": "Component1"
+							"name": "Return Books"
 						},
 						{
 							"_type": "UMLDependency",
@@ -6770,6 +6956,14 @@
 							"target": {
 								"$ref": "AAAAAAGIMcKnxgj9Py0="
 							}
+						},
+						{
+							"_type": "UMLComponent",
+							"_id": "AAAAAAGINCyuZiJff0o=",
+							"_parent": {
+								"$ref": "AAAAAAGIMdKt/Qq1pzQ="
+							},
+							"name": "Manage Authority"
 						}
 					]
 				},
