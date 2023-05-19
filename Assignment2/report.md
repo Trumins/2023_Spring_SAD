@@ -52,6 +52,44 @@ The process of using knowledge graphs by users is similar to that of librarians.
 
 ![BMS_UserUseKG](../Assignment2/picture/BookManagementSystem/UserUseKG.png)
 
+### 3.2 Account Management System
+
+#### 3.2.1 Class Diagram
+
+![](picture/AccountManagementSystem/AMSClassDiagram.png)
+
+#### 3.2.2 Interaction Diagram
+
+##### 3.2.2.1 Users Login
+
+This sequence diagram shows how users login to the system.
+
+![](picture/AccountManagementSystem/AMSLogin.png)
+
+##### 3.2.2.2 Public Users Register
+
+This sequence diagram shows how a public user registers an account in the system.
+
+![](picture/AccountManagementSystem/AMSRegister.png)
+
+##### 3.2.2.3 Users Modify Information
+
+This sequence diagram shows how a user modify his information in the system.
+
+![](picture/AccountManagementSystem/AMSModify.png)
+
+##### 3.2.2.4 Users Retrieve Password
+
+This communication diagram shows how a user retrieve his password in the system.
+
+![](picture/AccountManagementSystem/AMSRetrieve.png)
+
+##### 3.2.2.5 Account Administrator Manage Account
+
+This communication diagram shows how an account administrator manages accounts in the system, including creating and deleting accounts.
+
+![](picture/AccountManagementSystem/AMSAccountManagement.png)
+
 ### 3.5 Reader Communication System
 
 #### 3.5.1 Class Diagram
