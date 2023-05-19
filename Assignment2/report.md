@@ -6,7 +6,7 @@
 
 ### 1.2 Progress and Current Status
 
-In the previous assignment, we divided the smart library system into 5 subsystems and gave their use case models and use case analysis in detail. In this assignment, we first give the architecture diagram of the whole system and the specific analysis of the architecture, and then design the components at each level based on this architecture. In this process, we also designed the class and interaction diagrams for each subsystem and explained them all. During the analysis, we also found the poorly designed elements in the use case module of the previous assignment and made improvements. Currently, we have completed the architectural analysis of the whole system and the class and interaction analysis of each subsystem.
+In the previous assignment, we divided the smart library system into 5 subsystems and presented their use case models and analyses in detail. In this assignment, we first provide the architecture diagram of the whole system and explain its components and rationale, and then design the components at each level based on this architecture. In this process, we also create the class and interaction diagrams for each subsystem and describe their functions and relationships. During the analysis, we also identify and improve the poorly designed elements in the use case models of the previous assignment. Currently, we have completed the architectural analysis of the whole system and the class and interaction analysis of each subsystem.
 
 ## 2. Architectural Analysis
 
@@ -56,39 +56,39 @@ The process of using knowledge graphs by users is similar to that of librarians.
 
 #### 3.2.1 Class Diagram
 
-![](picture/AccountManagementSystem/AMSClassDiagram.png)
+![AMS_ClassDiagram](picture/AccountManagementSystem/AMSClassDiagram.png)
 
-#### 3.2.2 Interaction Diagram
+#### 3.2.2 Interaction Diagrams
 
 ##### 3.2.2.1 Users Login
 
 This sequence diagram shows how users login to the system.
 
-![](picture/AccountManagementSystem/AMSLogin.png)
+![AMS_Login](picture/AccountManagementSystem/AMSLogin.png)
 
 ##### 3.2.2.2 Public Users Register
 
 This sequence diagram shows how a public user registers an account in the system.
 
-![](picture/AccountManagementSystem/AMSRegister.png)
+![AMS_Register](picture/AccountManagementSystem/AMSRegister.png)
 
 ##### 3.2.2.3 Users Modify Information
 
 This sequence diagram shows how a user modify his information in the system.
 
-![](picture/AccountManagementSystem/AMSModify.png)
+![AMS_Modify](picture/AccountManagementSystem/AMSModify.png)
 
 ##### 3.2.2.4 Users Retrieve Password
 
 This communication diagram shows how a user retrieve his password in the system.
 
-![](picture/AccountManagementSystem/AMSRetrieve.png)
+![AMS_Retrieve](picture/AccountManagementSystem/AMSRetrieve.png)
 
 ##### 3.2.2.5 Account Administrator Manage Account
 
 This communication diagram shows how an account administrator manages accounts in the system, including creating and deleting accounts.
 
-![](picture/AccountManagementSystem/AMSAccountManagement.png)
+![AMS_AccountManagement](picture/AccountManagementSystem/AMSAccountManagement.png)
 
 ### 3.5 Reader Communication System
 
@@ -126,7 +126,7 @@ This communication diagram shows how the system creates a new post when a user s
 
 This sequence diagram shows how an administrator deletes inappropriate posts. The administrator views the reported posts first, and decides whether to keep the post or delete it. The loop fragment shows that the administrator repeats the decision making process until there is no more post to moderate.
 
-![RCS_DeleteInappropriatePosts](../Assignment2/picture/ReaderCommunicationSystem/RCS_DeleteInappropriatePosts.png)
+![RCS_DelInaptPosts](../Assignment2/picture/ReaderCommunicationSystem/RCS_DeleteInappropriatePosts.png)
 
 ## 4. Updated Use Case Model
 
@@ -150,6 +150,6 @@ The updated use case diagram is as follows.
 
 Application Architecture Guide（<https://developer.android.google.cn/jetpack/guide?hl=zh-cn>）
 
-This webpage introduces the common application architectures for Android application development, introducing developers to a series of common architectural principles, recommended application architectures, common best practices, and some real-life application examples. It introduces developers to a series of common architectural principles, recommended application architectures, common best practices, and some real-life application examples. The layered architecture and the interface display part used in this project are designed according to this design guideline
+This webpage provides an overview of the common application architectures for Android application development. It guides developers through a series of common architectural principles, recommended application architectures, best practices, and real-life application examples. The layered architecture and the user interface design used in this project are based on this design guideline.
 
 ## 6. Contributions of Team Members
