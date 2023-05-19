@@ -90,6 +90,32 @@ This communication diagram shows how an account administrator manages accounts i
 
 ![AMS_AccountManagement](picture/AccountManagementSystem/AMSAccountManagement.png)
 
+### 3.3 Book Borrowing Management System
+
+#### 3.3.1 Class Diagram
+
+![loading-ag-501](picture/BookBorrowingSystem/BookBorrowingSystem-CD.png)
+
+#### 3.3.2 Interaction Diagrams
+
+##### 3.3.2.1 Borrow Books
+
+This sequence diagram show how the borrowers borrow books.
+
+![loading-ag-516](picture/BookBorrowingSystem/BookBorrowing-SD.png)
+
+##### 3.3.2.2 Return Books
+
+This sequence diagram shows how the borrowers return the books.
+
+![loading-ag-707](picture/BookBorrowingSystem/BookReturning-SD.png)
+
+##### 3.3.2.3 Modify Authority
+
+This sequence diagram shows how the librarian modify the borrower's authority.
+
+![loading-ag-721](picture/BookBorrowingSystem/MosifyAuthority-SD.png)
+
 ### 3.5 Reader Communication System
 
 #### 3.5.1 Class Diagram
@@ -137,6 +163,14 @@ In the last assignment, in terms of the knowledge graph, we only considered the 
 The updated use case diagram is as follows.
 
 ![BMS_newUCD](../Assignment2/picture/BookManagementSystem/newBookManagementSystemModel.png)
+
+### 4.3 Book Borrowing Management System
+
+In the past use case diagram, the borrower has a use case called "reservebooks", which is a function that is not practical, and we have deleted it in this assignment. In the past use case diagram, Librarian directly contacted the use case called "Check the borrowing record", which is not reasonable, and we changed it to "Manage borrowing authority" include "Check the borrowing record" in this assignment
+
+The updated use case diagram is as follows.
+
+![loading-ag-741](picture/BookBorrowingSystem/BookBorrowingSystem.png)
 
 ### 4.5 Reader Communication System
 
