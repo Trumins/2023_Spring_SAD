@@ -59,3 +59,7 @@ The process of using knowledge graphs by users is similar to that of librarians.
 ![](../Assignment2/picture/BookManagementSystem/UserUseKG.png)
 
 ### References
+
+Application Architecture Guide（https://developer.android.google.cn/jetpack/guide?hl=zh-cn）This webpage introduces the common application architectures for Android application development, introducing developers to a series of common architectural principles, recommended application architectures, common best practices, and some real-life application examples. It introduces developers to a series of common architectural principles, recommended application architectures, common best practices, and some real-life application examples. The layered architecture and the interface display part used in this project are designed according to this design guideline
+
+### Contributions
