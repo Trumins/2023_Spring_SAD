@@ -94,7 +94,7 @@ This communication diagram shows how an account administrator manages accounts i
 
 #### 3.3.1 Class Diagram
 
-![loading-ag-501](picture/BookBorrowingSystem/BookBorrowingSystem-CD.png)
+![loading-ag-291](picture/BookBorrowingSystem/BookBorrowingSystem-CD.png)
 
 #### 3.3.2 Interaction Diagrams
 
@@ -102,19 +102,19 @@ This communication diagram shows how an account administrator manages accounts i
 
 This sequence diagram show how the borrowers borrow books.
 
-![loading-ag-516](picture/BookBorrowingSystem/BookBorrowing-SD.png)
+![loading-ag-293](picture/BookBorrowingSystem/BookBorrowing-SD.png)
 
 ##### 3.3.2.2 Return Books
 
 This sequence diagram shows how the borrowers return the books.
 
-![loading-ag-707](picture/BookBorrowingSystem/BookReturning-SD.png)
+![loading-ag-295](picture/BookBorrowingSystem/BookReturning-SD.png)
 
 ##### 3.3.2.3 Modify Authority
 
 This sequence diagram shows how the librarian modify the borrower's authority.
 
-![loading-ag-721](picture/BookBorrowingSystem/MosifyAuthority-SD.png)
+![loading-ag-297](picture/BookBorrowingSystem/MosifyAuthority-SD.png)
 
 ### 3.5 Reader Communication System
 
@@ -170,7 +170,7 @@ In the past use case diagram, the borrower has a use case called "reservebooks",
 
 The updated use case diagram is as follows.
 
-![loading-ag-741](picture/BookBorrowingSystem/BookBorrowingSystem.png)
+![loading-ag-299](picture/BookBorrowingSystem/BookBorrowingSystem.png)
 
 ### 4.5 Reader Communication System
 
