@@ -116,6 +116,32 @@ This sequence diagram shows how the librarian modify the borrower's authority.
 
 ![loading-ag-721](picture/BookBorrowingSystem/MosifyAuthority-SD.png)
 
+### 3.4 Venture Management System
+
+#### 3.4.1 Class Diagram
+
+![vmsClassDiagram](picture/VentureManagementSystem/vmsClassDiagram.png)
+
+#### 3.4.2 Interaction Diagrams
+
+##### 3.4.2.1 Enter Open Space
+
+This sequence diagram shows how a user can enter open spaces of a University library. It demonstrates the data flow between the system and the user. They were connected by the interface Entry Panel. A controller is designed to arrange the data flow.
+
+![EnterOpenSpace](picture/VentureManagementSystem/EnterOpenSpace.png)
+
+##### 3.4.2.2 Book a Study Room
+
+This sequence diagram shows how some of the users(teachers and students) can book a study room in the library. It demonstrates the data flow between the system and the user. They were connected by the interface of a booking webpage. A room booking controller is designed to arrange the data flow.
+
+![BookaStudyRoom](picture/VentureManagementSystem/BookStudyRoom.png)
+
+##### 3.4.2.3 Check in to a Study Room
+
+This sequence diagram shows how user who has already book a room can check in to it.  The diagram demonstrates the data flow between the system and the user. They were connected by the interface of a room panel. A room check in controller is designed to arrange the data flow.
+
+![CheckintoaStudyRoom](picture/VentureManagementSystem/CheckIn.png)
+
 ### 3.5 Reader Communication System
 
 #### 3.5.1 Class Diagram
