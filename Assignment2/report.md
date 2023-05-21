@@ -1,4 +1,6 @@
-# heading
+[TOC]
+
+
 
 ## 1. Introduction
 
@@ -116,11 +118,11 @@ This sequence diagram shows how the librarian modify the borrower's authority.
 
 ![loading-ag-297](picture/BookBorrowingSystem/MosifyAuthority-SD.png)
 
-### 3.4 Venture Management System
+### 3.4 Venue Management System
 
 #### 3.4.1 Class Diagram
 
-![vmsClassDiagram](picture/VentureManagementSystem/vmsClassDiagram.png)
+![vmsClassDiagram](picture/VenueManagementSystem/vmsClassDiagram.png)
 
 #### 3.4.2 Interaction Diagrams
 
@@ -128,19 +130,19 @@ This sequence diagram shows how the librarian modify the borrower's authority.
 
 This sequence diagram shows how a user can enter open spaces of a University library. It demonstrates the data flow between the system and the user. They were connected by the interface Entry Panel. A controller is designed to arrange the data flow.
 
-![EnterOpenSpace](picture/VentureManagementSystem/EnterOpenSpace.png)
+![EnterOpenSpace](picture/VenueManagementSystem/EnterOpenSpace.png)
 
 ##### 3.4.2.2 Book a Study Room
 
 This sequence diagram shows how some of the users(teachers and students) can book a study room in the library. It demonstrates the data flow between the system and the user. They were connected by the interface of a booking webpage. A room booking controller is designed to arrange the data flow.
 
-![BookaStudyRoom](picture/VentureManagementSystem/BookStudyRoom.png)
+![BookaStudyRoom](picture/VenueManagementSystem/BookStudyRoom.png)
 
 ##### 3.4.2.3 Check in to a Study Room
 
 This sequence diagram shows how user who has already book a room can check in to it.  The diagram demonstrates the data flow between the system and the user. They were connected by the interface of a room panel. A room check in controller is designed to arrange the data flow.
 
-![CheckintoaStudyRoom](picture/VentureManagementSystem/CheckIn.png)
+![CheckintoaStudyRoom](picture/VenueManagementSystem/CheckIn.png)
 
 ### 3.5 Reader Communication System
 
@@ -182,7 +184,7 @@ This sequence diagram shows how an administrator deletes inappropriate posts. Th
 
 ## 4. Updated Use Case Model
 
-### 4.1 Book Management System
+### 4.1 Updated System: Book Management System
 
 In the last assignment, in terms of the knowledge graph, we only considered the librarian's modifications to it. For this assignment , we found that users also have the need to use the knowledge graph, so we added the function to use the knowledge graph to the use case model.
 
@@ -190,7 +192,7 @@ The updated use case diagram is as follows.
 
 ![BMS_newUCD](../Assignment2/picture/BookManagementSystem/newBookManagementSystemModel.png)
 
-### 4.3 Book Borrowing Management System
+### 4.3 Updated System: Book Borrowing Management System
 
 In the past use case diagram, the borrower has a use case called "reservebooks", which is a function that is not practical, and we have deleted it in this assignment. In the past use case diagram, Librarian directly contacted the use case called "Check the borrowing record", which is not reasonable, and we changed it to "Manage borrowing authority" include "Check the borrowing record" in this assignment
 
@@ -198,13 +200,55 @@ The updated use case diagram is as follows.
 
 ![loading-ag-299](picture/BookBorrowingSystem/BookBorrowingSystem.png)
 
-### 4.5 Reader Communication System
+### 4.4 Updated System: Venue Management System
+
+Based on the problems raised in the class two major changes have been made in the venue management system's use case diagram. In the past use case diagram, there is an arrow between check into a study room and enter open spaces, indicating the dependency relation. This arrow is now deleted because this dependency doesn't need to be realized in the system. It is promised physically. The authorization list is also deleted because it is not a actor of any use case, it is a detail that should be put in the detail specification.
+
+The updated use case diagram is as follows.
+
+![newVMS](picture/VenueManagementSystem/vmsUCD.png)
+
+### 4.5 Updated System: Reader Communication System
 
 In the last assignment, we grouped the use cases “Reply to Posts” and “Create Posts” under the general term “Share Thoughts”. However, we realized that this was not appropriate because these two use cases are quite different from each other. Moreover, this would also increase the complexity. Therefore, we removed the use case “Share Thoughts”.
 
 The updated use case diagram is as follows.
 
 ![RCS_newUCD](../Assignment2/picture/ReaderCommunicationSystem/RCS_newUCD.png)
+
+### 4.6 Use Case Detailed Specification
+
+System: Venue Management System
+
+Use Case: Enter Open Spaces
+
+Update: In the previous report the alternative flow of this use case is miswritten. The updated version corrected it.
+
+| **USE CASE**          | Enter Open Spaces                                            |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC07                                                         |
+| **Specification**     | This use case happens when a user wanted to enter the library building in order to borrow and return books, and use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold. |
+| **Actors**            | **User**                                                     |
+| **Pre-Condition**     | User's account must be valid and active                      |
+| **Basic Flow**        | 1. The user reaches the turnstile at the front gate of the library building. <br/>2. User verifies his or her identity at the smart device attached to the turnstile. <br/> 2.1 If the user has a library card, he or she could swipe the card.<br/> 2.2 The user could also enter his or her account number on the panel to get verification.  <br/>3. The user walks through the turnstile and enters the open spaces. |
+| **Alternative Flows** | a. The user is not able to go through the verification process:<br/> a.1. If the user enters an invalid account number, he or she is allowed to renter the account number.<br/> a.2. If the user’s card can’t be recognized, he or she should turn to a librarian for help.<br/>b. The total number of people inside the building reaches the threshold. All the users outside are not allowed to go through the turnstile |
+| **Post-Condition**    | After successfully entering the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room. |
+
+System: Venue Management System
+
+Use Case: Check in to a Study Room
+
+Update: The previous report doesn't contain the case when the card and the room doesn't match. It is now added to the report.
+
+| **USE CASE**          | Check in to a Study Room                                     |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC09                                                         |
+| **Specification**     | Users must check in to a study room at the registered time. The user could either wipe the library card or enter the temporary password he or she get after booking. The room door will be unlocked after the check-in process. |
+| **Actors**            | **Teacher or student**                                       |
+| **Pre-Condition**     | The user must have successfully booked a spare study room already. The user must have already entered the open spaces. |
+| **Basic Flow**        | 1. Users reach the door of the room he or she booked. <br/>2. Users check-in:<br/> 2.1. If the user has a library card, he could swipe the card to check in.<br/> 2.2. If the user doesn’t have a card, he could enter password through the panel. <br/>3. The system unlocks the door so that the user could get into the study room. |
+| **Alternative Flows** | a. If the user enters the wrong temporary password: he will be given 5 more times to enter the correct password, otherwise, he could not check-in and use the room. <br/>b. The user check-in 20 minutes later than the booked time spot: The user will be punished, he could not use the study room for the next 5 days.<br/>c. If the card does not match the room, or the room is no booked by this certain user now, the user is informed. |
+| **Post-Condition**    | none                                                         |
 
 ## 5. Annotated References
 
