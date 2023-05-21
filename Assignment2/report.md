@@ -58,22 +58,22 @@ By conducting a comprehensive analysis of the system's requirements and decompos
 
 According to the reference, the traditional three-layers architecture design has presentation, business logic and data access layer.
 
-![3Layer](picture\ArchitecturalAnalysis\3Layer.png)
+![3Layer](picture/ArchitecturalAnalysis/3Layer.png)
 
 We enhance and strengthen the architecture analysis and design of the system by dividing the traditional three-layer logic system architecture in to fine-grained sub-layers. The system-level architecture can be denoted by the blocks of sub-layers as follow:
 
-![block](picture\ArchitecturalAnalysis\layerBlock.png)
+![block](picture/ArchitecturalAnalysis/layerBlock.png)
 
 By means of a package diagram and components, we seamlessly incorporate the aforementioned architecture design into the smart library management system, enhancing its overall functionality. The integration process capitalizes on the system's existing capabilities and harmoniously merges them with the proposed architecture design. This strategic amalgamation creates a cohesive and robust framework that optimizes the system's performance and efficiency. Through the careful alignment of the package diagram and components, we ensure a seamless integration that preserves the intended purpose and objectives of the smart library management system.
 
 The high level architecture diagram is as follow:
 
-![arch](picture\ArchitecturalAnalysis\systemLevelDiagram.png)
+![arch](picture/ArchitecturalAnalysis/systemLevelDiagram.png)
 
 ##### 2.1.2.1 User Interface Layer
 
 The User Interface layer contains the interface information and components that interact with users. The presentation layer responds to user events through components, and encapsulates the page data as VO (view object), which can be directly transferred to the application layer components for further business logic processing, and can also directly call the external API to realize functions.
-![InterfaceL](picture\ArchitecturalAnalysis\InterfaceL.png)
+![InterfaceL](picture/ArchitecturalAnalysis/InterfaceL.png)
 
 - Interface status
 
@@ -90,7 +90,7 @@ The User Interface layer contains the interface information and components that 
 ##### 2.1.2.2 Control Layer
 
 The control layer receives and processes user requests. When the user initiates a request, the Control layer will judge the target of the request according to the requested URL, HTTP method and other information, and call the Business layer to process the business logic. When the Controller needs to process the business logic, the method of the Business layer will be called, and the Business layer will process it accordingly according to the specific business requirements. Finally, return to the processing results. After completing the request processing, the Control layer will send the processing results to the front-end user page for display.
-![ControlL](picture\ArchitecturalAnalysis\ControlL.png)
+![ControlL](picture/ArchitecturalAnalysis/ControlL.png)
 
 - Interface Status Control
 
@@ -107,7 +107,7 @@ The control layer receives and processes user requests. When the user initiates 
 ##### 2.1.2.3 Business Layer
 
 The business layer is the core value part of the system architecture. Its focus is mainly on the formulation of business rules, the implementation of business processes and other system design related to business requirements, that is to say, it is related to the field (Domain) logic that the system deals with. In many cases, the business logic layer is also called the domain layer.
-![BusinessL](picture\ArchitecturalAnalysis\BusinessL.png)
+![BusinessL](picture/ArchitecturalAnalysis/BusinessL.png)
 
 - Book Management
 
@@ -132,7 +132,7 @@ The business layer is the core value part of the system architecture. Its focus 
 ##### 2.1.2.4 Universal Service Layer
 
 The universal layer contains some functional services which are closely related to all levels of the system architecture for the components of all levels to call.
-![UniversalServiceL](picture\ArchitecturalAnalysis\UniversalServiceL.png)
+![UniversalServiceL](picture/ArchitecturalAnalysis/UniversalServiceL.png)
 
 - Clear Cache
 
@@ -153,7 +153,7 @@ The universal layer contains some functional services which are closely related 
 ##### 2.1.2.5 Data Process Layer
 
 The function of the data processing layer is mainly responsible for the database access, and you can have access to the database system, binary files, text documents, or XML documents. The simple statement is to implement the operation of the data table Select, Insert, Update, Delete. If you want to include elements of the ORM, then it includes the mapping between the object and the data table, and the persistence of the object entity. The transactions done by this layer directly operate the database, to add, delete, modify, and find the data, etc. The function in the data access layer is atomic, namely minimum and inseparable.
-![DataProcessL](picture\ArchitecturalAnalysis\DataProcessL.png)
+![DataProcessL](picture/ArchitecturalAnalysis/DataProcessL.png)
 
 - DB Connection
 
