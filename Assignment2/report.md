@@ -22,6 +22,59 @@ In the previous assignment, we divided the smart library system into 5 subsystem
 
 架构分析：以高级架构、子系统的形式介绍项目，并详细说明在当前阶段之前所做的体系结构决策。您应该至少包括一个系统级图表，例如，系统的分层体系结构。您还应该为系统级关系图提供文本描述。
 
+### 2.1 System-Level Architecture Analysis and Designs
+
+JIYU system is a based on the web platform focusing on club management and
+communication between diffrent people. In order to promote the club communication
+platform by taking advantage of the system and seize the opportunity, on the one hand,
+from the user perspective we should pay attention to the rich and complete functions and
+the security and confidentiality of personal information in the system. On the other hand,
+we should extract the same functions and mechanisms in the business to improve the
+platform performance and availability from the perspective of developers.
+
+#### 2.1.1 System Detailed Analysis
+
+In the requirement phase, we focus on the interaction between different objects outside
+the system and all the system. We also complete the preliminary analysis of the system in
+the form of use cases. In the early stage of architecture design, we consider the specific
+behavior steps of the system to realize the use case, further divide the system into smaller
+granularity systems according to the function, and complete the transformation of the
+use case in the form of robust graph.
+
+#### 2.1.2 Hierarchical Architecture Design
+
+According to the reference, the traditional three-layers architecture design has presentation, business logic and data access layer.
+
+![3Layer](picture\ArchitecturalAnalysis\3Layer.png)
+
+We enhance and strengthen the architecture analysis and design of the system by dividing the traditional three-layer logic system architecture in to fine-grained sub-layers. The system-level architecture can be denoted by the blocks of sub-layers as follow:
+
+![block](picture\ArchitecturalAnalysis\layerBlock.png)
+
+By means of a package diagram and components, we seamlessly incorporate the aforementioned architecture design into the smart library management system, enhancing its overall functionality. The integration process capitalizes on the system's existing capabilities and harmoniously merges them with the proposed architecture design. This strategic amalgamation creates a cohesive and robust framework that optimizes the system's performance and efficiency. Through the careful alignment of the package diagram and components, we ensure a seamless integration that preserves the intended purpose and objectives of the smart library management system. 
+
+The high level architecture diagram is as follow:
+
+![arch](picture\ArchitecturalAnalysis\systemLevelDiagram.png)
+
+##### 2.1.2.1 User Interface Layer
+
+
+
+##### 2.1.2.2 Control Layer
+
+
+
+##### 2.1.2.3 Business Layer
+
+
+
+##### 2.1.2.4 Universal Service Layer
+
+
+
+##### 2.1.2.5 Data Process Layer
+
 
 
 ## 3. Analysis Model
