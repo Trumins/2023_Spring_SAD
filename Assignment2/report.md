@@ -4,17 +4,33 @@
 
 ### 1.1 Project Goals
 
-The university library provides a large number of book resources for students and teachers, which is an important space for learning and exchanging ideas. Therefore, it is very necessary to establish an efficient and reliable library information management system. At the same time, human society is experiencing a new round of technological and industrial revolutions led by artificial intelligence, big data, and other technologies. At present, these emerging technologies are not fully applied in the field of library management. Based on the concept of Smart +, we believe that the library management system should provide more convenient and efficient information and knowledge services for schools and society by transforming it into intelligent systems. Through software engineering and big data technologies, we plan to develop an intelligent university library management system.
+The university library provides a large number of book resources for students and teachers, which is an important space for learning and exchanging ideas. Therefore, it is necessary to establish an efficient and reliable library management system.
 
-The system has got many useful functions. They could be divided into 5 subsystems, which are book management system, account management system book borrowing management system, venue management system and reader communication system.
+Meanwhile, human society is experiencing a new round of technological and industrial revolutions led by artificial intelligence, big data, and other technologies. However, these emerging technologies are not fully applied in the field of library management. Based on the concept of Smart+, we believe that a library management system should provide more convenient and efficient services for schools and society.
 
-The target users of our smart library system includes 4 kinds of people. They are university students, teachers, public users and librarian. The system's duty is to realize their requirements.
+Through software engineering and big data technologies, we plan to develop a smart university library management system. The target users of our system include four kinds of people. They are:
 
-Students of the university can inquire, borrow and renew books on the system, and deal with violations. They can make reservations for seats. They can log on to the forum to express views and communicate with people who have similar reading interests. Are given similar authority. But the authority to query and borrow books and periodicals is higher. Public users can search books on the system. They can read books and periodicals in the reading room but can not take books and periodicals out of the library. Can reserve the library reading room seats. Librarians can manage all the library books borrowing and returning through this system. Check out the information and borrowing status of the books. Manage the borrowing rights of various users.
+- University students: They can inquire, borrow, and renew books on the system, and deal with violations. They can also make reservations for seats and log on to the forum to communicate with people who have similar reading interests.
+
+- Teachers: They have similar functions as students, but they have a higher authority to query and borrow books and periodicals.
+
+- Public users: They can search for books on the system and read books and periodicals in the reading room, but they cannot take them out of the library. They can also reserve the reading room seats.
+
+- Librarians: They can manage all the borrowing-returning transactions through this system, check out the information and borrowing status of the books, and manage the borrowing rights of various users.
+
+This is how we envision our system to work and benefit different user groups.
 
 ### 1.2 Progress and Current Status
 
-In the previous assignment, we divided the smart library system into 5 subsystems and presented their use case models and analyses in detail. In this assignment, we first provide the architecture diagram of the whole system and explain its components and rationale, and then design the components at each level based on this architecture. In this process, we also create the class and interaction diagrams for each subsystem and describe their functions and relationships. During the analysis, we also identify and improve the poorly designed elements in the use case models of the previous assignment. Currently, we have completed the architectural analysis of the whole system and the class and interaction analysis of each subsystem.
+In the previous assignment, we divided the smart library system into five subsystems: Book Management System, Account Management System, Book Borrowing Management System, Venue Management System, and Reader Communication System. We also presented their use case models and analyses in detail.
+
+For this assignment, we first provide the architecture diagram of the entire system and explain its components and rationale. The architecture diagram shows how the subsystems interact with each other and with external entities such as users, databases, and hardware devices. It also shows the layers of abstraction that separate the presentation, business logic, and data access of the system. We also describe the design principles and patterns that we used to create a modular, scalable, and reliable system.
+
+In this assignment, we also design the components at each level based on this architecture. We use class diagrams to show the classes and their attributes, methods, and associations for each subsystem. We also use interaction diagrams to show how the classes collaborate to realize the use cases of each subsystem. We use sequence diagrams to show the temporal order of messages exchanged between objects, and we use communication diagrams to show the structural organization of objects and their links.
+
+During the analysis, we also identify and improve the poorly designed elements in the use case models of the previous assignment. For example, we eliminate redundant or unnecessary use cases. We also modify inconsistent or incorrect use cases.
+
+Therefore, we have currently completed the architectural analysis of the entire system and the class and interaction analysis of each subsystem.
 
 ## 2. Architectural Analysis
 
@@ -48,7 +64,7 @@ We enhance and strengthen the architecture analysis and design of the system by 
 
 ![block](picture\ArchitecturalAnalysis\layerBlock.png)
 
-By means of a package diagram and components, we seamlessly incorporate the aforementioned architecture design into the smart library management system, enhancing its overall functionality. The integration process capitalizes on the system's existing capabilities and harmoniously merges them with the proposed architecture design. This strategic amalgamation creates a cohesive and robust framework that optimizes the system's performance and efficiency. Through the careful alignment of the package diagram and components, we ensure a seamless integration that preserves the intended purpose and objectives of the smart library management system. 
+By means of a package diagram and components, we seamlessly incorporate the aforementioned architecture design into the smart library management system, enhancing its overall functionality. The integration process capitalizes on the system's existing capabilities and harmoniously merges them with the proposed architecture design. This strategic amalgamation creates a cohesive and robust framework that optimizes the system's performance and efficiency. Through the careful alignment of the package diagram and components, we ensure a seamless integration that preserves the intended purpose and objectives of the smart library management system.
 
 The high level architecture diagram is as follow:
 
@@ -57,7 +73,6 @@ The high level architecture diagram is as follow:
 ##### 2.1.2.1 User Interface Layer
 
 The User Interface layer contains the interface information and components that interact with users. The presentation layer responds to user events through components, and encapsulates the page data as VO (view object), which can be directly transferred to the application layer components for further business logic processing, and can also directly call the external API to realize functions.
-
 ![InterfaceL](picture\ArchitecturalAnalysis\InterfaceL.png)
 
 - Interface status
@@ -75,7 +90,6 @@ The User Interface layer contains the interface information and components that 
 ##### 2.1.2.2 Control Layer
 
 The control layer receives and processes user requests. When the user initiates a request, the Control layer will judge the target of the request according to the requested URL, HTTP method and other information, and call the Business layer to process the business logic. When the Controller needs to process the business logic, the method of the Business layer will be called, and the Business layer will process it accordingly according to the specific business requirements. Finally, return to the processing results. After completing the request processing, the Control layer will send the processing results to the front-end user page for display.
-
 ![ControlL](picture\ArchitecturalAnalysis\ControlL.png)
 
 - Interface Status Control
@@ -93,7 +107,6 @@ The control layer receives and processes user requests. When the user initiates 
 ##### 2.1.2.3 Business Layer
 
 The business layer is the core value part of the system architecture. Its focus is mainly on the formulation of business rules, the implementation of business processes and other system design related to business requirements, that is to say, it is related to the field (Domain) logic that the system deals with. In many cases, the business logic layer is also called the domain layer.
-
 ![BusinessL](picture\ArchitecturalAnalysis\BusinessL.png)
 
 - Book Management
@@ -119,7 +132,6 @@ The business layer is the core value part of the system architecture. Its focus 
 ##### 2.1.2.4 Universal Service Layer
 
 The universal layer contains some functional services which are closely related to all levels of the system architecture for the components of all levels to call.
-
 ![UniversalServiceL](picture\ArchitecturalAnalysis\UniversalServiceL.png)
 
 - Clear Cache
@@ -141,7 +153,6 @@ The universal layer contains some functional services which are closely related 
 ##### 2.1.2.5 Data Process Layer
 
 The function of the data processing layer is mainly responsible for the database access, and you can have access to the database system, binary files, text documents, or XML documents. The simple statement is to implement the operation of the data table Select, Insert, Update, Delete. If you want to include elements of the ORM, then it includes the mapping between the object and the data table, and the persistence of the object entity. The transactions done by this layer directly operate the database, to add, delete, modify, and find the data, etc. The function in the data access layer is atomic, namely minimum and inseparable.
-
 ![DataProcessL](picture\ArchitecturalAnalysis\DataProcessL.png)
 
 - DB Connection
@@ -415,4 +426,3 @@ This article details the knowledge of entity, boundary, and control classes.The 
 This article introduces the basics of the UML sequence diagram from various aspects.It tells the basic elements and their respective usage in the sequence diagram, the classification and corresponding usage of the combined fragments, and helps us to understand the steps of drawing the sequence diagram.We refer to this article for the design of the sequence diagram in this assignment.
 
 ## 6. Contributions of Team Members
-
