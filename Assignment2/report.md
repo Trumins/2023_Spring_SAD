@@ -6,6 +6,14 @@
 
 ### 1.1 Project Goals
 
+The university library provides a large number of book resources for students and teachers, which is an important space for learning and exchanging ideas. Therefore, it is very necessary to establish an efficient and reliable library information management system. At the same time, human society is experiencing a new round of technological and industrial revolutions led by artificial intelligence, big data, and other technologies. At present, these emerging technologies are not fully applied in the field of library management. Based on the concept of Smart +, we believe that the library management system should provide more convenient and efficient information and knowledge services for schools and society by transforming it into intelligent systems. Through software engineering and big data technologies, we plan to develop an intelligent university library management system.
+
+The system has got many useful functions. They could be divided into 5 subsystems, which are book management system, account management system book borrowing management system, venue management system and reader communication system.
+
+The target users of our smart library system includes 4 kinds of people. They are university students, teachers, public users and librarian. Their unique goals and expectations can be realized by this system.
+
+Students of the university can inquire, borrow and renew books on the system, and deal with violations. They can make reservations for seats. They can log on to the forum to express views and communicate with people who have similar reading interests. Are given similar authority. But the authority to query and borrow books and periodicals is higher. Public users can search books on the system. They can read books and periodicals in the reading room but can not take books and periodicals out of the library. Can reserve the library reading room seats. Librarians can manage all the library books borrowing and returning through this system. Check out the information and borrowing status of the books. Manage the borrowing rights of various users.
+
 ### 1.2 Progress and Current Status
 
 In the previous assignment, we divided the smart library system into 5 subsystems and presented their use case models and analyses in detail. In this assignment, we first provide the architecture diagram of the whole system and explain its components and rationale, and then design the components at each level based on this architecture. In this process, we also create the class and interaction diagrams for each subsystem and describe their functions and relationships. During the analysis, we also identify and improve the poorly designed elements in the use case models of the previous assignment. Currently, we have completed the architectural analysis of the whole system and the class and interaction analysis of each subsystem.
@@ -13,6 +21,8 @@ In the previous assignment, we divided the smart library system into 5 subsystem
 ## 2. Architectural Analysis
 
 架构分析：以高级架构、子系统的形式介绍项目，并详细说明在当前阶段之前所做的体系结构决策。您应该至少包括一个系统级图表，例如，系统的分层体系结构。您还应该为系统级关系图提供文本描述。
+
+
 
 ## 3. Analysis Model
 
@@ -269,5 +279,4 @@ This article details the knowledge of entity, boundary, and control classes.The 
 This article introduces the basics of the UML sequence diagram from various aspects.It tells the basic elements and their respective usage in the sequence diagram, the classification and corresponding usage of the combined fragments, and helps us to understand the steps of drawing the sequence diagram.We refer to this article for the design of the sequence diagram in this assignment.
 
 ## 6. Contributions of Team Members
-
 
