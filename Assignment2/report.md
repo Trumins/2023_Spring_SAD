@@ -208,8 +208,22 @@ The updated use case diagram is as follows.
 
 ## 5. Annotated References
 
-Application Architecture Guide（<https://developer.android.google.cn/jetpack/guide?hl=zh-cn>）
+### 5.1 Application Architecture Guide（<https://developer.android.google.cn/jetpack/guide?hl=zh-cn>）
 
 This webpage provides an overview of the common application architectures for Android application development. It guides developers through a series of common architectural principles, recommended application architectures, best practices, and real-life application examples. The layered architecture and the user interface design used in this project are based on this design guideline.
 
+### 5.2 30 minutes of learning the UML class Fig （<https://zhuanlan.zhihu.com/p/109655171>）
+
+This web page explains in detail the basics of class diagram and the use of class diagram.It expounds the representation of specific classes, abstractions, interfaces and packages in class diagram and six relationships in class diagram, guiding the developers to correctly build class diagram in UML.We designed the class diagrams based on this article in this assignment.
+
+### 5.3 Entity Class, Boundary Class and Control Class (<https://blog.csdn.net/u012372720/article/details/71171660>)
+
+This article details the knowledge of entity, boundary, and control classes.The paper expounds the distinction and connection between the entity class, boundary class and control class, and tells how to abstract the entity class, boundary class and control class in the system.The article helps us to have a deeper understanding of classes by giving examples.We refer to this article when dividing the classes in this assignment.
+
+### 5.4 Study notes of UML Sequence Diagram (<https://blog.csdn.net/fly_zxy/article/details/80911942>)
+
+This article introduces the basics of the UML sequence diagram from various aspects.It tells the basic elements and their respective usage in the sequence diagram, the classification and corresponding usage of the combined fragments, and helps us to understand the steps of drawing the sequence diagram.We refer to this article for the design of the sequence diagram in this assignment.
+
 ## 6. Contributions of Team Members
+
+
