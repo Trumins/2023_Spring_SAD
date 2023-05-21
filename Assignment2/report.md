@@ -1,7 +1,5 @@
 [TOC]
 
-
-
 ## 1. Introduction
 
 ### 1.1 Project Goals
@@ -10,7 +8,7 @@ The university library provides a large number of book resources for students an
 
 The system has got many useful functions. They could be divided into 5 subsystems, which are book management system, account management system book borrowing management system, venue management system and reader communication system.
 
-The target users of our smart library system includes 4 kinds of people. They are university students, teachers, public users and librarian. Their unique goals and expectations can be realized by this system.
+The target users of our smart library system includes 4 kinds of people. They are university students, teachers, public users and librarian. The system's duty is to realize their requirements.
 
 Students of the university can inquire, borrow and renew books on the system, and deal with violations. They can make reservations for seats. They can log on to the forum to express views and communicate with people who have similar reading interests. Are given similar authority. But the authority to query and borrow books and periodicals is higher. Public users can search books on the system. They can read books and periodicals in the reading room but can not take books and periodicals out of the library. Can reserve the library reading room seats. Librarians can manage all the library books borrowing and returning through this system. Check out the information and borrowing status of the books. Manage the borrowing rights of various users.
 
@@ -20,26 +18,25 @@ In the previous assignment, we divided the smart library system into 5 subsystem
 
 ## 2. Architectural Analysis
 
-架构分析：以高级架构、子系统的形式介绍项目，并详细说明在当前阶段之前所做的体系结构决策。您应该至少包括一个系统级图表，例如，系统的分层体系结构。您还应该为系统级关系图提供文本描述。
-
 ### 2.1 System-Level Architecture Analysis and Designs
 
-JIYU system is a based on the web platform focusing on club management and
-communication between diffrent people. In order to promote the club communication
-platform by taking advantage of the system and seize the opportunity, on the one hand,
-from the user perspective we should pay attention to the rich and complete functions and
-the security and confidentiality of personal information in the system. On the other hand,
-we should extract the same functions and mechanisms in the business to improve the
-platform performance and availability from the perspective of developers.
+The smart library system is a web-based platform focused on library affairs and book lover communication. To promote our system and seize opportunities, we prioritize rich functions, secure personal information, and extract business mechanisms for improved performance.
 
 #### 2.1.1 System Detailed Analysis
 
-In the requirement phase, we focus on the interaction between different objects outside
-the system and all the system. We also complete the preliminary analysis of the system in
-the form of use cases. In the early stage of architecture design, we consider the specific
-behavior steps of the system to realize the use case, further divide the system into smaller
-granularity systems according to the function, and complete the transformation of the
-use case in the form of robust graph.
+During the requirement phase, our primary focus is on understanding the interactions between various objects external to the system and the system itself. This involves identifying the stakeholders, gathering their requirements, and comprehending how they interact with the system. Through this process, we gain a comprehensive understanding of the system's functional and non-functional requirements.
+
+To effectively capture and analyze these requirements, we utilize use cases as a valuable tool. Use cases allow us to define and illustrate the system's behavior from the perspective of the users, actors, or external entities involved. By creating use case diagrams and narratives, we establish a clear understanding of how different actors interact with the system and the desired outcomes.
+
+In the early stages of the architecture design, we delve into the specific steps and behaviors required to realize each use case. This involves breaking down the system into smaller, more manageable components or subsystems based on their functional characteristics. By doing so, we can identify the specific responsibilities and functionalities of each component, ensuring a modular and organized system structure.
+
+Dividing the system into smaller granularity systems based on functionality allows for better control, maintenance, and scalability. It enables us to focus on individual components and their interactions, ensuring that each component performs its designated function effectively. This approach promotes modularity, reusability, and simplifies system maintenance and enhancements in the future.
+
+By conducting a comprehensive analysis of the system's requirements and decomposing it into smaller granularity systems, we lay a solid foundation for the subsequent stages of the system design and development process.
+
+- A demonstrative Robust Diagram of the Venue Management System
+
+  缺一个图
 
 #### 2.1.2 Hierarchical Architecture Design
 
@@ -59,23 +56,109 @@ The high level architecture diagram is as follow:
 
 ##### 2.1.2.1 User Interface Layer
 
+The User Interface layer contains the interface information and components that interact with users. The presentation layer responds to user events through components, and encapsulates the page data as VO (view object), which can be directly transferred to the application layer components for further business logic processing, and can also directly call the external API to realize functions.
 
+![InterfaceL](picture\ArchitecturalAnalysis\InterfaceL.png)
+
+- Interface status
+
+  Provides real-time feedback and system status updates to users.
+
+- Interface Elements
+
+  Includes buttons, forms, menus, and other interactive elements for seamless user interaction.
+
+- Data Manipulate
+
+  Handles data processing, validation, and transformation within the system.
 
 ##### 2.1.2.2 Control Layer
 
+The control layer receives and processes user requests. When the user initiates a request, the Control layer will judge the target of the request according to the requested URL, HTTP method and other information, and call the Business layer to process the business logic. When the Controller needs to process the business logic, the method of the Business layer will be called, and the Business layer will process it accordingly according to the specific business requirements. Finally, return to the processing results. After completing the request processing, the Control layer will send the processing results to the front-end user page for display.
 
+![ControlL](picture\ArchitecturalAnalysis\ControlL.png)
+
+- Interface Status Control
+
+  Manages and updates the user interface status to keep users informed.
+
+- Call API
+
+  Facilitates communication between the user control layer and the system's backend through API calls.
+
+- Data Transfer
+
+  Handles secure data exchange within the user control layer and with external systems.
 
 ##### 2.1.2.3 Business Layer
 
+The business layer is the core value part of the system architecture. Its focus is mainly on the formulation of business rules, the implementation of business processes and other system design related to business requirements, that is to say, it is related to the field (Domain) logic that the system deals with. In many cases, the business logic layer is also called the domain layer.
 
+![BusinessL](picture\ArchitecturalAnalysis\BusinessL.png)
+
+- Book Management
+
+  Realizes the management of book resources and supports the classification, cataloguing, labelling, indexing, input, modification, deletion, and other functions of the collection of books.
+
+- Book Borrow Management
+
+  Manages the borrowing information and support readers' borrowing, returning, renewing, and other businesses.
+
+- Account Management
+
+  Supports the management of reader information and the operation of user account registration, login, and password modification. In addition, readers can be divided into teachers, students, and the public for separate management, providing different permissions for different types of readers.
+
+- Reader Communication
+
+  Supports the reader communication function, which can analyze readers' reading preferences according to their borrowing records, and help readers find other readers with the same interests to communicate according to their reading preferences.
+
+- Venue Management
+
+  Supports the management of venue resources and users' reservations of venues.
 
 ##### 2.1.2.4 Universal Service Layer
 
+The universal layer contains some functional services which are closely related to all levels of the system architecture for the components of all levels to call.
 
+![UniversalServiceL](picture\ArchitecturalAnalysis\UniversalServiceL.png)
+
+- Clear Cache
+
+  Manages cache clearing and refreshing for up-to-date data.
+
+- View Log
+
+  Allows users to analyze system logs for monitoring and issue tracking.
+
+- Security
+
+  Enforces authentication, authorization, and data protection measures.
+
+- Network
+
+  Handles communication and connectivity between components and systems.
 
 ##### 2.1.2.5 Data Process Layer
 
+The function of the data processing layer is mainly responsible for the database access, and you can have access to the database system, binary files, text documents, or XML documents. The simple statement is to implement the operation of the data table Select, Insert, Update, Delete. If you want to include elements of the ORM, then it includes the mapping between the object and the data table, and the persistence of the object entity. The transactions done by this layer directly operate the database, to add, delete, modify, and find the data, etc. The function in the data access layer is atomic, namely minimum and inseparable.
 
+![DataProcessL](picture\ArchitecturalAnalysis\DataProcessL.png)
+
+- DB Connection
+
+  Manages the connection between the system and the database.
+
+- DB CRUD
+
+  Handles basic database operations like create, read, update, and delete.
+
+- DB Store
+
+  Stores and organizes data within the database.
+
+- Data Transmit
+
+  Facilitates secure data transmission between the system and the database.
 
 ## 3. Analysis Model
 
