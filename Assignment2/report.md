@@ -426,3 +426,12 @@ This article details the knowledge of entity, boundary, and control classes.The 
 This article introduces the basics of the UML sequence diagram from various aspects.It tells the basic elements and their respective usage in the sequence diagram, the classification and corresponding usage of the combined fragments, and helps us to understand the steps of drawing the sequence diagram.We refer to this article for the design of the sequence diagram in this assignment.
 
 ## 6. Contributions of Team Members
+
+1. Project goals: Ding Yimin and Li Haocheng
+2. Progress and Current Status: Ge Yuyang and Li Haocheng
+3. System Detailed Analysis: Ding Yimin
+4. Hierarchical Architecture Design: Ge Yuyang, Ding Yimin and Wang Xinglin
+5. Analysis model: All members in group participate in model analysis, working on their own subsystem
+6. Updated use case model: All members in group updated their own subsystem
+7. Use Case Specification: Ding Yimin
+8. References: Wang Xinglin
