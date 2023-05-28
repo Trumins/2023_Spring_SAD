@@ -52,7 +52,7 @@ By conducting a comprehensive analysis of the system's requirements and decompos
 
 - A demonstrative Robust Diagram of the Venue Management System
 
-  ![Robutness](/picture/ArchitecturalAnalysis/Robutness.png)
+  ![Robutness](picture/ArchitecturalAnalysis/Robutness.png)
 
 #### 2.1.2 Hierarchical Architecture Design
 
