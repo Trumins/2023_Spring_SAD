@@ -6,25 +6,25 @@
 
 #### 1.1 Intention
 
-The intention behind this document is to unveil an intricate blueprint of the Smart Library. The document will encompass the updated employment of case scenarios, refined architecture tailored to the platform's requirements, and meticulous realization of case scenarios and class design. Furthermore, it will expound upon the distinctive architectural styles and pivotal design choices that have been implemented.
+The intention behind this document is to unveil an intricate blueprint of the Smart Library. The document will encompass the updated employment of use cases, refined architecture tailored to the platform's requirements, and realization of use cases and class design. Furthermore, it will expound upon the distinctive architectural styles and pivotal design choices that have been implemented.
 
 #### 1.2 Advances in System Design
 
-In the preceding assignment, we partitioned the intelligent library system into five subsystems and revealed the deployment of case scenarios, architecture diagrams, class diagrams, and interaction diagrams of the system.
+In the preceding assignment, we partitioned the intelligent library system into five subsystems and revealed the deployment of use cases, architecture diagrams, class diagrams, and interaction diagrams of the system.
 
-Building upon our prior endeavor, we have accomplished the tasks of analysis and design, which encompassed the meticulous enhancement of the case scenario model, architectural fine-tuning, design blueprint, as well as the identification of architectural styles and critical design choices. The principal enhancements made to our system are outlined as follows:
+Building upon our prior endeavor, we have accomplished the tasks of analysis and design, which encompassed the enhancement of the use case model, architectural fine-tuning, design model, as well as the identification of architectural styles and critical design choices. The principal enhancements made to our system are outlined as follows:
 
-- **Case Scenario Model Enhancement:** We have meticulously refined the case scenario model by integrating supplementary realizations and design mechanisms. This serves to present a more comprehensive depiction of the system's functionality and user interactions.
+- **Use Case Model Enhancement:** We have refined the use case model by integrating supplementary realizations and design mechanisms. This serves to present a more comprehensive depiction of the system's functionality and user interactions.
 
 - **Architectural Fine-Tuning:** We have crafted a platform-specific architecture with an improved overarching structure. This architecture guarantees the system's scalability, modularity, and maintainability.
 
-- **Subsystems and Interfaces:** We have successfully pinpointed and compiled a list of the subsystems constituting the system. Each subsystem is equipped with well-defined interfaces that foster seamless communication and collaboration between disparate components.
+- **Subsystems and Interfaces:** Each subsystem is equipped with well-defined interfaces that foster seamless communication and collaboration between disparate components.
 
-- **Interface Specification:** We have furnished meticulous specifications for the system's interactions with external entities such as the public information website, third-party messaging system, and map services. These specifications ensure the seamless integration and exchange of data between the system and external entities.
+- **Interface Specification:** We have furnished specifications for the system's interactions with external entities such as the public information website, third-party messaging system, and map services. These specifications ensure the seamless integration and exchange of data between the system and external entities.
 
-- **Elaborate Case Scenario Realizations:** We have meticulously incorporated five exemplars of elaborate case scenario realizations, thereby exhibiting the system's behavior in diverse scenarios. These realizations integrate design mechanisms and leverage the refined architecture to enhance efficiency and user experience.
+- **Use Case Realizations:** We have incorporated five exemplars of use case realizations, thereby exhibiting the system's behavior in diverse scenarios. These realizations integrate design mechanisms and leverage the refined architecture to enhance efficiency and user experience.
 
-- **Detailed Class Design:** We have meticulously formulated and documented over 20 comprehensive classes that encapsulate the system's data and behavior. These classes adhere to object-oriented principles and significantly contribute to the overall robustness and extensibility of the system.
+- **Detailed Class Design:** We have formulated and documented over 20 comprehensive classes that encapsulate the system's data and behavior. These classes adhere to object-oriented principles and significantly contribute to the overall robustness and extensibility of the system.
 
 In addition to the aforementioned enhancements, we have also conscientiously contemplated various architectural styles and made crucial design choices intending to optimize the system's performance and efficacy. These choices have been thoroughly evaluated and aligned with the project's requirements and constraints.
 
@@ -85,8 +85,12 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 ![Login](/picture/AccountManagementSystem/Login.png)
 
 All users of the system need to log in when entering the system.
+
 We use Spring MVC in the system to process login requests, and use the REST API to send information commands to the database that stores user account information, and use sa-token for account login authentication.
+
 When the user enters the system, he first enters the account login interface of the system. After the user fills in his user name, password and verification code on this interface, he clicks the "Login" button. LoginInterface first judges the correctness of the verification code. If the verification code is wrong, then Directly refuse to log in, login fails and prompts that the verification code is wrong; otherwise, if the verification code is correct, the information will be converted into JSON format and sent to Spring MVC, Spring MVC sends a query request to the database through the REST API. The database queries the tuple that matches the user name and password in the account information table and returns the query result. If it is not found, it means that the login information is incorrect, the login request is rejected, and the login fails. And it prompts that the user name or password is wrong; if it is correct, call StpUtil.login(id) to log in, and then get the login token information from sa-token through StpUtil.getTokenInfo(), send and save the token information to the front end, and the login is successful. This use case ends.
+
+Some of the corresponding classes are represented in the class diagram below:
 
 ![AMSClass](/picture/AccountManagementSystem/AMSMain.png)
 
@@ -102,9 +106,13 @@ To initiate the post creation, the user activates the "Create a Post" button, pr
 
 During the validation process, Spring MVC checks the content's format. Concurrently, we utilize Google reCAPTCHA (<https://mvnrepository.com/artifact/com.github.penggle/kaptcha>) to handle the captcha and prevent automated bot usage. Any content with an invalid format or an incorrect captcha will be rejected.
 
-Upon successful validation, the post content is dispatched to the database interface via a POST command facilitated by the REST API. The interface inserts the data into the database and returns the corresponding outcome.
+Upon successful validation, the post content is dispatched to the database interface via a POST command facilitated by the REST API. The interface inserts the data into the database and returns the corresponding result.
 
 Finally, the system refreshes the webpage, displaying the newly created post if the operation was successful, or an error message if it failed.
+
+Some of the corresponding classes are represented in the class diagram below:
+
+![DetailedClassDiagram](/picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
 
 #### 4.2 Detailed class design
 
