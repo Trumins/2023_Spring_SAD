@@ -1,8 +1,8 @@
-![](/picture/cover.png)
+![cover](/picture/cover.png)
 
 [toc]
 
-### 1、Introduction and overview
+### 1. Introduction and overview
 
 #### 1.1 Intention
 
@@ -28,11 +28,11 @@ Building upon our prior endeavor, we have accomplished the tasks of analysis and
 
 In addition to the aforementioned enhancements, we have also conscientiously contemplated various architectural styles and made crucial design choices intending to optimize the system's performance and efficacy. These choices have been thoroughly evaluated and aligned with the project's requirements and constraints.
 
-### 2、Updated use case model
+### 2. Updated use case model
 
 
 
-### 3、 Architecture Refinement
+### 3. Architecture Refinement
 
 #### 3.1 Platform-dependent architecture
 
@@ -40,25 +40,33 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 #### 3.2 Subsystems and interfaces
 
-##### 1、Account Management System
+##### 3.2.1 Account Management System
 
-| ORDER NUM | REST API                                                     | INTERFACE INTRODUCTION                                       |
-| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 01        | GET /api/users/?userName=username & userPassword = userpassword/ | This interface is used to login the user account.            |
-| 02        | POST /api/users/                                             | This interface is used to register user accounts.            |
-| 03        | DELETE /api/users/                                           | This interface is used to delete the user account.           |
-| 04        | PUT /api/users/?userName=username/                           | This interface is used for users to modify account information. |
+| ORDER NUM | REST API                                                         | INTERFACE INTRODUCTION                                                 |
+| --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| 01        | GET /api/users/?userName=username & userPassword = userpassword/ | This interface is used to login the user account.                      |
+| 02        | POST /api/users/                                                 | This interface is used to register user accounts.                      |
+| 03        | DELETE /api/users/                                               | This interface is used to delete the user account.                     |
+| 04        | PUT /api/users/?userName=username/                               | This interface is used for users to modify account information.        |
 
-##### 2、Book Management System
+##### 3.2.2 Book Management System
 
-| Order num | rest api                                               | interface introduction                                       |
-| --------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| 05        | POST /api/users/suggestions                            | This interface is used to send suggestions from users to administrator |
-| 06        | GET /api/users/suggestions                             | This interface is used to get suggestions                    |
-| 07        | PUT /api/users/knowledgeGraph                          | This interface is used to update the knowledge graph         |
-| 08        | PUT /api/library/inventory?bookid=id&inventory=number/ | This interface is used to update the inventory of some books |
+| Order num | rest api                                                         | interface introduction                                                 |
+| --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| 05        | POST /api/users/suggestions                                      | This interface is used to send suggestions from users to administrator |
+| 06        | GET /api/users/suggestions                                       | This interface is used to get suggestions                              |
+| 07        | PUT /api/users/knowledgeGraph                                    | This interface is used to update the knowledge graph                   |
+| 08        | PUT /api/library/inventory?bookid=id&inventory=number/           | This interface is used to update the inventory of some books           |
 
+##### 3.2.5 Reader Communication System
 
+| Order num | rest api                                                         | interface introduction                                                 |
+| --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| xx        | GET /api/forum/post                                              | This interface is used to get all the posts in the forum               |
+| xx        | POST /api/forum/post                                             | This interface is used to send a new post to the database              |
+| xx        | POST /api/forum/post/id/reply                                    | This interface is used to add a new reply under a specific post        |
+| xx        | DELETE /api/forum/post/id                                        | This interface is used to delete a specific post                       |
+| xx        | DELETE /api/forum/post/id/reply                                  | This interface is used to delete a specific reply to a specific post   |
 
 #### 3.3 Interface specification
 
@@ -68,30 +76,45 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 
 
-### 4、Design model
+### 4. Design model
 
 #### 4.1 Implemented use cases
 
-##### 1、Users Login
+##### 4.1.1 Users Login
 
 ![Login](/picture/AccountManagementSystem/Login.png)
 
 All users of the system need to log in when entering the system.
 We use Spring MVC in the system to process login requests, and use the REST API to send information commands to the database that stores user account information, and use sa-token for account login authentication.
-When the user enters the system, he first enters the account login interface of the system. After the user fills in his user name, password and verification code on this interface, he clicks the "Login" button. LoginInterface first judges the correctness of the verification code. If the verification code is wrong, then Directly refuse to log in, login fails and prompts that the verification code is wrong; otherwise, if the verification code is correct, the information will be converted into JSON format and sent to Spring
-MVC, Spring MVC sends a query request to the database through the REST API. The database queries the tuple that matches the user name and password in the account information table and returns the query result. If it is not found, it means that the login information is incorrect, the login request is rejected, and the login fails. And it prompts that the user name or password is wrong; if it is correct, call StpUtil.login(id) to log in, and then get the login token information from sa-token through StpUtil.getTokenInfo(), send and save the token information to the front end, and the login is successful. This use case ends.
+When the user enters the system, he first enters the account login interface of the system. After the user fills in his user name, password and verification code on this interface, he clicks the "Login" button. LoginInterface first judges the correctness of the verification code. If the verification code is wrong, then Directly refuse to log in, login fails and prompts that the verification code is wrong; otherwise, if the verification code is correct, the information will be converted into JSON format and sent to Spring MVC, Spring MVC sends a query request to the database through the REST API. The database queries the tuple that matches the user name and password in the account information table and returns the query result. If it is not found, it means that the login information is incorrect, the login request is rejected, and the login fails. And it prompts that the user name or password is wrong; if it is correct, call StpUtil.login(id) to log in, and then get the login token information from sa-token through StpUtil.getTokenInfo(), send and save the token information to the front end, and the login is successful. This use case ends.
 
-![](/picture/AccountManagementSystem/AMSMain.png)
+![AMSClass](/picture/AccountManagementSystem/AMSMain.png)
+
+##### 4.1.5 Create Posts
+
+![CreatePosts](/picture/ReaderCommunicationSystem/CreatePosts.png)
+
+The use case "Create Posts" serves the purpose of generating new posts. The process for this use case is illustrated in the sequence diagram above.
+
+We employ AJAX for data interaction in conjunction with the Spring MVC framework, which handles the validation process. Once the content is approved, it is submitted to the database via the REST API.
+
+To initiate the post creation, the user activates the "Create a Post" button, prompting the system to transition to the post-creation page. Subsequently, the user inputs the desired post content along with a captcha for bot verification. Upon clicking the submit button, the relevant data is generated and transmitted to Spring MVC using AJAX techniques.
+
+During the validation process, Spring MVC checks the content's format. Concurrently, we utilize Google reCAPTCHA (<https://mvnrepository.com/artifact/com.github.penggle/kaptcha>) to handle the captcha and prevent automated bot usage. Any content with an invalid format or an incorrect captcha will be rejected.
+
+Upon successful validation, the post content is dispatched to the database interface via a POST command facilitated by the REST API. The interface inserts the data into the database and returns the corresponding outcome.
+
+Finally, the system refreshes the webpage, displaying the newly created post if the operation was successful, or an error message if it failed.
 
 #### 4.2 Detailed class design
 
-### 5、Architectural styles and critical design decisions
+### 5. Architectural styles and critical design decisions
 
-#### 5.1 Architectural styles 
+#### 5.1 Architectural styles
 
 After analyzing the requirements of our intelligent library system, we believe that the system does not have high requirements for maintainability and expandability, because for a given library system, the number of users it can serve and the range of services it can provide are limited and will not continue to grow, and the functionality of the system will not change much, and there is no need to design additional interfaces for subsequent expansion; We focus more on the responsiveness and reliability of the system. From the user's point of view, users always want to keep their waiting time as short as possible, and no one wants the server to be down while they are receiving the service. Since the microservices architecture is more focused on the scalability and maintainability of the system, we chose the client-server architecture, which is more in line with our system requirements, as the main architecture.
 
-`Client-Server Architecture `(CSA) is a common distributed computing architecture for building web applications and systems. In this architecture, the system is divided into two main components: the client and the server.
+`Client-Server Architecture`(CSA) is a common distributed computing architecture for building web applications and systems. In this architecture, the system is divided into two main components: the client and the server.
 
 1. `Client`: The client is the front-end part of the system, usually a software application or user interface that runs on the user's device. The client is responsible for providing an interactive interface to the user, receiving user input and sending it to the server. It is also responsible for processing the data returned by the server and presenting the results to the user; it can be a desktop application, a mobile application, a Web browser, etc.
 2. `Server`: The server is the back-end part of the system, responsible for processing requests sent by clients and providing corresponding services. The server usually runs on a dedicated hardware device or cloud server, which can handle requests from multiple clients and execute the corresponding business logic and data processing according to the type of requests, it can be an application server, database server, file server, etc.
@@ -102,9 +125,9 @@ Also, to make our system development, design, and maintenance easier, we have ad
 
 Our layered architecture diagram is as follows:
 
-![](../Assignment2/picture/ArchitecturalAnalysis/layerBlock.png)
+![LayerBlock](../Assignment2/picture/ArchitecturalAnalysis/layerBlock.png)
 
-The detailed logic layer is implemented as follows:![](../Assignment2/picture/ArchitecturalAnalysis/systemLevelDiagram.png)
+The detailed logic layer is implemented as follows:![SystemLevelDiagram](../Assignment2/picture/ArchitecturalAnalysis/systemLevelDiagram.png)
 
 In this layered architecture, each layer is built on top of its next layer and provides a set of clearly defined interfaces and functions. The Application Layer accepts requests from the Presentation Layer and calls the core methods of the Domain Layer to process various requests, while the Domain Layer has direct access to the bottom Data Access Layer, which effectively protects the data from being exposed to other layers.
 
@@ -123,4 +146,4 @@ In order to ensure a good user experience and high code maintainability, our sys
 
 In order to ensure security, the system uses an authority authentication framework. Since the system only provides services for students and teachers of one school and some off-campus users, the scope of use is not large, so a simple and lightweight authority authentication framework sa-token was chosen.
 
-### 6、Contributions
+### 6. Contributions
