@@ -1,4 +1,4 @@
-![cover](/picture/cover.png)
+![cover](picture/cover.png)
 
 [toc]
 
@@ -82,7 +82,7 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 ##### 4.1.1 Users Login
 
-![Login](/picture/AccountManagementSystem/Login.png)
+![Login](picture/AccountManagementSystem/Login.png)
 
 All users of the system need to log in when entering the system.
 
@@ -92,11 +92,11 @@ When the user enters the system, he first enters the account login interface of 
 
 Some of the corresponding classes are represented in the class diagram below:
 
-![AMSClass](/picture/AccountManagementSystem/AMSMain.png)
+![AMSClass](picture/AccountManagementSystem/AMSMain.png)
 
 ##### 4.1.5 Create Posts
 
-![CreatePosts](/picture/ReaderCommunicationSystem/CreatePosts.png)
+![CreatePosts](picture/ReaderCommunicationSystem/CreatePosts.png)
 
 The use case "Create Posts" serves the purpose of generating new posts. The process for this use case is illustrated in the sequence diagram above.
 
@@ -112,7 +112,7 @@ Finally, the system refreshes the webpage, displaying the newly created post if 
 
 Some of the corresponding classes are represented in the class diagram below:
 
-![DetailedClassDiagram](/picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
+![DetailedClassDiagram](picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
 
 #### 4.2 Detailed class design
 
