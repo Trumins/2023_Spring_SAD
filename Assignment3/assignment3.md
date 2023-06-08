@@ -88,6 +88,15 @@ Specify the actor of this use case.
 | 07        | PUT /api/users/knowledgeGraph                                    | This interface is used to update the knowledge graph                   |
 | 08        | PUT /api/library/inventory?bookid=id&inventory=number/           | This interface is used to update the inventory of some books           |
 
+##### 3.2.3 Book Borrowing System
+
+| Order num | rest api                                               | interface introduction                                       |
+| --------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| 05        | POST /api/users/suggestions                            | This interface is used to send suggestions from users to administrator |
+| 06        | GET /api/users/suggestions                             | This interface is used to get suggestions                    |
+| 07        | PUT /api/users/knowledgeGraph                          | This interface is used to update the knowledge graph         |
+| 08        | PUT /api/library/inventory?bookid=id&inventory=number/ | This interface is used to update the inventory of some books |
+
 ##### 3.2.4 Venue Management System
 
 | Order num | rest api                               | interface introduction                                       |
