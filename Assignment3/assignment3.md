@@ -58,6 +58,17 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 | 07        | PUT /api/users/knowledgeGraph                                    | This interface is used to update the knowledge graph                   |
 | 08        | PUT /api/library/inventory?bookid=id&inventory=number/           | This interface is used to update the inventory of some books           |
 
+##### 3.2.4 Venue Management System
+
+| Order num | rest api                               | interface introduction                                       |
+| --------- | -------------------------------------- | ------------------------------------------------------------ |
+| xx        | POST /api/venue/id                     | This interface accepts the id of a user, indicating the user has enter the venue, and return whether the operation is successful. |
+| xx        | GET /api/venue/authorization/id        | This interface returns one user's authorization of entering a certain venue. |
+| xx        | GET /api/venue/studyroom/info          | This interface returns the information like room numbers and timetable of study rooms. |
+| xx        | POST /api/venue/studyroom/room_id      | This interface accepts the room number(id of a room) and if the room has vacancy, returns the timetable and the registration table of the room, else returns a denial message. |
+| xx        | POST /api/venue/studyroom/time/room_id | This interface accepts a time period and change the room's registration table, and return whether the operation is successful. |
+| xx        | POST /api/venue/studyroom/password     | This interface accepts the password of a study room, and return whether the operation is successful. |
+
 ##### 3.2.5 Reader Communication System
 
 | Order num | rest api                                                         | interface introduction                                                 |
@@ -103,6 +114,30 @@ When the administrator enters the system, he can view the update suggestions sub
 Some of the corresponding classes are represented in the class diagram below:
 
 ![](/picture/BookManagementSystem/ClassDiagram1.png)
+
+##### 4.1.4 Book a Study Room
+
+![VMSRealization](C:\Users\Jack Ding\Desktop\Assignment3save\picture\VenueManagementSystem\BookStudyRoomRealization.png)
+
+Booking a study room is a crucial use case for users who wish to reserve a study room for a specific time period. The process of booking a study room is depicted in sequence diagram above.
+
+Based on our system design, we employ AJAX for seamless data interaction. Additionally, we leverage the Spring MVC framework, as utilized in our previous use case realization, to handle requests and perform validation processes. The approved booking details will be submitted to the database through a REST API.
+
+The user begins by browsing the available study rooms and their corresponding time periods. The system presents the information of all the available time slots for study rooms, allowing the user to view the room availability.
+
+Once the user selects a vacant study room, they proceed to choose an available time slot for booking. This selection is made from the displayed options, indicating the time period during which the user intends to use the room.
+
+Upon making the selection, the user confirms the booking information. This includes the chosen study room, the selected time period, and any other relevant details required for the booking process.
+
+The system validates the user's booking request. Spring MVC is responsible for examining the correctness of the input format, ensuring it meets the required semantic level criteria. The pending validation code is utilized to verify the user's authenticity and deter robot users. Any booking input with an illegal format or an incorrect validation code will be rejected by the system.
+
+After successful validation, the booking details are posted to the content database using the REST API's POST command. The database processes the request and returns the result in JSON format, indicating that the booking has been successfully stored in the database. In the event of an error during the operation, an empty JSON response will be returned and subsequently handled by error processing methods.
+
+Finally, the system refreshes the webpage to display the study room booking with the newly added information. The user can now view their confirmed booking details, including the room number, chosen time period, and any other relevant information.
+
+The corresponding subsystems and interfaces are represented in the class diagram provided below.
+
+![VMSClass](picture/VenueManagementSystem/BookingClass.png)
 
 ##### 4.1.5 Create Posts
 
