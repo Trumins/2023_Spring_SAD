@@ -1,6 +1,6 @@
 ![cover](picture/cover.png)
 
-[toc]
+[TOC]
 
 ### 1. Introduction and overview
 
@@ -38,29 +38,29 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 Deleted some redundant steps in the basic flow of UC07.
 
-| **USE CASE**          | Enter Open Spaces                                            |
-| --------------------- | ------------------------------------------------------------ |
-| **ID**                | UC07                                                         |
-| **Specification**     | This use case happens when a user wanted to enter the library building in order to borrow and return books, and use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold. |
-| **Actors**            | **User**                                                     |
-| **Pre-Condition**     | User's account must be valid                                 |
-| **Basic Flow**        | 1. User verifies his or her identity at the panel attached to the turnstile.<br/> 1.1 If the user has a library card, he or she could swipe the card.<br/> 1.2 The user could also enter his or her account number on the panel to get verification.  <br/>3. The user is allowed to enter the open space. |
+| **USE CASE**          | Enter Open Spaces                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                | UC07                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Specification**     | This use case happens when a user wanted to enter the library building in order to borrow and return books, and use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold.                                                                                                                                    |
+| **Actors**            | **User**                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Pre-Condition**     | User's account must be valid                                                                                                                                                                                                                                                                                                                                                              |
+| **Basic Flow**        | 1. User verifies his or her identity at the panel attached to the turnstile.<br/> 1.1 If the user has a library card, he or she could swipe the card.<br/> 1.2 The user could also enter his or her account number on the panel to get verification.  <br/>3. The user is allowed to enter the open space.                                                                                |
 | **Alternative Flows** | a. The user is not able to go through the verification process:<br/> a.1. If the user enters an invalid account number, he or she is allowed to renter the account number.<br/> a.2. If the user’s card can’t be recognized, he or she should turn to a librarian for help.<br/>b. When the total number of people inside the building reaches the threshold, no more user is allowed in. |
-| **Post-Condition**    | After successfully entering the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room. |
+| **Post-Condition**    | After successfully entering the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room.                                                                                                                                                                                          |
 
 **Update:** 
 
 Specify the actor of this use case.
 
-| **USE CASE**          | Book a Study Room                                            |
-| --------------------- | ------------------------------------------------------------ |
-| **ID**                | UC08                                                         |
-| **Specification**     | In this use case, teachers and students will see information about the study rooms on the system interface. Users could book a study room by choosing a spare room, a time spot to enter the room and the duration. Users could only use the study room after booking one. |
-| **Actors**            | **Teacher/Student**                                          |
-| **Pre-Condition**     | The user must have a valid account and log in to the system and jump to the booking webpage. |
+| **USE CASE**          | Book a Study Room                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **ID**                | UC08                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Specification**     | In this use case, teachers and students will see information about the study rooms on the system interface. Users could book a study room by choosing a spare room, a time spot to enter the room and the duration. Users could only use the study room after booking one.                                                                                                                                                                 |
+| **Actors**            | **Teacher/Student**                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Pre-Condition**     | The user must have a valid account and log in to the system and jump to the booking webpage.                                                                                                                                                                                                                                                                                                                                               |
 | **Basic Flow**        | 1. Users click the booking button.<br/>2. Check whether the user is authorized to use a study room(public users are not allowed to use study rooms).<br/>3. Users browse the information of all the available periods of study rooms.<br/>4. Users choose a spare study room.<br/>5. Users choose an available period.<br/>6. Users confirm the booking information.<br/>7. Users get a temporary password to enter the booked study room. |
-| **Alternative Flows** | a. There are no vacant rooms: users could not choose rooms and will be directed to leave this page.<br/>b. The room chosen has no vacancy: users could not choose a time(step 5)<br/>c. The user is not authorized to use the study room: The user will be informed when clicking the booking button and could not enter step 3. |
-| **Post-Condition**    | Users could check in to the study room at due time.          |
+| **Alternative Flows** | a. There are no vacant rooms: users could not choose rooms and will be directed to leave this page.<br/>b. The room chosen has no vacancy: users could not choose a time(step 5)<br/>c. The user is not authorized to use the study room: The user will be informed when clicking the booking button and could not enter step 3.                                                                                                           |
+| **Post-Condition**    | Users could check in to the study room at due time.                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### 3. Architecture Refinement
 
@@ -70,57 +70,123 @@ Specify the actor of this use case.
 
 #### 3.2 Subsystems and interfaces
 
+According to domain-driven design, in order to properly design thecorresponding domain services, we chose to divide the business boundaryinvolved in the system into four partial domains.
+
+1.User Domain 
+
+2.Reading RoomDomain
+
+3.Book Domain
+
+4.Online ForumDomain
+
+Based on the above domain design, in order to accommodate the moderategranularity of services in the system design process, we choose to furtherdivide the microservices into the following systems based on functionality.
+
 ##### 3.2.1 Account Management System
 
-| ORDER NUM | REST API                                                         | INTERFACE INTRODUCTION                                                 |
-| --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| 01        | GET /api/users/?userName=username & userPassword = userpassword/ | This interface is used to login the user account.                      |
-| 02        | POST /api/users/                                                 | This interface is used to register user accounts.                      |
-| 03        | DELETE /api/users/                                               | This interface is used to delete the user account.                     |
-| 04        | PUT /api/users/?userName=username/                               | This interface is used for users to modify account information.        |
+| ORDER NUM | REST API                                                         | INTERFACE INTRODUCTION                                          |
+| --------- | ---------------------------------------------------------------- | --------------------------------------------------------------- |
+| 01        | GET /api/users/?userName=username & userPassword = userpassword/ | This interface is used to login the user account.               |
+| 02        | POST /api/users/                                                 | This interface is used to register user accounts.               |
+| 03        | DELETE /api/users/                                               | This interface is used to delete the user account.              |
+| 04        | PUT /api/users/?userName=username/                               | This interface is used for users to modify account information. |
 
 ##### 3.2.2 Book Management System
 
-| Order num | rest api                                                         | interface introduction                                                 |
-| --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| 05        | POST /api/users/suggestions                                      | This interface is used to send suggestions from users to administrator |
-| 06        | GET /api/users/suggestions                                       | This interface is used to get suggestions                              |
-| 07        | PUT /api/users/knowledgeGraph                                    | This interface is used to update the knowledge graph                   |
-| 08        | PUT /api/library/inventory?bookid=id&inventory=number/           | This interface is used to update the inventory of some books           |
+| Order num | rest api                                               | interface introduction                                                 |
+| --------- | ------------------------------------------------------ | ---------------------------------------------------------------------- |
+| 05        | POST /api/users/suggestions                            | This interface is used to send suggestions from users to administrator |
+| 06        | GET /api/users/suggestions                             | This interface is used to get suggestions                              |
+| 07        | PUT /api/users/knowledgeGraph                          | This interface is used to update the knowledge graph                   |
+| 08        | PUT /api/library/inventory?bookid=id&inventory=number/ | This interface is used to update the inventory of some books           |
 
 ##### 3.2.3 Book Borrowing System
 
-| Order num | rest api                                               | interface introduction                                       |
-| --------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| 05        | POST /api/users/suggestions                            | This interface is used to send suggestions from users to administrator |
-| 06        | GET /api/users/suggestions                             | This interface is used to get suggestions                    |
-| 07        | PUT /api/users/knowledgeGraph                          | This interface is used to update the knowledge graph         |
-| 08        | PUT /api/library/inventory?bookid=id&inventory=number/ | This interface is used to update the inventory of some books |
+| Order num | rest api             | interface introduction                                                                                                                                                                             |
+| --------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 09        | GET/api/books/bookID | The interface accepts the bookID, returning the details of the specific book.                                                                                                                      |
+| 10        | GET/api/users/userID | The interface accepts the userID and returns the details of the specific User.                                                                                                                     |
+| 11        | PUT/api/books/bookID | The interface accepts requests from users to borrow, renew and return books for a specific purpose, and returns the operation after the modification of the specific book information is completed |
+| 12        | PUT/api/users/userID | The interface accepts Librarian requests to modify the borrowing permission and modification penalty for a specific user and returns whether the operation is successful                           |
 
 ##### 3.2.4 Venue Management System
 
-| Order num | rest api                               | interface introduction                                       |
-| --------- | -------------------------------------- | ------------------------------------------------------------ |
-| xx        | POST /api/venue/id                     | This interface accepts the id of a user, indicating the user has enter the venue, and return whether the operation is successful. |
-| xx        | GET /api/venue/authorization/id        | This interface returns one user's authorization of entering a certain venue. |
-| xx        | GET /api/venue/studyroom/info          | This interface returns the information like room numbers and timetable of study rooms. |
-| xx        | POST /api/venue/studyroom/room_id      | This interface accepts the room number(id of a room) and if the room has vacancy, returns the timetable and the registration table of the room, else returns a denial message. |
-| xx        | POST /api/venue/studyroom/time/room_id | This interface accepts a time period and change the room's registration table, and return whether the operation is successful. |
-| xx        | POST /api/venue/studyroom/password     | This interface accepts the password of a study room, and return whether the operation is successful. |
+| Order num | rest api                               | interface introduction                                                                                                                                                         |
+| --------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 13        | POST /api/venue/id                     | This interface accepts the id of a user, indicating the user has enter the venue, and return whether the operation is successful.                                              |
+| 14        | GET /api/venue/authorization/id        | This interface returns one user's authorization of entering a certain venue.                                                                                                   |
+| 15        | GET /api/venue/studyroom/info          | This interface returns the information like room numbers and timetable of study rooms.                                                                                         |
+| 16        | POST /api/venue/studyroom/room_id      | This interface accepts the room number(id of a room) and if the room has vacancy, returns the timetable and the registration table of the room, else returns a denial message. |
+| 17        | POST /api/venue/studyroom/time/room_id | This interface accepts a time period and change the room's registration table, and return whether the operation is successful.                                                 |
+| 18        | POST /api/venue/studyroom/password     | This interface accepts the password of a study room, and return whether the operation is successful.                                                                           |
 
 ##### 3.2.5 Reader Communication System
 
-| Order num | rest api                                                         | interface introduction                                                 |
-| --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| xx        | GET /api/forum/post                                              | This interface is used to get all the posts in the forum               |
-| xx        | POST /api/forum/post                                             | This interface is used to send a new post to the database              |
-| xx        | POST /api/forum/post/id/reply                                    | This interface is used to add a new reply under a specific post        |
-| xx        | DELETE /api/forum/post/id                                        | This interface is used to delete a specific post                       |
-| xx        | DELETE /api/forum/post/id/reply                                  | This interface is used to delete a specific reply to a specific post   |
+| Order num | rest api                        | interface introduction                                               |
+| --------- | ------------------------------- | -------------------------------------------------------------------- |
+| 19        | GET /api/forum/post             | This interface is used to get all the posts in the forum             |
+| 20        | POST /api/forum/post            | This interface is used to send a new post to the database            |
+| 21        | POST /api/forum/post/id/reply   | This interface is used to add a new reply under a specific post      |
+| 22        | DELETE /api/forum/post/id       | This interface is used to delete a specific post                     |
+| 23        | DELETE /api/forum/post/id/reply | This interface is used to delete a specific reply to a specific post |
 
 #### 3.3 Interface specification
 
+##### 3.3.1 Basic Requirements:
 
+To ensure the integrity and robustness of the system, thesystem interface shall meet the following basic requirements:
+
+- The interface shall provide enterprise-level support for the access toexternal systems, and provide safe and reliable access on the basis of highconcurrency and large capacity of the system;
+
+- Provide a perfect information security mechanism, to achieve thecomprehensive protection of information, ensure the normal operation of thesystem, should prevent a large number of access, and a large amount ofresources, to ensure the robustness of the system;
+
+- Provide an effective system monitoring mechanism, so that the operation ofthe interface can be monitored, easy to timely detection and troubleshooting;
+
+- Ensure that on the premise of making full use of the system resources,realize the smooth transplantation and expansion of the system, and provide thedynamic expansion of the system resources when the system increasesconcurrently, so as to ensure the stability of the system;
+
+- In the expansion, new business expansion, should be able to provide fast,convenient and accurate implementation.
+
+##### 3.3.2 Interface safety requirements:
+
+In order to ensure the safe operation of the system, allkinds of interface modes should ensure the security of its access.
+
+Interface security is an important part of the system security.Toensure the security of the interface, to realize the technical security controlthrough the interface, to achieve the security events "knowable,controllable, predictable", is an important basis to achieve systemsecurity.
+
+According to the interface connection characteristics andbusiness characteristics, formulate a special security technologyimplementation strategy, to ensure the security of the interface datatransmission and data processing.
+
+The system shall implement the interface security controlat the network boundary of the access point.
+
+The security control of the interface logically includes:security assessment, access control, intrusion detection, passwordauthentication, security audit, anti-malicious code, encryption and other content.
+
+##### 3.3.3 Transmission Control Requirements:
+
+Transmission control uses high-speed data channeltechnology to distribute the large front-end data requests to the back end, soas to ensure that the application system can maintain a fast and stable workingstate when a large number of clients request services at the same time.
+
+The system shall adopt transmission control means toreduce the burden of the interface network, improve the interface throughputcapacity, and ensure the overall processing capacity of the system.The specificmeans include load balancing, scalability and dynamic configuration management,network scheduling and other functions:
+
+- Load balancing: In order to ensure the maximum throughput of interfaceservices, the interface shall automatically complete the dynamic load balancingscheduling in the system;
+
+- Scalability and dynamic configuration management: by the system automaticscalability management mode or dynamic configuration management mode to achievequeue management, access resource management, and interface applicationsrecovery processing;
+
+- Network scheduling: Set multiple network channels between the interfacesof the two sides to realize the multiple data channels and fault tolerance ofthe interface, ensure that when a network channel communication fails,automatically switch, and realize the automatic recovery of the interfaceconnection.
+
+**The following example describes the interfacespecification between this system and the external system:**
+
+Since the library management platform is involved bydifferent roles, in order to ensure the data privacy security and transmissionefficiency in the operation process, the project should include securityservices such as login and authentication.Considering that the front and backends of the project development process are separate and may be subject tounauthorized access and attacks during operation, the system has authenticationand other security requirements.So, we chose the lightweight and powerfulsecurity framework, sa-token to provide system security services.
+
+Since there are many operation interfaces in thecommunity communication platform that are restricted after login, theinterfaces that need login permission operation need to be login authenticationbefore execution.sa-token provides an interface to query login status and tokeninformation parameters.This interface can be cut into other interfaces forcorresponding operations.
+
+| StpUtil.setLoginId(Object loginId);           | Mark the account id of the current session login.                                                                      |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| StpUtil.logout();                             | Log out of the current session.                                                                                        |
+| StpUtil.isLogin();                            | Get whether the current session is logged in, return login state.                                                      |
+| StpUtil.checkLogin();                         | Check whether the current session has been logged in, if not logged in, an exception will be thrown: NotLoginException |
+| StpUtil.getLoginId();                         | Get the login id of the current session, if not logged in, an exception will be thrown: NotLoginException              |
+| StpUtil.getLoginIdByToken(String tokenValue); | Get the login id corresponding to the specified token, if not logged in, return null                                   |
+| StpUtil.getTokenValue();                      | Get the token value of the current session.                                                                            |
+| StpUtil.getTokenInfo();                       | Get the token information parameters of the current session.                                                           |
+
+In the login business logic, thecorrectness of the accountpassword.lf the account is legal, the interfaceStpUtil.ThesetLoginld (Object loginld) is called to mark that the user isloggedin.
 
 #### 3.4 Example of interfaces
 
@@ -153,6 +219,28 @@ When the administrator enters the system, he can view the update suggestions sub
 Some of the corresponding classes are represented in the class diagram below:
 
 ![](/picture/BookManagementSystem/ClassDiagram1.png)
+
+##### 4.1.3 Borrow Books
+
+![loading-ag-716](picture/BookBorrowingSystem/BorrowBooks-interaction.png)
+
+BorrowBooksis a use case. The procedure of the use case is demonstrated in the sequencediagram above.
+
+Accordingto our system design, we used AJAX for data interaction. The Spring MVCframework will be used here to handle the request and the validation process. The approved contents will be submitted to the database through RESTAPI.
+
+The user typesthe key information of the book he wants to borrow and a verification code forsecurity checks (for robot detection). After clicking the apply button, thecorresponding HTML form data is generated, and it is converted to a Java objectby AJAX technology. The corresponding request for the object is sent to theSpring MVC.
+
+For theverification process, Spring MVC checks for the correctness of the contentformat. (The semantic level, not the content level) At the same time, we usethe external tool CAPTCHA([Maven Repository: com.github.penggle » kaptcha](https://mvnrepository.com/artifact/com.github.penggle/kaptcha)) developedby Google for the verification code to process the pending verification code toprevent the robot users. (Any content input with an illegal format or anincorrect verification code will be rejected)
+
+After passingthe verification, the information of the books in the borrowing bookapplication to be submitted will be updated (the PUT command is supported byREST API) to the content database. The content-database will return the resultsin JSON format, indicating that the content has been successfully loaded intothe database. (If an operation is wrong, an empty JSON is returned and capturedby the error handling method)
+
+Finally,the system refreshes the page and displays the updated library book listinformation.
+
+Thecorresponding subsystems and interfaces and their communication modes are shownin the class diagram and communication diagram below:
+
+![loading-ag-7033](picture/BookBorrowingSystem/BorrowBooks-class.png)
+
+![loading-ag-7040](picture/BookBorrowingSystem/BorrowBooks-communication.png)
 
 ##### 4.1.4 Book a Study Room
 
@@ -199,6 +287,12 @@ Some of the corresponding classes are represented in the class diagram below:
 ![DetailedClassDiagram](picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
 
 #### 4.2 Detailed class design
+
+
+
+##### 4.2.3 Book Borrowing System
+
+![loading-ag-727](picture/BookBorrowingSystem/BookBorrowingSystem-CD.png)
 
 ### 5. Architectural styles and critical design decisions
 
