@@ -32,6 +32,36 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 
 
+#### 2.4 Updated System: Venue Management System
+
+**Update:** 
+
+Deleted some redundant steps in the basic flow of UC07.
+
+| **USE CASE**          | Enter Open Spaces                                            |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC07                                                         |
+| **Specification**     | This use case happens when a user wanted to enter the library building in order to borrow and return books, and use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold. |
+| **Actors**            | **User**                                                     |
+| **Pre-Condition**     | User's account must be valid                                 |
+| **Basic Flow**        | 1. User verifies his or her identity at the panel attached to the turnstile.<br/> 1.1 If the user has a library card, he or she could swipe the card.<br/> 1.2 The user could also enter his or her account number on the panel to get verification.  <br/>3. The user is allowed to enter the open space. |
+| **Alternative Flows** | a. The user is not able to go through the verification process:<br/> a.1. If the user enters an invalid account number, he or she is allowed to renter the account number.<br/> a.2. If the user’s card can’t be recognized, he or she should turn to a librarian for help.<br/>b. When the total number of people inside the building reaches the threshold, no more user is allowed in. |
+| **Post-Condition**    | After successfully entering the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room. |
+
+**Update:** 
+
+Specify the actor of this use case.
+
+| **USE CASE**          | Book a Study Room                                            |
+| --------------------- | ------------------------------------------------------------ |
+| **ID**                | UC08                                                         |
+| **Specification**     | In this use case, teachers and students will see information about the study rooms on the system interface. Users could book a study room by choosing a spare room, a time spot to enter the room and the duration. Users could only use the study room after booking one. |
+| **Actors**            | **Teacher/Student**                                          |
+| **Pre-Condition**     | The user must have a valid account and log in to the system and jump to the booking webpage. |
+| **Basic Flow**        | 1. Users click the booking button.<br/>2. Check whether the user is authorized to use a study room(public users are not allowed to use study rooms).<br/>3. Users browse the information of all the available periods of study rooms.<br/>4. Users choose a spare study room.<br/>5. Users choose an available period.<br/>6. Users confirm the booking information.<br/>7. Users get a temporary password to enter the booked study room. |
+| **Alternative Flows** | a. There are no vacant rooms: users could not choose rooms and will be directed to leave this page.<br/>b. The room chosen has no vacancy: users could not choose a time(step 5)<br/>c. The user is not authorized to use the study room: The user will be informed when clicking the booking button and could not enter step 3. |
+| **Post-Condition**    | Users could check in to the study room at due time.          |
+
 ### 3. Architecture Refinement
 
 #### 3.1 Platform-dependent architecture
