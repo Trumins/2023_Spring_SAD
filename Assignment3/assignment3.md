@@ -294,6 +294,10 @@ Some of the corresponding classes are represented in the class diagram below:
 
 ![loading-ag-727](picture/BookBorrowingSystem/BookBorrowingSystem-CD.png)
 
+##### 4.2.4 Venue Management System
+
+![vmsClassDesign](./picture/VenueManagementSystem/vmsClassDesign.png)
+
 ### 5. Architectural styles and critical design decisions
 
 #### 5.1 Architectural styles
