@@ -83,7 +83,7 @@ Considering the aforementioned attributes of microservice architecture and a tho
 Based on the aforementioned enhanced logical architecture, we have tailored the microservices architecture to suit the project's scale. Consequently, we continue to adopt separate front-end and back-end development approaches. For the front-end, we utilize Vue.js and other libraries to facilitate development, while the back-end leverages SpringBoot and SpringCloud for general development purposes. REST-style API calls and JSON data files are employed, to enable communication between the front-end and back-end. Additionally, different data models are utilized to facilitate seamless communication and conversion between layers.To enhance system functionality, several key components have been incorporated. Authorization and authentication are implemented through the utilization of sa-token. For comprehensive log collection and data analysis visualization, we rely on ELK (Elasticsearch, Logstash, and Kibana).To effectively handle asynchronous messages and manage traffic, activeMQ message queues are employed for message delivery and storage. This ensures efficient message handling and storage capabilities. Regarding data management, the back-end interacts with either an Oracle database or Redis cache utilizing Hibernate's persistence mechanism. This allows for efficient data exchange and storage between the back-end and these data storage solutions.
 
 According to the design above, the technology stack is demonstrated in this diagram：
-
+![techStackDiagram](picture/techStackDiagram.png)
 
 #### 3.2 Subsystems and interfaces
 
