@@ -428,7 +428,7 @@ The communication methods used by corresponding subsystems and interfaces are re
 
 ##### 4.2.1 Account Management System
 
-![](D:\git\ThereIsNoTreasuresHere\Assignment3\picture\AccountManagementSystem\AMSClassDiagram.png)
+![](picture/AccountManagementSystem/AMSClassDiagram.png)
 
 ##### 4.2.2 Book Management System
 
