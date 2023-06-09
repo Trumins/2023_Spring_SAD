@@ -235,61 +235,63 @@ By considering the book management system as an illustrative example, we can dem
 
 The detailed API design of the book management subsystem is demonstrated as follow:
 
-| ORDER NUM                   |
-| --------------------------- |
-| 01                          |
-| **REST API**                |
-| POST /api/users/suggestions |
-| **Interface**               |
-|                             |
-| **Argument**                |
-|                             |
-| **Return Value**            |
-|                             |
-| **Interface Introduction**  |
-|                             |
+| ORDER NUM                                                    |
+| ------------------------------------------------------------ |
+| 01                                                           |
+| **REST API**                                                 |
+| POST /api/users/suggestions                                  |
+| **Interface**                                                |
+| GiveSuggestion(SuggestionDTO Suggestion): bool               |
+| **Argument**                                                 |
+| Suggestion: SuggestionDTO                                    |
+| **Return Value**                                             |
+| bool                                                         |
+| **Interface Introduction**                                   |
+| This interface is used to send suggestions from users to the Oracle database,  and return whether the execution status is successful or not. The administrator can then pull the suggestions from database and process them. |
 
-| ORDER NUM                  |
-| -------------------------- |
-| 02                         |
-| **REST API**               |
-| GET /api/users/suggestions |
-| **Interface**              |
-|                            |
-| **Argument**               |
-|                            |
-| **Return Value**           |
-|                            |
-| **Interface Introduction** |
-|                            |
+| ORDER NUM                                                    |
+| ------------------------------------------------------------ |
+| 02                                                           |
+| **REST API**                                                 |
+| GET /api/users/suggestions                                   |
+| **Interface**                                                |
+| ViewSuggestions(ConditionDTO suggestionCondition): list < suggestionsDTO > |
+| **Argument**                                                 |
+| suggestionCondition: ConditionDTO                            |
+| **Return Value**                                             |
+| list < suggestionsDTO >                                      |
+| **Interface Introduction**                                   |
+| The function of this interface is to accept the conditions of filtering suggestion by time or type, etc. It will return the selected suggestions. |
 
-| ORDER NUM                     |
-| ----------------------------- |
-| 03                            |
-| **REST API**                  |
-| PUT /api/users/knowledgeGraph |
-| **Interface**                 |
-|                               |
-| **Argument**                  |
-|                               |
-| **Return Value**              |
-|                               |
-| **Interface Introduction**    |
-|                               |
+| ORDER NUM                                                    |
+| ------------------------------------------------------------ |
+| 03                                                           |
+| **REST API**                                                 |
+| PUT /api/users/knowledgeGraph                                |
+| **Interface**                                                |
+| ViewKnowledgeGraph(ConditionDTO knowledgeGraphCondition): KnowledgeGraphDTO |
+| **Argument**                                                 |
+| knowledgeGraphCondition: ConditionDTO                        |
+| **Return Value**                                             |
+| KnowledgeGraphDTO                                            |
+| **Interface Introduction**                                   |
+| The function of this interface is to accept the conditions of generating knowledge graph, by user, time or books, etc. It will return the required knowledge graph. |
 
-| ORDER NUM                                              |
-| ------------------------------------------------------ |
-| 04                                                     |
-| **REST API**                                           |
-| PUT /api/library/inventory?bookid=id&inventory=number/ |
-| **Interface**                                          |
-|                                                        |
-| **Argument**                                           |
-|                                                        |
-| **Return Value**                                       |
-|                                                        |
-| **Interface Introduction**                             |
-|                                                        |
+| ORDER NUM                                                    |
+| ------------------------------------------------------------ |
+| 04                                                           |
+| **REST API**                                                 |
+| PUT /api/library/inventory?bookid=id&inventory=number/       |
+| **Interface**                                                |
+| UpdateInventory(str bookid, str inventory): bool             |
+| **Argument**                                                 |
+| bookid: string, inventory: string                            |
+| **Return Value**                                             |
+| bool                                                         |
+| **Interface Introduction**                                   |
+| This interface is used to update the inventory of some books, and return whether the update is successful or not. |
+
+**The external system calls to view suggestions API according to conditions**
 
 
 
