@@ -309,7 +309,7 @@ To ensure the integrity and security of data during the transmission of paramete
 
 <img src="picture/ConditionDTO.png" alt="conditionDTO" style="zoom:50%;" />
 
-<img src="picture/suggestionDTO.png" alt="conditionDTO" style="zoom:50%;" />
+<img src="picture/suggestionDTO.png" alt="suggestionsDTO" style="zoom:50%;" />
 
 **The external system calls API to view knowledge graphs  **
 
