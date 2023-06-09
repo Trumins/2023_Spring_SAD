@@ -351,8 +351,12 @@ In our various subsystems, we use the following design patterns:
 
 #### 5.2 Critical design decisions
 
+In order to ensure the ease of use of the system and enable users to easily and quickly grasp the usage of the system, we have designed a simple and natural execution path for each use case in the system, and users can implement it in the system through simple steps that they are familiar with various functions.
+
 In order to ensure a good user experience and high code maintainability, our system adopts the development method of front-end and back-end separation.
 
 In order to ensure security, the system uses an authority authentication framework. Since the system only provides services for students and teachers of one school and some off-campus users, the scope of use is not large, so a simple and lightweight authority authentication framework sa-token was chosen.
+
+In order to ensure high security and stability of the system, we chose the Oracle database as the database used in the system. Another reason for this choice is that our team members are also familiar with the Oracle database.
 
 ### 6. Contributions

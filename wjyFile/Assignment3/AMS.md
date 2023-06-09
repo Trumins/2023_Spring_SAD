@@ -13,7 +13,7 @@
 
 #### Users Login
 
-![Login](.\picture\Login.png)
+![](.\picture\Login.png)
 
 All users of the system need to log in when entering the system.
 We use Spring MVC in the system to process login requests, and use the REST API to send information commands to the database that stores user account information, and use sa-token for account login authentication.
