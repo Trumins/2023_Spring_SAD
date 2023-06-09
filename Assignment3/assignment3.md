@@ -229,6 +229,68 @@ In the login business logic, thecorrectness of the accountpassword.lf the accoun
 
 #### 3.4 Example of interfaces
 
+The utilization of a smart library management system extends beyond a singular web project or application. To enhance user convenience, the functionalities of various components within the smart library management system can be made available to external systems through interfaces, such as a student information system. This enables users to conveniently access and process information.
+
+By considering the book management system as an illustrative example, we can demonstrate how an external system interacts with the interface to fulfill specific business logic within the corresponding scenario. This showcases the seamless integration and utilization of the smart library management system's capabilities by external systems.
+
+The detailed API design of the book management subsystem is demonstrated as follow:
+
+| ORDER NUM                   |
+| --------------------------- |
+| 01                          |
+| **REST API**                |
+| POST /api/users/suggestions |
+| **Interface**               |
+|                             |
+| **Argument**                |
+|                             |
+| **Return Value**            |
+|                             |
+| **Interface Introduction**  |
+|                             |
+
+| ORDER NUM                  |
+| -------------------------- |
+| 02                         |
+| **REST API**               |
+| GET /api/users/suggestions |
+| **Interface**              |
+|                            |
+| **Argument**               |
+|                            |
+| **Return Value**           |
+|                            |
+| **Interface Introduction** |
+|                            |
+
+| ORDER NUM                     |
+| ----------------------------- |
+| 03                            |
+| **REST API**                  |
+| PUT /api/users/knowledgeGraph |
+| **Interface**                 |
+|                               |
+| **Argument**                  |
+|                               |
+| **Return Value**              |
+|                               |
+| **Interface Introduction**    |
+|                               |
+
+| ORDER NUM                                              |
+| ------------------------------------------------------ |
+| 04                                                     |
+| **REST API**                                           |
+| PUT /api/library/inventory?bookid=id&inventory=number/ |
+| **Interface**                                          |
+|                                                        |
+| **Argument**                                           |
+|                                                        |
+| **Return Value**                                       |
+|                                                        |
+| **Interface Introduction**                             |
+|                                                        |
+
 
 
 ### 4. Design model
