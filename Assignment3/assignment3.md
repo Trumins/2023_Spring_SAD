@@ -32,7 +32,7 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 Here only diagrams and specifications that are updated are presented.
 
-#### 2.1 Updates of use case specification
+#### Updates of use case specification
 
 **Update:**
 
@@ -485,3 +485,21 @@ In order to ensure security, the system uses an authority authentication framewo
 In order to ensure high security and stability of the system, we chose the Oracle database as the database used in the system. Another reason for this choice is that our team members are also familiar with the Oracle database.
 
 ### 6. Contributions
+
+1、Introduction and overview : Li Haocheng
+
+2、Update use case model : Every one is responsible for their own module
+
+3、Platform-dependent architecture : Ding Yimin
+
+4、Subsystems and interfaces : Every one is responsible for their own module
+
+5、Interface specification : Wang Xinglin
+
+6、Example of interfaces : Ding Yimin
+
+7、Design model : Every one is responsible for their own module
+
+8、Architecture styles : Ge Yuyang
+
+9、Critical design decisions : Wang Jingyue
