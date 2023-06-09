@@ -173,29 +173,29 @@ Based on the above domain design, in order to accommodate the moderategranularit
 
 ##### 3.3.1 Basic Requirements
 
-To ensure the integrity and robustness of the system, thesystem interface shall meet the following basic requirements:
+To ensure the integrity and robustness of the system, the system interface shall meet the following basic requirements:
 
-- The interface shall provide enterprise-level support for the access toexternal systems, and provide safe and reliable access on the basis of highconcurrency and large capacity of the system;
+- The interface shall provide enterprise-level support for the access to external systems, and provide safe and reliable access on the basis of high concurrency and large capacity of the system;
 
-- Provide a perfect information security mechanism, to achieve thecomprehensive protection of information, ensure the normal operation of thesystem, should prevent a large number of access, and a large amount ofresources, to ensure the robustness of the system;
+- Provide a perfect information security mechanism, to achieve the comprehensive protection of information, ensure the normal operation of the system, should prevent a large number of access, and a large amount of resources, to ensure the robustness of the system;
 
-- Provide an effective system monitoring mechanism, so that the operation ofthe interface can be monitored, easy to timely detection and troubleshooting;
+- Provide an effective system monitoring mechanism, so that the operation of the interface can be monitored, easy to timely detection and troubleshooting;
 
-- Ensure that on the premise of making full use of the system resources,realize the smooth transplantation and expansion of the system, and provide thedynamic expansion of the system resources when the system increasesconcurrently, so as to ensure the stability of the system;
+- Ensure that on the premise of making full use of the system resources,realize the smooth transplantation and expansion of the system, and provide the dynamic expansion of the system resources when the system increases concurrently, so as to ensure the stability of the system;
 
 - In the expansion, new business expansion, should be able to provide fast,convenient and accurate implementation.
 
 ##### 3.3.2 Interface safety requirements
 
-In order to ensure the safe operation of the system, allkinds of interface modes should ensure the security of its access.
+In order to ensure the safe operation of the system, all kinds of interface modes should ensure the security of its access.
 
-Interface security is an important part of the system security.Toensure the security of the interface, to realize the technical security controlthrough the interface, to achieve the security events "knowable,controllable, predictable", is an important basis to achieve systemsecurity.
+Interface security is an important part of the system security. To ensure the security of the interface, to realize the technical security control through the interface, to achieve the security events "knowable,controllable, predictable", is an important basis to achieve system security.
 
-According to the interface connection characteristics andbusiness characteristics, formulate a special security technologyimplementation strategy, to ensure the security of the interface datatransmission and data processing.
+According to the interface connection characteristics and business characteristics, formulate a special security technology implementation strategy, to ensure the security of the interface data transmission and data processing.
 
-The system shall implement the interface security controlat the network boundary of the access point.
+The system shall implement the interface security control at the network boundary of the access point.
 
-The security control of the interface logically includes:security assessment, access control, intrusion detection, passwordauthentication, security audit, anti-malicious code, encryption and other content.
+The security control of the interface logically includes: security assessment, access control, intrusion detection, password authentication, security audit, anti-malicious code, encryption and other content.
 
 ##### 3.3.3 Transmission Control Requirements
 
