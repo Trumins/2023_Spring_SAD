@@ -30,11 +30,9 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 ### 2. Updated use case model
 
-
-
 #### 2.4 Updated System: Venue Management System
 
-**Update:** 
+**Update:**
 
 Deleted some redundant steps in the basic flow of UC07.
 
@@ -48,7 +46,7 @@ Deleted some redundant steps in the basic flow of UC07.
 | **Alternative Flows** | a. The user is not able to go through the verification process:<br/> a.1. If the user enters an invalid account number, he or she is allowed to renter the account number.<br/> a.2. If the user’s card can’t be recognized, he or she should turn to a librarian for help.<br/>b. When the total number of people inside the building reaches the threshold, no more user is allowed in. |
 | **Post-Condition**    | After successfully entering the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room.                                                                                                                                                                                          |
 
-**Update:** 
+**Update:**
 
 Specify the actor of this use case.
 
@@ -78,8 +76,6 @@ Considering the aforementioned attributes of microservice architecture and a tho
 
 <img src="./picture/logical_architecture_diagram.png" alt="logical_architecture_diagram" style="zoom:67%;" />
 
-
-
 Based on the aforementioned enhanced logical architecture, we have tailored the microservices architecture to suit the project's scale. Consequently, we continue to adopt separate front-end and back-end development approaches. For the front-end, we utilize Vue.js and other libraries to facilitate development, while the back-end leverages SpringBoot and SpringCloud for general development purposes. REST-style API calls and JSON data files are employed, to enable communication between the front-end and back-end. Additionally, different data models are utilized to facilitate seamless communication and conversion between layers.To enhance system functionality, several key components have been incorporated. Authorization and authentication are implemented through the utilization of sa-token. For comprehensive log collection and data analysis visualization, we rely on ELK (Elasticsearch, Logstash, and Kibana).To effectively handle asynchronous messages and manage traffic, activeMQ message queues are employed for message delivery and storage. This ensures efficient message handling and storage capabilities. Regarding data management, the back-end interacts with either an Oracle database or Redis cache utilizing Hibernate's persistence mechanism. This allows for efficient data exchange and storage between the back-end and these data storage solutions.
 
 According to the design above, the technology stack is demonstrated in this diagram：
@@ -89,7 +85,7 @@ According to the design above, the technology stack is demonstrated in this diag
 
 According to domain-driven design, in order to properly design thecorresponding domain services, we chose to divide the business boundaryinvolved in the system into four partial domains.
 
-1.User Domain 
+1.User Domain
 
 2.Reading Room Domain
 
@@ -149,7 +145,7 @@ Based on the above domain design, in order to accommodate the moderategranularit
 
 #### 3.3 Interface specification
 
-##### 3.3.1 Basic Requirements:
+##### 3.3.1 Basic Requirements
 
 To ensure the integrity and robustness of the system, thesystem interface shall meet the following basic requirements:
 
@@ -163,7 +159,7 @@ To ensure the integrity and robustness of the system, thesystem interface shall 
 
 - In the expansion, new business expansion, should be able to provide fast,convenient and accurate implementation.
 
-##### 3.3.2 Interface safety requirements:
+##### 3.3.2 Interface safety requirements
 
 In order to ensure the safe operation of the system, allkinds of interface modes should ensure the security of its access.
 
@@ -175,7 +171,7 @@ The system shall implement the interface security controlat the network boundary
 
 The security control of the interface logically includes:security assessment, access control, intrusion detection, passwordauthentication, security audit, anti-malicious code, encryption and other content.
 
-##### 3.3.3 Transmission Control Requirements:
+##### 3.3.3 Transmission Control Requirements
 
 Transmission control uses high-speed data channeltechnology to distribute the large front-end data requests to the back end, soas to ensure that the application system can maintain a fast and stable workingstate when a large number of clients request services at the same time.
 
@@ -229,13 +225,13 @@ Some of the corresponding classes are represented in the class diagram below:
 
 ##### 4.1.2 Update Book Inventory
 
-![](/picture/BookManagementSystem/UpdateBookInventory.png)
+![UpdateBookInventory](/picture/BookManagementSystem/UpdateBookInventory.png)
 
 When the administrator enters the system, he can view the update suggestions submitted by the user, or directly update the book inventory, when updating the inventory, you need to choose one of the three to buy new books, increase, and decrease, after the selection, the front-end interface will package the data into a json file through AJAX and send it to the backend, and then call the relevant interface, access the database and update the information to achieve the request, and finally return the result to the front-end and display.
 
 Some of the corresponding classes are represented in the class diagram below:
 
-![](/picture/BookManagementSystem/ClassDiagram1.png)
+![Classes](/picture/BookManagementSystem/ClassDiagram1.png)
 
 ##### 4.1.3 Borrow Books
 
@@ -253,7 +249,7 @@ After passingthe verification, the information of the books in the borrowing boo
 
 Finally,the system refreshes the page and displays the updated library book listinformation.
 
-Thecorresponding subsystems and interfaces and their communication modes are shownin the class diagram and communication diagram below:
+The corresponding subsystems and interfaces and their communication modes are shown in the class diagram and communication diagram below:
 
 ![loading-ag-7033](picture/BookBorrowingSystem/BorrowBooks-class.png)
 
@@ -285,7 +281,7 @@ The corresponding subsystems and interfaces are represented in the class diagram
 
 ##### 4.1.5 Create Posts
 
-![CreatePosts](picture/ReaderCommunicationSystem/CreatePosts.png)
+![CreatePosts](picture/ReaderCommunicationSystem/Sequence.png)
 
 The use case "Create Posts" serves the purpose of generating new posts. The process for this use case is illustrated in the sequence diagram above.
 
@@ -299,15 +295,15 @@ Upon successful validation, the post content is dispatched to the database inter
 
 Finally, the system refreshes the webpage, displaying the newly created post if the operation was successful, or an error message if it failed.
 
-Some of the corresponding classes are represented in the class diagram below:
+The communication methods used by corresponding subsystems and interfaces are represented in the communication diagram below:
 
-![DetailedClassDiagram](picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
+![Communication](picture/ReaderCommunicationSystem/Communication.png)
 
 #### 4.2 Detailed class design
 
 ##### 4.2.2 Book Management System
 
-![](/picture/BookManagementSystem/classs.png)
+![BMS_ClassDesign](/picture/BookManagementSystem/classs.png)
 
 ##### 4.2.3 Book Borrowing System
 
@@ -316,6 +312,10 @@ Some of the corresponding classes are represented in the class diagram below:
 ##### 4.2.4 Venue Management System
 
 ![vmsClassDesign](./picture/VenueManagementSystem/vmsClassDesign.png)
+
+##### 4.2.5 Reader Communication System
+
+![RCS_ClassDesign](./picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
 
 ### 5. Architectural styles and critical design decisions
 
