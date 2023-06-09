@@ -66,6 +66,23 @@ Specify the actor of this use case.
 
 #### 3.1 Platform-dependent architecture
 
+In the earlier design of the library management system's logical architecture, our primary concerns revolved around ensuring the internal functions of the system were robust and secure data transmission. To accomplish the enhancement and upgrade of the system's logical architecture, we made the decision to adopt a microservice architecture system rooted in domain-driven design.
+
+The decision to transition from a layered architecture to a microservice architecture in this project was motivated by several factors:
+
+1. Microservices promote flexibility and agility in software development. Each microservice represents a specific business capability and can be developed, deployed, and updated independently. This decoupling allows teams to work autonomously, choose their preferred technologies, and release updates without affecting the entire system. This flexibility enables faster development cycles, continuous delivery, and easier adaptation to changing business requirements.
+2. In a microservice architecture, each service runs in its own process or container, which provides fault isolation. If one service fails, it doesn't bring down the entire system. Failure in one microservice can be contained without affecting others, resulting in increased overall system resilience and availability.
+3. Microservices communicate with each other through well-defined APIs, enabling easy integration with external systems or third-party services. This promotes interoperability and allows the  library management system to leverage existing services or integrate with other platforms seamlessly.
+
+Considering the aforementioned attributes of microservice architecture and a thorough evaluation of its advantages and disadvantages compared to traditional layered architecture, we have opted to craft a system architecture that embodies comprehensive internal functionality, robust security, and a lightweight nature. To accomplish this, we have made the decision to appropriately generalize and refine the previous architecture between layers, resulting in the following logical architecture diagram.
+
+<img src="./picture/logical_architecture_diagram.png" alt="logical_architecture_diagram" style="zoom:67%;" />
+
+
+
+Based on the aforementioned enhanced logical architecture, we have tailored the microservices architecture to suit the project's scale. Consequently, we continue to adopt separate front-end and back-end development approaches. For the front-end, we utilize Vue.js and other libraries to facilitate development, while the back-end leverages SpringBoot and SpringCloud for general development purposes. REST-style API calls and JSON data files are employed, to enable communication between the front-end and back-end. Additionally, different data models are utilized to facilitate seamless communication and conversion between layers.To enhance system functionality, several key components have been incorporated. Authorization and authentication are implemented through the utilization of sa-token. For comprehensive log collection and data analysis visualization, we rely on ELK (Elasticsearch, Logstash, and Kibana).To effectively handle asynchronous messages and manage traffic, activeMQ message queues are employed for message delivery and storage. This ensures efficient message handling and storage capabilities. Regarding data management, the back-end interacts with either an Oracle database or Redis cache utilizing Hibernate's persistence mechanism. This allows for efficient data exchange and storage between the back-end and these data storage solutions.
+
+According to the design above, the technology stack is demonstrated in this diagram：
 
 
 #### 3.2 Subsystems and interfaces
