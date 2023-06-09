@@ -251,13 +251,13 @@ Some of the corresponding classes are represented in the class diagram below:
 
 ##### 4.1.2 Update Book Inventory
 
-![UpdateBookInventory](/picture/BookManagementSystem/UpdateBookInventory.png)
+![UpdateBookInventory](picture/BookManagementSystem/UpdateBookInventory.png)
 
 When the administrator enters the system, they can view the update suggestions submitted by the user, or directly update the book inventory, when updating the inventory, you need to choose one of the three to buy new books, increase, and decrease, after the selection, the front-end interface will package the data into a json file through AJAX and send it to the backend, and then call the relevant interface, access the database and update the information to achieve the request, and finally return the result to the front-end and display.
 
 Some of the corresponding classes are represented in the class diagram below:
 
-![Classes](/picture/BookManagementSystem/ClassDiagram1.png)
+![Classes](picture/BookManagementSystem/ClassDiagram1.png)
 
 ##### 4.1.3 Borrow Books
 
@@ -283,7 +283,7 @@ The corresponding subsystems and interfaces and their communication modes are sh
 
 ##### 4.1.4 Book a Study Room
 
-![VMSRealization](picture\VenueManagementSystem\BookStudyRoomRealization.png)
+![VMSRealization](picture/VenueManagementSystem/BookStudyRoomRealization.png)
 
 Booking a study room is a crucial use case for users who wish to reserve a study room for a specific time period. The process of booking a study room is depicted in sequence diagram above.
 
@@ -329,7 +329,7 @@ The communication methods used by corresponding subsystems and interfaces are re
 
 ##### 4.2.2 Book Management System
 
-![BMS_ClassDesign](/picture/BookManagementSystem/classs.png)
+![BMS_ClassDesign](picture/BookManagementSystem/classs.png)
 
 ##### 4.2.3 Book Borrowing System
 
@@ -337,11 +337,11 @@ The communication methods used by corresponding subsystems and interfaces are re
 
 ##### 4.2.4 Venue Management System
 
-![vmsClassDesign](./picture/VenueManagementSystem/vmsClassDesign.png)
+![vmsClassDesign](picture/VenueManagementSystem/vmsClassDesign.png)
 
 ##### 4.2.5 Reader Communication System
 
-![RCS_ClassDesign](./picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
+![RCS_ClassDesign](picture/ReaderCommunicationSystem/DetailedClassDiagram.png)
 
 ### 5. Architectural styles and critical design decisions
 
