@@ -307,7 +307,7 @@ All of the threee arguments could be null, and by using null as value, it means 
 
 To ensure the integrity and security of data during the transmission of parameters or return values, a Data Transfer Object (DTO) pattern is employed to encapsulate the data. By utilizing DTOs, the data is effectively wrapped and protected, enhancing the reliability and confidentiality of the information exchanged during the process. Within the activity interfaces mentioned earlier, the DTOs used for this purpose include:
 
-<img src="picture/conditionDTO.png" alt="conditionDTO" style="zoom:50%;" />
+<img src="picture/ConditionDTO.png" alt="conditionDTO" style="zoom:50%;" />
 
 <img src="picture/suggestionDTO.png" alt="suggestionsDTO" style="zoom:50%;" />
 
