@@ -30,7 +30,7 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 ### 2. Updated use case model
 
-#### 2.4 Updated System: Venue Management System
+#### 2.4 Venue Management System
 
 **Update:**
 
@@ -42,8 +42,8 @@ Deleted some redundant steps in the basic flow of UC07.
 | **Specification**     | This use case happens when a user wanted to enter the library building in order to borrow and return books, and use the facilities like tables and study rooms. There is no limitation unless the total number of people inside reaches the threshold.                                                                                                                                    |
 | **Actors**            | **User**                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Pre-Condition**     | User's account must be valid                                                                                                                                                                                                                                                                                                                                                              |
-| **Basic Flow**        | 1. User verifies his or her identity at the panel attached to the turnstile.<br/> 1.1 If the user has a library card, he or she could swipe the card.<br/> 1.2 The user could also enter his or her account number on the panel to get verification.  <br/>3. The user is allowed to enter the open space.                                                                                |
-| **Alternative Flows** | a. The user is not able to go through the verification process:<br/> a.1. If the user enters an invalid account number, he or she is allowed to renter the account number.<br/> a.2. If the user’s card can’t be recognized, he or she should turn to a librarian for help.<br/>b. When the total number of people inside the building reaches the threshold, no more user is allowed in. |
+| **Basic Flow**        | 1. User verifies their identity at the panel attached to the turnstile.<br/> 1.1 If the user has a library card, they could swipe the card.<br/> 1.2 The user could also enter their account number on the panel to get verification.  <br/>3. The user is allowed to enter the open space.                                                                                |
+| **Alternative Flows** | a. The user is not able to go through the verification process:<br/> a.1. If the user enters an invalid account number, they are allowed to renter the account number.<br/> a.2. If the user’s card can’t be recognized, they should turn to a librarian for help.<br/>b. When the total number of people inside the building reaches the threshold, no more user is allowed in. |
 | **Post-Condition**    | After successfully entering the open spaces, users could see the books on the bookshelves, use public PCs to log in to the system and borrow books, use the tables and check in to a study room.                                                                                                                                                                                          |
 
 **Update:**
@@ -59,6 +59,32 @@ Specify the actor of this use case.
 | **Basic Flow**        | 1. Users click the booking button.<br/>2. Check whether the user is authorized to use a study room(public users are not allowed to use study rooms).<br/>3. Users browse the information of all the available periods of study rooms.<br/>4. Users choose a spare study room.<br/>5. Users choose an available period.<br/>6. Users confirm the booking information.<br/>7. Users get a temporary password to enter the booked study room. |
 | **Alternative Flows** | a. There are no vacant rooms: users could not choose rooms and will be directed to leave this page.<br/>b. The room chosen has no vacancy: users could not choose a time(step 5)<br/>c. The user is not authorized to use the study room: The user will be informed when clicking the booking button and could not enter step 3.                                                                                                           |
 | **Post-Condition**    | Users could check in to the study room at due time.                                                                                                                                                                                                                                                                                                                                                                                        |
+
+#### 2.5 Reader Communication System
+
+**Update:**
+
+Include a validation step in the basic flow of UC11 and UC12. Add alternative flows for scenarios where the user fails to get verified or the system fails to update the change.
+
+| **USE CASE**          | CREATE POSTS |
+| --------------------- | ---------------------------------------------- |
+| **ID**                | UC11 |
+| **Specification**     | This use case describes how a User creates a post to share their thoughts about reading in the forum. |
+| **Actors**            | **User** |
+| **Pre-Condition**     | The user must be logged onto the system before this use case begins. |
+| **Basic Flow**        | This use case starts when the User wishes to create a post to share their thoughts in the forum.<br/>1. The User enters the forum page.<br/>2. The User clicked “Create a Post”.<br/>3. The User selects a topic.<br/>4. The User types the content of the post.<br/>5. The User clicks “Post”.<br/>6. The User completes a captcha to verify they are not a robot.<br/>7. The system adds the post to the forum and the User’s post collection.<br/>8. The system displays a success message. |
+| **Alternative Flows** | a. At any point, the User may leave the page. If this occurs in step 3 or step 4, the system displays a message about whether to save the content. If the User chose to save, the content is saved as an unposted post in the User’s post collection.<br/>b. If, in step 6, the User fails to pass the verification, the system displays an error message.<br/>c. If, in step 7, the system fails to add the post to the database, it displays an error message, and the use case terminates. |
+| **Post-Condition**    | A new post is submitted to the forum and added to the User’s post collection if the use case was successful. |
+
+| **USE CASE**          | REPLY TO POSTS |
+| --------------------- | ---------------------------------------------- |
+| **ID**                | UC12 |
+| **Specification**     | This use case describes how a User reply to a post to express their opinions about the post in the forum. |
+| **Actors**            | **User** |
+| **Pre-Condition**     | The user must be logged onto the system before this use case begins. |
+| **Basic Flow**        | This use case starts when the User wishes to reply to a post in the forum.<br/>1. include (View Posts).<br/>2. The User clicks the reply box.<br/>3. The User types the reply.<br/>4. The User clicks “Reply”.<br/>5. The User completes a captcha to verify they are not a robot.<br/>6. The system attaches the reply to the post and displays the reply on the page. |
+| **Alternative Flows** | a. At any point, the User may leave the page.<br/>b. If, in step 4 where the post was already deleted, the system displays an error message, and the use case terminates.<br/>c. If, in step 5, the User fails to pass the verification, the system displays an error message.<br/>d. If, in step 7, the system fails to add the reply to the database, it displays an error message, and the use case terminates. |
+| **Post-Condition**    | A new reply is posted below the post if the use case was successful. |
 
 ### 3. Architecture Refinement
 
@@ -106,21 +132,21 @@ Based on the above domain design, in order to accommodate the moderategranularit
 
 ##### 3.2.2 Book Management System
 
-| Order num | rest api                                               | interface introduction                                                 |
-| --------- | ------------------------------------------------------ | ---------------------------------------------------------------------- |
-| 05        | POST /api/users/suggestions                            | This interface is used to send suggestions from users to administrator |
-| 06        | GET /api/users/suggestions                             | This interface is used to get suggestions                              |
-| 07        | PUT /api/users/knowledgeGraph                          | This interface is used to update the knowledge graph                   |
-| 08        | PUT /api/library/inventory?bookid=id&inventory=number/ | This interface is used to update the inventory of some books           |
+| Order num | rest api                                               | interface introduction                                                  |
+| --------- | ------------------------------------------------------ | ----------------------------------------------------------------------- |
+| 05        | POST /api/users/suggestions                            | This interface is used to send suggestions from users to administrator. |
+| 06        | GET /api/users/suggestions                             | This interface is used to get suggestions.                              |
+| 07        | PUT /api/users/knowledgeGraph                          | This interface is used to update the knowledge graph.                   |
+| 08        | PUT /api/library/inventory?bookid=id&inventory=number/ | This interface is used to update the inventory of some books.           |
 
 ##### 3.2.3 Book Borrowing System
 
-| Order num | rest api             | interface introduction                                                                                                                                                                             |
-| --------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 09        | GET/api/books/bookID | The interface accepts the bookID, returning the details of the specific book.                                                                                                                      |
-| 10        | GET/api/users/userID | The interface accepts the userID and returns the details of the specific User.                                                                                                                     |
-| 11        | PUT/api/books/bookID | The interface accepts requests from users to borrow, renew and return books for a specific purpose, and returns the operation after the modification of the specific book information is completed |
-| 12        | PUT/api/users/userID | The interface accepts Librarian requests to modify the borrowing permission and modification penalty for a specific user and returns whether the operation is successful                           |
+| Order num | rest api             | interface introduction                                                                                                                                                    |
+| --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 09        | GET/api/books/bookID | The interface accepts the bookID, returning the details of the specific book.                                                                                             |
+| 10        | GET/api/users/userID | The interface accepts the userID and returns the details of the specific User.                                                                                            |
+| 11        | PUT/api/books/bookID | The interface accepts requests from users to borrow, renew and return books for a specific purpose, and returns the operation after the modification of the specific book information is completed. |
+| 12        | PUT/api/users/userID | The interface accepts Librarian requests to modify the borrowing permission and modification penalty for a specific user and returns whether the operation is successful. |
 
 ##### 3.2.4 Venue Management System
 
@@ -135,13 +161,13 @@ Based on the above domain design, in order to accommodate the moderategranularit
 
 ##### 3.2.5 Reader Communication System
 
-| Order num | rest api                        | interface introduction                                               |
-| --------- | ------------------------------- | -------------------------------------------------------------------- |
-| 19        | GET /api/forum/post             | This interface is used to get all the posts in the forum             |
-| 20        | POST /api/forum/post            | This interface is used to send a new post to the database            |
-| 21        | POST /api/forum/post/id/reply   | This interface is used to add a new reply under a specific post      |
-| 22        | DELETE /api/forum/post/id       | This interface is used to delete a specific post                     |
-| 23        | DELETE /api/forum/post/id/reply | This interface is used to delete a specific reply to a specific post |
+| Order num | rest api                        | interface introduction                                                |
+| --------- | ------------------------------- | --------------------------------------------------------------------- |
+| 19        | GET /api/forum/post             | This interface is used to get all the posts in the forum.             |
+| 20        | POST /api/forum/post            | This interface is used to send a new post to the database.            |
+| 21        | POST /api/forum/post/id/reply   | This interface is used to add a new reply under a specific post.      |
+| 22        | DELETE /api/forum/post/id       | This interface is used to delete a specific post.                     |
+| 23        | DELETE /api/forum/post/id/reply | This interface is used to delete a specific reply to a specific post. |
 
 #### 3.3 Interface specification
 
@@ -217,7 +243,7 @@ All users of the system need to log in when entering the system.
 
 We use Spring MVC in the system to process login requests, and use the REST API to send information commands to the database that stores user account information, and use sa-token for account login authentication.
 
-When the user enters the system, he first enters the account login interface of the system. After the user fills in his user name, password and verification code on this interface, he clicks the "Login" button. Login Interface first judges the correctness of the verification code. If the verification code is wrong, then Directly refuse to log in, login fails and prompts that the verification code is wrong; otherwise, if the verification code is correct, the information will be converted into JSON format and sent to Spring MVC, Spring MVC sends a query request to the database through the REST API. The database queries the tuple that matches the user name and password in the account information table and returns the query result. If it is not found, it means that the login information is incorrect, the login request is rejected, and the login fails. And it prompts that the user name or password is wrong; if it is correct, call StpUtil.login(id) to log in, and then get the login token information from sa-token through StpUtil.getTokenInfo(), send and save the token information to the front end, and the login is successful. This use case ends.
+When the user enters the system, they first enter the account login interface of the system. After the user fills in their user name, password and verification code on this interface, they click the "Login" button. Login Interface first judges the correctness of the verification code. If the verification code is wrong, then Directly refuse to log in, login fails and prompts that the verification code is wrong; otherwise, if the verification code is correct, the information will be converted into JSON format and sent to Spring MVC, Spring MVC sends a query request to the database through the REST API. The database queries the tuple that matches the user name and password in the account information table and returns the query result. If it is not found, it means that the login information is incorrect, the login request is rejected, and the login fails. And it prompts that the user name or password is wrong; if it is correct, call StpUtil.login(id) to log in, and then get the login token information from sa-token through StpUtil.getTokenInfo(), send and save the token information to the front end, and the login is successful. This use case ends.
 
 Some of the corresponding classes are represented in the class diagram below:
 
@@ -227,7 +253,7 @@ Some of the corresponding classes are represented in the class diagram below:
 
 ![UpdateBookInventory](/picture/BookManagementSystem/UpdateBookInventory.png)
 
-When the administrator enters the system, he can view the update suggestions submitted by the user, or directly update the book inventory, when updating the inventory, you need to choose one of the three to buy new books, increase, and decrease, after the selection, the front-end interface will package the data into a json file through AJAX and send it to the backend, and then call the relevant interface, access the database and update the information to achieve the request, and finally return the result to the front-end and display.
+When the administrator enters the system, they can view the update suggestions submitted by the user, or directly update the book inventory, when updating the inventory, you need to choose one of the three to buy new books, increase, and decrease, after the selection, the front-end interface will package the data into a json file through AJAX and send it to the backend, and then call the relevant interface, access the database and update the information to achieve the request, and finally return the result to the front-end and display.
 
 Some of the corresponding classes are represented in the class diagram below:
 
@@ -241,7 +267,7 @@ BorrowBooksis a use case. The procedure of the use case is demonstrated in the s
 
 Accordingto our system design, we used AJAX for data interaction. The Spring MVCframework will be used here to handle the request and the validation process. The approved contents will be submitted to the database through RESTAPI.
 
-The user typesthe key information of the book he wants to borrow and a verification code forsecurity checks (for robot detection). After clicking the apply button, thecorresponding HTML form data is generated, and it is converted to a Java objectby AJAX technology. The corresponding request for the object is sent to theSpring MVC.
+The user typesthe key information of the book they want to borrow and a verification code forsecurity checks (for robot detection). After clicking the apply button, thecorresponding HTML form data is generated, and it is converted to a Java objectby AJAX technology. The corresponding request for the object is sent to theSpring MVC.
 
 For theverification process, Spring MVC checks for the correctness of the contentformat. (The semantic level, not the content level) At the same time, we usethe external tool CAPTCHA([Maven Repository: com.github.penggle » kaptcha](https://mvnrepository.com/artifact/com.github.penggle/kaptcha)) developedby Google for the verification code to process the pending verification code toprevent the robot users. (Any content input with an illegal format or anincorrect verification code will be rejected)
 
