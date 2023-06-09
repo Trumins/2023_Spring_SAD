@@ -261,7 +261,7 @@ Thecorresponding subsystems and interfaces and their communication modes are sho
 
 ##### 4.1.4 Book a Study Room
 
-![VMSRealization](C:\Users\Jack Ding\Desktop\Assignment3save\picture\VenueManagementSystem\BookStudyRoomRealization.png)
+![VMSRealization](picture\VenueManagementSystem\BookStudyRoomRealization.png)
 
 Booking a study room is a crucial use case for users who wish to reserve a study room for a specific time period. The process of booking a study room is depicted in sequence diagram above.
 
