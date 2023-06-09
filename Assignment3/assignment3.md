@@ -293,7 +293,23 @@ The detailed API design of the book management subsystem is demonstrated as foll
 
 **The external system calls to view suggestions API according to conditions**
 
+Once the external system has successfully completed the authorization and authentication process, it gains the capability to utilize the API. By sending HTTP requests that include relevant search parameters, the external system can interact with the library management platform. Subsequently, the platform will analyze and process these parameters to filter and retrieve the corresponding suggestion data. The filtered data will then be returned to the external system in the JSON file format, facilitating seamless integration and data exchange between the two systems.
 
+A example of the parameters are as follow:
+
+| Argument       | Value    | Introduction                                                 |
+| -------------- | -------- | ------------------------------------------------------------ |
+| suggestionDate | 2023-6-1 | The date the suggestion was given.                           |
+| userID         | 100001   | The id of the user who gives the suggestion.                 |
+| isDealt        | true     | Whether the suggestion is handled by the administrator or not. |
+
+All of the threee arguments could be null, and by using null as value, it means any value.
+
+To ensure the integrity and security of data during the transmission of parameters or return values, a Data Transfer Object (DTO) pattern is employed to encapsulate the data. By utilizing DTOs, the data is effectively wrapped and protected, enhancing the reliability and confidentiality of the information exchanged during the process. Within the activity interfaces mentioned earlier, the DTOs used for this purpose include:
+
+<img src="picture/conditionDTO.png" alt="conditionDTO" style="zoom:50%;" />
+
+<img src="picture/suggestionDTO.png" alt="conditionDTO" style="zoom:50%;" />
 
 ### 4. Design model
 
