@@ -30,7 +30,9 @@ In addition to the aforementioned enhancements, we have also conscientiously con
 
 ### 2. Updated use case model
 
-#### 2.4 Venue Management System
+Here only diagrams and specifications that are updated are presented.
+
+#### 2.1 Updates of use case specification
 
 **Update:**
 
@@ -48,7 +50,7 @@ Deleted some redundant steps in the basic flow of UC07.
 
 **Update:**
 
-Specify the actor of this use case.
+Specify the actor of use case UC08.
 
 | **USE CASE**          | Book a Study Room                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -59,8 +61,6 @@ Specify the actor of this use case.
 | **Basic Flow**        | 1. Users click the booking button.<br/>2. Check whether the user is authorized to use a study room(public users are not allowed to use study rooms).<br/>3. Users browse the information of all the available periods of study rooms.<br/>4. Users choose a spare study room.<br/>5. Users choose an available period.<br/>6. Users confirm the booking information.<br/>7. Users get a temporary password to enter the booked study room. |
 | **Alternative Flows** | a. There are no vacant rooms: users could not choose rooms and will be directed to leave this page.<br/>b. The room chosen has no vacancy: users could not choose a time(step 5)<br/>c. The user is not authorized to use the study room: The user will be informed when clicking the booking button and could not enter step 3.                                                                                                           |
 | **Post-Condition**    | Users could check in to the study room at due time.                                                                                                                                                                                                                                                                                                                                                                                        |
-
-#### 2.5 Reader Communication System
 
 **Update:**
 
@@ -307,9 +307,28 @@ All of the threee arguments could be null, and by using null as value, it means 
 
 To ensure the integrity and security of data during the transmission of parameters or return values, a Data Transfer Object (DTO) pattern is employed to encapsulate the data. By utilizing DTOs, the data is effectively wrapped and protected, enhancing the reliability and confidentiality of the information exchanged during the process. Within the activity interfaces mentioned earlier, the DTOs used for this purpose include:
 
-<img src="picture/conditionDTO.png" alt="conditionDTO" style="zoom:50%;" />
+<img src="picture/ConditionDTO.png" alt="conditionDTO" style="zoom:50%;" />
 
 <img src="picture/suggestionDTO.png" alt="conditionDTO" style="zoom:50%;" />
+
+**The external system calls API to view knowledge graphs  **
+
+The external system with authorization can also calls API to get knowledge graphs, the data forms and interaction mechanism are the same as the view suggestions API.
+
+A example of the parameters are as follow:
+
+| Argument | Value   | Introduction                                 |
+| -------- | ------- | -------------------------------------------- |
+| bookID   | 2023655 | The date the suggestion was given.           |
+| userID   | 100001  | The id of the user who gives the suggestion. |
+
+The DTOs used for this purpose include:
+
+<img src="picture/ConditionDTO2.png" alt="conditionDTO2" style="zoom:50%;" />
+
+The detailed data type of the entity varies.
+
+<img src="picture/KnowledgeGraphDTO.png" alt="KGDTO" style="zoom:50%;" />
 
 ### 4. Design model
 
