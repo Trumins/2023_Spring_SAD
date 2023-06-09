@@ -91,11 +91,11 @@ According to domain-driven design, in order to properly design thecorresponding 
 
 1.User Domain 
 
-2.Reading RoomDomain
+2.Reading Room Domain
 
 3.Book Domain
 
-4.Online ForumDomain
+4.Online Forum Domain
 
 Based on the above domain design, in order to accommodate the moderategranularity of services in the system design process, we choose to furtherdivide the microservices into the following systems based on functionality.
 
@@ -305,7 +305,9 @@ Some of the corresponding classes are represented in the class diagram below:
 
 #### 4.2 Detailed class design
 
+##### 4.2.2 Book Management System
 
+![](/picture/BookManagementSystem/classs.png)
 
 ##### 4.2.3 Book Borrowing System
 
